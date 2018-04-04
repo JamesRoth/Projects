@@ -10,6 +10,6 @@ def elev(xl,yl,E,A,Z):
     tane=tan(radians(E))
     ansrad=((((yl-sina*Z*tane)**2 + (xl-cosa*Z*tane))**2)**1/2)/(Z-61)
     print(ansrad)
-    return degrees(atan(radians(ansrad)))
+    return atan(ansrad)
     
 print(elev(40.6,-106,77.6,23.1,408))
