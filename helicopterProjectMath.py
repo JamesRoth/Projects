@@ -13,6 +13,6 @@ def elev(xl,yl,E,A,Z):
     tane=degrees(tane)
     ansrad=((((yl-sina*Z*tane)**2 + (xl-cosa*Z*tane))**2)**1/2)/(Z-61)
     print(ansrad)
-    return atan(ansrad) #should work but doesnt - why?
+    return atan(radians(ansrad)) #should work but doesnt - why?
     
 print(elev(40.6,-106,77.6,23.1,408))
