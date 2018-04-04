@@ -9,7 +9,7 @@ def elev(xl,yl,E,A,Z):
     cosa=cos(radians(A))
     tane=tan(radians(E))
     print(sina,cosa,tane,"SPACE")
-    print((sina*Z*tane-yl)**2, (cosa*Z*tane-xl)**2)
+    print((sina*Z*tane-yl)**2, (cosa*Z*tane-xl)**2, "SPACE")
     ansrad=((((yl-sina*Z*tane)**2 + (xl-cosa*Z*tane))**2)**1/2)/(Z-61)
     print(ansrad)
     return atan(ansrad) #should work but doesnt - why?
