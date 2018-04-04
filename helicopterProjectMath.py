@@ -13,7 +13,7 @@ def elev(xl,yl,E,A,Z):
     p2=round((cosa*Z*tane-xl),4)
     print(p1,p2,"SPACE")
     print(sqrt((p1**2+p2**2)),"SPACE")
-    ansrad=sqrt((p1**2+p2**2))/Z-61
+    ansrad=sqrt((p1**2+p2**2))/(Z-61)
     print(ansrad)
     return atan(ansrad) #should work but doesnt - why?
     
