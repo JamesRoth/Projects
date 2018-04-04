@@ -12,6 +12,7 @@ blackoutline=LineStyle(1, black)
 gallows1=RectangleAsset(30,1000,blackoutline,brown)
 gallows2=RectangleAsset(240,30,blackoutline,brown)
 gallows3=RectangleAsset(20, 80, blackoutline,black)
+blank=RectangleAsset(70,10,blackoutline,black)
 
 Sprite(gallows1,(20,50))
 Sprite(gallows2, (40,30))
