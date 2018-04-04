@@ -8,7 +8,7 @@ def elev(xl,yl,E,A,Z):
     sina=sin(radians(A))
     cosa=cos(radians(A))
     tane=tan(radians(E))
-    ansrad=(((yl-sina*Z*tane)**2 + (xl-cosa*Z*tane))**2)**1/2/(Z-61)
+    ansrad=((((yl-sina*Z*tane)**2 + (xl-cosa*Z*tane))**2)**1/2)/(Z-61)
     print(ansrad)
     return degrees(atan(radians(ansrad)))
     
