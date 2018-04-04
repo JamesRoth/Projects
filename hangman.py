@@ -15,6 +15,6 @@ gallows3=RectangleAsset(30, 80, blackoutline,black)
 
 Sprite(gallows1,(20,50))
 Sprite(gallows2, (40,30))
-Sprite(gallows3, 
+Sprite(gallows3, (270,50))
 
 App().run()
