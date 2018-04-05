@@ -7,7 +7,7 @@ from random import randint
 
 def guess(event):
     print(event.key)
-    print(["badGuess"])
+    print(len(["badGuess"]))
     ch=event.key
     if ch not in ["badGuess"]:
         ["badGuess"]+=ch
