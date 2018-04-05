@@ -40,7 +40,7 @@ if __name__ == "__main__":
     Sprite(gallows2, (40,30))
     Sprite(gallows3, (240,60))
     for i in range(1,len(word)+1):
-        Sprite(blank, (1`0+i*700, 300))
+        Sprite(blank, (100+i*90, 500))
     
     
     App().run()
