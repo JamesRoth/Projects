@@ -9,7 +9,8 @@ def guess(event):
     print(len(["badGuess"]))
     ch=event.key
     if ch not in ["badGuess"] and ch not in word:
-        ["badGuess"]+=ch
+        ["badGuess"]+=1
+        print(len(["badGuess"]))
         printHangman(len(["badGuess"]))
     if ch in word:
         printLetter(word,ch)
@@ -44,7 +45,7 @@ def printHangman(length):
             Sprite(leg2, (215,200))
 
 def pickWord():
-    num=randint(1,7)
+    num=randint(1,8)
     if num==1:
         return "apocalypse"
     if num==2:
@@ -59,11 +60,13 @@ def pickWord():
         return "function"
     if num==7:
         return "giraffe"
+    if num==8:
+        return "abacus"
 
 if __name__ == "__main__":
     
     data={}
-    data["badGuess"]=""
+    data["badGuess"]=0
     
     word=pickWord()
     
