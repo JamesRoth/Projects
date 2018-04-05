@@ -6,7 +6,6 @@ from ggame import *
 from random import randint
 
 def guess(event):
-    print(event.key)
     print(len(["badGuess"]))
     ch=event.key
     if ch not in ["badGuess"] and ch not in word:
@@ -64,13 +63,9 @@ def pickWord():
 if __name__ == "__main__":
     
     data={}
-    stop=0
-    if stop==0:
-        data["badGuess"]=""
-        stop=1
+    data["badGuess"]=""
     
     word=pickWord()
-    print(word)
     
     black=Color(0x000000,1)
     brown=Color(0x934b14,1)
