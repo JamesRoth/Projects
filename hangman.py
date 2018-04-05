@@ -7,6 +7,7 @@ from random import randint
 
 def guess(event):
     print(event.key)
+    print(["badGuess"])
     ch=event.key
     if ch not in ["badGuess"]:
         ["badGuess"]+=ch
@@ -76,4 +77,4 @@ if __name__ == "__main__":
     for ch in "abcdefghijklmnopqrstuvwxyz":
         App().listenKeyEvent("keydown",ch, guess)
     
-    App().run(step)
+    App().run()
