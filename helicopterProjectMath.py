@@ -11,7 +11,7 @@ def elev(xl,yl,E,A,Z):
     p1=(sina*Z*tane-yl)
     p2=(cosa*Z*tane-xl)
     ans=sqrt((p1**2+p2**2))/(Z-61)
-    return "ELEV = " + str(round(degrees(atan(ans)),4)) + " degrees"
+    return "ELEV = " + str(round(degrees(atan(ans)),2)) + " degrees"
 
 def azim(xl,yl,E,A,Z):
     sina=sin(radians(A))
@@ -20,7 +20,12 @@ def azim(xl,yl,E,A,Z):
     p1=(sina*Z*tane-yl)
     p2=(cosa*Z*tane-xl)
     ans=sqrt((p1**2+p2**2))
-    return "AZIM = " + str(degrees(acos(p2)-xl/ans)) + " degrees"
+    if A>270:
+        return "AZIM = " + str(round(360-degrees(acos((p2)/ans)),2)) + " degrees"
+    elif A>180:
+        return "AZIM = " + str(round(180 + (180-degrees(acos((p2)/ans))),2)) + " degrees"
+    else:
+        return "AZIM = " + str(round(degrees(acos((p2)/ans)),2)) + " degrees"
 
 def beaconRange(xl,yl,E,A,Z):
     sina=sin(radians(A))
@@ -32,7 +37,7 @@ def beaconRange(xl,yl,E,A,Z):
     ans=sqrt((p1**2+p2**2))/(Z-61)
     angle=degrees(atan(ans))
     #sin angle = d/range
-    return "RANGE = " + str(round(d/sin(radians(angle)),4)) + " meters"
+    return "RANGE = " + str(round(d/sin(radians(angle)),2)) + " meters"
 
 print(elev(40.6,-106,77.6,23.1,408))
 print(elev(40.6,-106,77.9,146.7,408))
