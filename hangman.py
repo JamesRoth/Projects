@@ -64,7 +64,10 @@ def pickWord():
 if __name__ == "__main__":
     
     data={}
-    data["badGuess"]=""
+    stop=0
+    if stop==0:
+        data["badGuess"]=""
+        stop=1
     
     word=pickWord()
     print(word)
