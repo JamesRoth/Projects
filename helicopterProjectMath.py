@@ -25,6 +25,6 @@ def beaconRange(xl,yl,E,A,Z):
     ans=sqrt((p1**2+p2**2))/(Z-61)
     angle=degrees(atan(ans))
     #sin angle = d/range
-    return (1/sin(radians(angle))*d) + "meters"
+    return str(d/sin(radians(angle)))
 
 print(beaconRange(40.6,-106,677.6,23.1,408))
