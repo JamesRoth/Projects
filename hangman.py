@@ -13,7 +13,7 @@ def guess(event):
         printHangman(len(["badGuess"]))
 
 def printHangman(length):
-    head=EllipseAsset(15,40,blackoutline,Color(0xfffffff,1))
+    head=EllipseAsset(30,50,blackoutline,Color(0xfffffff,1))
     body=RectangleAsset(10,60,blackoutline,black)
     arm1=RectangleAsset(50,10,blackoutline,black)
     arm2=RectangleAsset(50,10,blackoutline,black)
@@ -21,17 +21,17 @@ def printHangman(length):
     leg2=PolygonAsset([(0,0),(-10,0),(-50,70),(-60,70)],blackoutline,black)
     for i in range(1,length+1):
         if i==1:
-            Sprite(head,(240,130))
+            Sprite(head,(240,120))
         if i==2:
-            Sprite(body, (240,170))
+            Sprite(body, (240,160))
         if i==3:
-            Sprite(arm1, (190,200))
+            Sprite(arm1, (190,190))
         if i==4:
-            Sprite(arm2, (290,200))
+            Sprite(arm2, (290,190))
         if i==5:
-            Sprite(leg1, (240,230))
+            Sprite(leg1, (240,220))
         if i==6:
-            Sprite(leg2, (240,230))
+            Sprite(leg2, (240,220))
 
 def pickWord():
     num=randint(1,7)
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     
     gallows1=RectangleAsset(30,1000,blackoutline,brown)
     gallows2=RectangleAsset(240,30,blackoutline,brown)
-    gallows3=RectangleAsset(20, 80, blackoutline,black)
+    gallows3=RectangleAsset(10, 70, blackoutline,black)
     blank=RectangleAsset(50,7,blackoutline,black)
     
     Sprite(gallows1,(20,50))
