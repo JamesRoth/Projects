@@ -39,7 +39,8 @@ blank=RectangleAsset(70,10,blackoutline,black)
 Sprite(gallows1,(20,50))
 Sprite(gallows2, (40,30))
 Sprite(gallows3, (240,60))
-for i in range(1,len(word)+1)
+for i in range(1,len(word)+1):
+    Sprite(blank, (150+i*100, 600))
 
 
 App().run()
