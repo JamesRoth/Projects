@@ -20,7 +20,7 @@ def azim(xl,yl,E,A,Z):
     p1=(sina*Z*tane-yl)
     p2=(cosa*Z*tane-xl)
     ans=sqrt((p1**2+p2**2))/(Z-61)
-    degrees(acos(p2-xl/ans))
+    return "AZIM = " + str(degrees(acos(p2-xl/ans))) + " degrees"
 
 def beaconRange(xl,yl,E,A,Z):
     sina=sin(radians(A))
