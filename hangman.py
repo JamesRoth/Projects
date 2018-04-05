@@ -19,7 +19,7 @@ def printLetter(string,char):
     for ch in string:
         i+=1
         if char==string[i-1]:
-            letter=TextAsset(ch,fill=black,style="italic 30pt Times")
+            letter=TextAsset(ch,fill=black,style="30pt Times")
             Sprite(letter,(210+i*70, 460))
 
 def printHangman(length):
