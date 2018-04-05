@@ -21,17 +21,17 @@ def printHangman(length):
     leg2=PolygonAsset([(0,0),(-10,0),(-50,70),(-60,70)],blackoutline,black)
     for i in range(1,length+1):
         if i==1:
-            Sprite(head,(215,120))
+            Sprite(head,(215,100))
         if i==2:
-            Sprite(body, (215,160))
+            Sprite(body, (215,140))
         if i==3:
-            Sprite(arm1, (165,190))
+            Sprite(arm1, (165,170))
         if i==4:
-            Sprite(arm2, (265,190))
+            Sprite(arm2, (265,170))
         if i==5:
-            Sprite(leg1, (215,220))
+            Sprite(leg1, (215,200))
         if i==6:
-            Sprite(leg2, (215,220))
+            Sprite(leg2, (215,200))
 
 def pickWord():
     num=randint(1,7)
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     
     gallows1=RectangleAsset(30,1000,blackoutline,brown)
     gallows2=RectangleAsset(240,30,blackoutline,brown)
-    gallows3=RectangleAsset(10, 70, blackoutline,black)
+    gallows3=RectangleAsset(10, 50, blackoutline,black)
     blank=RectangleAsset(50,7,blackoutline,black)
     
     Sprite(gallows1,(20,50))
