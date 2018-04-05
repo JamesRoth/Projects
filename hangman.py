@@ -17,8 +17,20 @@ def printHangman(length):
     arm2=RectangleAsset(50,10,blackoutline,black)
     leg1=PolygonAsset([(0,0),(10,0),(50,70),(60,70)],blackoutline,black)
     leg2=PolygonAsset([(0,0),(-10,0),(-50,70),(-60,70)],blackoutline,black)
-    if lenth==1:
-        
+    for i in range(1,length+1):
+        if i==1:
+            sprite=head
+        if i==2:
+            sprite=body
+        if i==3:
+            sprite=arm1
+        if i==4:
+            sprite=arm2
+        if i==5:
+            sprite=leg1
+        if i==6:
+            sprite=leg2
+        Sprite(sprite)
 
 def pickWord():
     num=randint(1,7)
