@@ -13,7 +13,7 @@ def guess(event):
         printHangman(len(["badGuess"]))
 
 def printHangman(length):
-    head=ElipseAsset(100,50,blackoutline,Color(0x000000,1))
+    head=EllipseAsset(100,50,blackoutline,Color(0x000000,1))
     body=RectangleAsset(10,50,blackoutline,black)
     arm1=RectangleAsset(50,10,blackoutline,black)
     arm2=RectangleAsset(50,10,blackoutline,black)
