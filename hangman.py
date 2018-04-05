@@ -13,7 +13,7 @@ def guess(event):
         printHangman(len(["badGuess"]))
 
 def printHangman(length):
-    head=EllipseAsset(100,50,blackoutline,Color(0x000000,1))
+    head=EllipseAsset(20,50,blackoutline,Color(0xfffffff,1))
     body=RectangleAsset(10,50,blackoutline,black)
     arm1=RectangleAsset(50,10,blackoutline,black)
     arm2=RectangleAsset(50,10,blackoutline,black)
@@ -21,7 +21,7 @@ def printHangman(length):
     leg2=PolygonAsset([(0,0),(-10,0),(-50,70),(-60,70)],blackoutline,black)
     for i in range(1,length+1):
         if i==1:
-            sprite=head
+            Sprite(head,(240,110))
         if i==2:
             sprite=body
         if i==3:
@@ -31,8 +31,7 @@ def printHangman(length):
         if i==5:
             sprite=leg1
         if i==6:
-            sprite=leg2
-        Sprite(sprite)
+            
 
 def pickWord():
     num=randint(1,7)
