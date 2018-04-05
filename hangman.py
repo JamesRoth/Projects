@@ -5,7 +5,10 @@
 from ggame import *
 from random import randint
 
-def guess(event)
+def guess(event, ch):
+    if ch not in badGuess:
+        badGuess+=ch
+        printHangman(len(badGuess))
 
 def pickWord():
     num=randint(1,7)
@@ -27,6 +30,7 @@ def pickWord():
 if __name__ == "__main__":
     
     word=pickWord()
+    badGuess=""
     
     black=Color(0x000000,1)
     brown=Color(0x934b14,1)
@@ -45,6 +49,6 @@ if __name__ == "__main__":
         Sprite(blank, (200+i*70, 500))
     
     for ch in "abcdefghijklmnopqrstuvwxyz":
-        App().listenKeyEvent("keydown",ch, guess)
+        App().listenKeyEvent("keydown",ch, guess(ch))
     
     App().run()
