@@ -22,7 +22,7 @@ def pickWord:
     if num==7:
         return "giraffe"
 
-if name == "_main_"
+if name == "_main_":
 
 word=pickWord
 
