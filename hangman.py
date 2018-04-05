@@ -10,6 +10,10 @@ def guess(event, ch):
         badGuess+=ch
         printHangman(len(badGuess))
 
+def printHangman(length):
+    if lenth==1:
+        head=ElipseAsset(100,50,blackoutline,Color(0x000000,1))
+
 def pickWord():
     num=randint(1,7)
     if num==1:
