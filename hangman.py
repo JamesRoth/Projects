@@ -9,9 +9,11 @@ def guess(event):
     print(event.key)
     print(len(["badGuess"]))
     ch=event.key
-    if ch not in ["badGuess"]:
+    if ch not in ["badGuess"] and ch not in word:
         ["badGuess"]+=ch
         printHangman(len(["badGuess"]))
+    if ch in word:
+        
 
 def printHangman(length):
     head=EllipseAsset(30,50,blackoutline,Color(0xfffffff,1))
