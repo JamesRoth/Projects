@@ -24,7 +24,7 @@ def pickWord():
 
 if __name__ == "__main__":
     
-    word=pickWord
+    word=pickWord()
     
     black=Color(0x000000,1)
     brown=Color(0x934b14,1)
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     Sprite(gallows2, (40,30))
     Sprite(gallows3, (240,60))
     for i in range(1,len(word)+1):
-        Sprite(blank, (150+i*100, 600))
+        Sprite(blank, (1`0+i*700, 300))
     
     
     App().run()
