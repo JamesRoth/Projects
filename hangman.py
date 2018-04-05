@@ -5,13 +5,12 @@
 from ggame import *
 from random import randint
 
-badGuess=""
 def guess(event):
     print(event.key)
     ch=event.key
-    if ch not in badGuess:
-        badGuess+=ch
-        printHangman(len(badGuess))
+    if ch not in ["badGuess"]:
+        ["badGuess"]+=ch
+        printHangman(len(["badGuess"]))
 
 def printHangman(length):
     head=ElipseAsset(100,50,blackoutline,Color(0x000000,1))
@@ -53,6 +52,9 @@ def pickWord():
         return "giraffe"
 
 if __name__ == "__main__":
+    
+    data={}
+    data["badGuess"]=""
     
     word=pickWord()
     
