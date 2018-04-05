@@ -3,6 +3,24 @@
 #hangman.py - graphics hangman
 
 from ggame import *
+from random import randint
+
+def pickWord:
+    num=randint(1,10)
+    if num==1:
+        return "apocalypse"
+    if num==2:
+        return "lizard"
+    if num==3:
+        return "garden"
+    if num==4:
+        return "starboard"
+    if num==5:
+        return "iguana"
+    if num==6:
+        return "function"
+    if num==7:
+        return "giraffe"
 
 black=Color(0x000000,1)
 brown=Color(0x934b14,1)
@@ -17,5 +35,6 @@ blank=RectangleAsset(70,10,blackoutline,black)
 Sprite(gallows1,(20,50))
 Sprite(gallows2, (40,30))
 Sprite(gallows3, (240,60))
+
 
 App().run()
