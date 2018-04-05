@@ -13,13 +13,13 @@ def guess(event):
         ["badGuess"]+=ch
         printHangman(len(["badGuess"]))
     if ch in word:
-        printLetter(ch)
+        printLetter(word,ch)
 
-def printLetter(string):
+def printLetter(string,char):
     i=0
     for ch in string:
         i+=1
-        if ch==string[i-1]:
+        if char==string[i-1]:
             letter=TextAsset(ch,fill=black,style="italic 30pt Times")
             Sprite(letter,(210+i*70, 460))
 
