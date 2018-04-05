@@ -67,6 +67,7 @@ if __name__ == "__main__":
     data["badGuess"]=""
     
     word=pickWord()
+    print(word)
     
     black=Color(0x000000,1)
     brown=Color(0x934b14,1)
