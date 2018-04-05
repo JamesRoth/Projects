@@ -76,4 +76,4 @@ if __name__ == "__main__":
     for ch in "abcdefghijklmnopqrstuvwxyz":
         App().listenKeyEvent("keydown",ch, guess)
     
-    App().run()
+    App().run(step)
