@@ -6,7 +6,7 @@ from ggame import *
 from random import randint
 
 def pickWord:
-    num=randint(1,10)
+    num=randint(1,7)
     if num==1:
         return "apocalypse"
     if num==2:
@@ -22,6 +22,8 @@ def pickWord:
     if num==7:
         return "giraffe"
 
+if name == "_main_"
+
 black=Color(0x000000,1)
 brown=Color(0x934b14,1)
 
@@ -35,6 +37,7 @@ blank=RectangleAsset(70,10,blackoutline,black)
 Sprite(gallows1,(20,50))
 Sprite(gallows2, (40,30))
 Sprite(gallows3, (240,60))
+for i in range(1,len(+1)
 
 
 App().run()
