@@ -12,8 +12,6 @@ def elev(xl,yl,E,A,Z):
     p2=(cosa*Z*tane-xl)
     ans=sqrt((p1**2+p2**2))/(Z-61)
     return "ELEV = " + str(round(degrees(atan(ans)),4)) + " degrees"
-    
-print(elev(40.6,-106,77.6,23.1,408))
 
 def beaconRange(xl,yl,E,A,Z):
     sina=sin(radians(A))
@@ -27,4 +25,11 @@ def beaconRange(xl,yl,E,A,Z):
     #sin angle = d/range
     return "AZIM = " + str(round(d/sin(radians(angle)),4)) + " meters"
 
+print(elev(40.6,-106,77.6,23.1,408))
+print(elev(40.6,-106,77.9,146.7,408))
+print(elev(40.6,-106,77.5,201.8,408))
+print(elev(40.6,-106,78.0,330.0,408))
 print(beaconRange(40.6,-106,77.6,23.1,408))
+print(beaconRange(40.6,-106,77.9,146.7,408))
+print(beaconRange(40.6,-106,77.5,201.8,408))
+print(beaconRange(40.6,-106,78.0,330.0,408))
