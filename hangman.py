@@ -5,6 +5,8 @@
 from ggame import *
 from random import randint
 
+def guess(event)
+
 def pickWord():
     num=randint(1,7)
     if num==1:
@@ -34,13 +36,15 @@ if __name__ == "__main__":
     gallows1=RectangleAsset(30,1000,blackoutline,brown)
     gallows2=RectangleAsset(240,30,blackoutline,brown)
     gallows3=RectangleAsset(20, 80, blackoutline,black)
-    blank=RectangleAsset(70,10,blackoutline,black)
+    blank=RectangleAsset(50,7,blackoutline,black)
     
     Sprite(gallows1,(20,50))
     Sprite(gallows2, (40,30))
     Sprite(gallows3, (240,60))
     for i in range(1,len(word)+1):
-        Sprite(blank, (100+i*90, 500))
+        Sprite(blank, (200+i*70, 500))
     
+    for ch in "abcdefghijklmnopqrstuvwxyz":
+        App().listenKeyEvent("keydown",ch, guess)
     
     App().run()
