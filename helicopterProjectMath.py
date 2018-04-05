@@ -15,6 +15,6 @@ def elev(xl,yl,E,A,Z):
     print(sqrt((p1**2+p2**2)),"SPACE")
     ans=sqrt((p1**2+p2**2))/(Z-61)
     print(ans)
-    return atan(ans) #should work but doesnt - why?
+    return degrees(atan(ans)) #should work but doesnt - why?
     
 print(elev(40.6,-106,77.6,23.1,408))
