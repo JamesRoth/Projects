@@ -12,7 +12,7 @@ def wordComplete(): #checking to see if the whole word is guessed
         data["loss"]=2
 
 def guess(event): #when a letter is guessed - is it right or wrong?
-    #Sprite(TextAsset(data["goodGuess"]+data["badGuess"],fill=black,style="25pt Arial"),(600,50)) - drawing letters on top of each other
+    #Sprite(TextAsset(data["goodGuess"]+data["badGuess"],fill=black,style="25pt Arial"),(600,50)) # - drawing letters on top of each other
     if data["loss"]==0:
         ch=event.key
         if ch not in data["badGuess"] and ch not in word:
@@ -85,6 +85,8 @@ def pickWord(): #picks a word to use
         return "blackboard"
     if num==13:
         return "planetary"
+    if num==14:
+        return "bullfight"
 
 if __name__ == "__main__":
     
@@ -104,11 +106,13 @@ if __name__ == "__main__":
     gallows1=RectangleAsset(30,1000,blackoutline,brown)
     gallows2=RectangleAsset(240,30,blackoutline,brown)
     gallows3=RectangleAsset(10, 50, blackoutline,black)
+    gallows4=PolygonAsset([(0,100),(10,100),(70,100),(60,100)])
     blank=RectangleAsset(50,7,blackoutline,black)
     
     Sprite(gallows1,(20,50))
     Sprite(gallows2, (40,30))
     Sprite(gallows3, (240,60))
+    Sprite(gallows4, (200,50))
     for i in range(1,len(word)+1):
         Sprite(blank, (200+i*70, 500))
     
