@@ -8,7 +8,7 @@ from random import randint
 def wordComplete(): #checking to see if the whole word is guessed
     if len(data["goodGuess"])==len(word):
         print("You win! Good job.")
-        Sprite(TextAsset("You win!",fill=black,style="70pt Arial"),(400,200))
+        Sprite(TextAsset("You win!",fill=black,style="70pt Arial"),(400,150))
         data["loss"]=2
 
 def guess(event): #when a letter is guessed - is it right or wrong?
@@ -54,7 +54,7 @@ def printHangman(length): #prints hangman based on incorrect answers
             data["loss"]=1
             Sprite(leg2, (190,270))
             print("You lose! Game over. The word was: " + word)
-            Sprite(TextAsset("You lose! The word was: " + word,fill=black,style="70pt Arial"),(400,200))
+            Sprite(TextAsset("You lose! The word was: " + word,fill=black,style="40pt Arial"),(400,150))
 
 def pickWord(): #picks a word to use
     num=randint(1,10)
