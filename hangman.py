@@ -8,7 +8,7 @@ from random import randint
 def wordComplete(): #checking to see if the whole word is guessed
     if len(data["goodGuess"])==len(word):
         print("You win! Good job.")
-        Sprite(TextAsset("You win!",fill=black,style="40pt Arial"),(300,200))
+        Sprite(TextAsset("You win!",fill=black,style="70pt Arial"),(400,200))
         data["loss"]=2
 
 def guess(event): #when a letter is guessed - is it right or wrong?
