@@ -106,7 +106,7 @@ if __name__ == "__main__":
     gallows1=RectangleAsset(30,1000,blackoutline,brown)
     gallows2=RectangleAsset(240,30,blackoutline,brown)
     gallows3=RectangleAsset(10, 50, blackoutline,black)
-    gallows4=PolygonAsset([(0,100),(10,100),(70,100),(60,100)],blackoutline,brown)
+    gallows4=PolygonAsset([(0,150),(10,150),(150,0),(1400,0)],blackoutline,brown)
     blank=RectangleAsset(50,7,blackoutline,black)
     
     Sprite(gallows1,(20,50))
