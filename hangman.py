@@ -54,7 +54,7 @@ def printHangman(length): #prints hangman based on incorrect answers
             break
 
 def pickWord(): #picks a word to use
-    num=randint(1,8)
+    num=randint(1,10)
     if num==1:
         return "apocalypse"
     if num==2:
@@ -74,7 +74,7 @@ def pickWord(): #picks a word to use
     if num==9:
         return "radians"
     if num==10:
-        return "
+        return "tornado"
 
 if __name__ == "__main__":
     
