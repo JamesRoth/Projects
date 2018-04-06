@@ -54,7 +54,7 @@ def printHangman(length): #prints hangman based on incorrect answers
             data["loss"]=1
             Sprite(leg2, (190,270))
             print("You lose! Game over. The word was: " + word)
-            Sprite(TextAsset("You lose! The word was: " + word,fill=black,style="40pt Arial"),(400,150))
+            Sprite(TextAsset("You lose! The word was: " + word,fill=red,style="40pt Arial"),(400,150))
 
 def pickWord(): #picks a word to use
     num=randint(1,10)
@@ -89,6 +89,7 @@ if __name__ == "__main__":
     word=pickWord()
     
     black=Color(0x000000,1)
+    red=Color(0xff00000,1)
     brown=Color(0x934b14,1)
     
     blackoutline=LineStyle(1, black)
