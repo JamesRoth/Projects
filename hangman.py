@@ -8,7 +8,6 @@ from random import randint
 def wordComplete(): #checking to see if the whole word is guessed
     if len(["goodGuess"])==len(word):
         print("You win! Good job.")
-        break
 
 def guess(event): #when a letter is guessed - is it right or wrong?
     print(len(["badGuess"]))
@@ -79,8 +78,8 @@ def pickWord(): #picks a word to use
 if __name__ == "__main__":
     
     data={}
-    data["badGuess"]
-    data["goodGuess"]
+    data["badGuess"]=""
+    data["goodGuess"]=""
     
     word=pickWord()
     
