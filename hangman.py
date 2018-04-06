@@ -5,26 +5,33 @@
 from ggame import *
 from random import randint
 
-def guess(event):
+def wordComplete(): #checking to see if the whole word is guessed
+    if len(["goodGuess"])==len(word):
+        print("You win! Good job.")
+        break
+
+def guess(event): #when a letter is guessed - is it right or wrong?
     print(len(["badGuess"]))
     ch=event.key
     if ch not in ["badGuess"] and ch not in word:
-        ["badGuess"]+=1
+        ["badGuess"]+=ch
         print(len(["badGuess"]))
         printHangman(len(["badGuess"]))
     if ch in word:
         printLetter(word,ch)
+        ["goodGuess"]+=ch
 
-def printLetter(string,char):
+def printLetter(string,char): #prints a correct letter on the correct line
     i=0
     for ch in string:
         i+=1
         if char==string[i-1]:
-            letter=TextAsset(ch,fill=black,style="30pt Times")
+            letter=TextAsset(ch,fill=black,style="30pt Arial")
             Sprite(letter,(210+i*70, 460))
+    wordComplete()
 
-def printHangman(length):
-    head=EllipseAsset(30,50,blackoutline,Color(0xfffffff,1))
+def printHangman(length): #prints hangman based on incorrect answers
+    head=EllipseAsset(30,40,blackoutline,Color(0xfffffff,1))
     body=RectangleAsset(10,60,blackoutline,black)
     arm1=RectangleAsset(50,10,blackoutline,black)
     arm2=RectangleAsset(50,10,blackoutline,black)
@@ -43,8 +50,10 @@ def printHangman(length):
             Sprite(leg1, (215,200))
         if i==6:
             Sprite(leg2, (215,200))
+            print("You lose! Game over.")
+            break
 
-def pickWord():
+def pickWord(): #picks a word to use
     num=randint(1,8)
     if num==1:
         return "apocalypse"
@@ -62,11 +71,16 @@ def pickWord():
         return "giraffe"
     if num==8:
         return "abacus"
+    if num==9:
+        return "radians"
+    if num==10:
+        return "
 
 if __name__ == "__main__":
     
     data={}
-    data["badGuess"]=0
+    data["badGuess"]
+    data["goodGuess"]
     
     word=pickWord()
     
