@@ -21,6 +21,7 @@ def guess(event): #when a letter is guessed - is it right or wrong?
             printLetter(word,ch)
         elif ch in data["badGuess"] or ch in data["goodGuess"]:
             print("You've already guessed this letter!")
+            Sprite(TextAsset(data["goodGuess"]+data["badGuess"],fill=black,style="25pt Arial"),(500,50))
 
 def printLetter(string,char): #prints a correct letter on the correct line
     i=0
