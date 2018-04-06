@@ -95,6 +95,8 @@ def pickWord(): #picks a word to use
         return "system"
     if num==18:
         return "computer"
+    if num==19:
+        return "behest"
 
 if __name__ == "__main__":
     
