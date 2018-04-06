@@ -78,7 +78,7 @@ def pickWord(): #picks a word to use
     if num==9:
         return "radians"
     if num==10:
-        return "tornado"  #haven't gotten this one yet
+        return "tornado"  
     if num==11:
         return "hanging"
     if num==12:
