@@ -19,6 +19,7 @@ def guess(event): #when a letter is guessed - is it right or wrong?
     if ch in word:
         printLetter(word,ch)
         ["goodGuess"]+=ch
+        print(len(["goodGuess"]))
 
 def printLetter(string,char): #prints a correct letter on the correct line
     i=0
