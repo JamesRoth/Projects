@@ -6,20 +6,18 @@ from ggame import *
 from random import randint
 
 def wordComplete(): #checking to see if the whole word is guessed
-    if len(["goodGuess"])==len(word):
+    if len(data["goodGuess"])==len(word):
         print("You win! Good job.")
 
 def guess(event): #when a letter is guessed - is it right or wrong?
-    print(len(["badGuess"]))
+    print(len(data["badGuess"]))
     ch=event.key
-    if ch not in ["badGuess"] and ch not in word:
-        ["badGuess"]+=ch
-        print(len(["badGuess"]))
-        printHangman(len(["badGuess"]))
+    if ch not in data["badGuess"] and ch not in word:
+        data["badGuess"]+=ch
+        print(len(data["badGuess"]))
+        printHangman(len(data["badGuess"]))
     if ch in word:
         printLetter(word,ch)
-        ["goodGuess"]+=ch
-        print(len(["goodGuess"]))
 
 def printLetter(string,char): #prints a correct letter on the correct line
     i=0
@@ -28,28 +26,30 @@ def printLetter(string,char): #prints a correct letter on the correct line
         if char==string[i-1]:
             letter=TextAsset(ch,fill=black,style="30pt Arial")
             Sprite(letter,(210+i*70, 460))
+            data["goodGuess"]+=ch
+            print(str(len(data["goodGuess"])) + " correct")
     wordComplete()
 
 def printHangman(length): #prints hangman based on incorrect answers
     head=EllipseAsset(30,40,blackoutline,Color(0xfffffff,1))
-    body=RectangleAsset(10,60,blackoutline,black)
+    body=RectangleAsset(10,90,blackoutline,black)
     arm1=RectangleAsset(50,10,blackoutline,black)
     arm2=RectangleAsset(50,10,blackoutline,black)
-    leg1=PolygonAsset([(0,0),(10,0),(50,70),(60,70)],blackoutline,black)
-    leg2=PolygonAsset([(0,0),(-10,0),(-50,70),(-60,70)],blackoutline,black)
+    leg1=PolygonAsset([(0,0),(10,0),(60,70),(50,70)],blackoutline,black)
+    leg2=PolygonAsset([(0,0),(-10,0),(-60,70),(-50,70)],blackoutline,black)
     for i in range(1,length+1):
         if i==1:
             Sprite(head,(215,100))
         if i==2:
-            Sprite(body, (215,140))
+            Sprite(body, (240,180))
         if i==3:
-            Sprite(arm1, (165,170))
+            Sprite(arm1, (190,200))
         if i==4:
-            Sprite(arm2, (265,170))
+            Sprite(arm2, (250,200))
         if i==5:
-            Sprite(leg1, (215,200))
+            Sprite(leg1, (240,270))
         if i==6:
-            Sprite(leg2, (215,200))
+            Sprite(leg2, (190,270))
             print("You lose! Game over.")
             break
 
