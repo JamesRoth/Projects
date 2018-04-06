@@ -89,7 +89,7 @@ if __name__ == "__main__":
     word=pickWord()
     
     black=Color(0x000000,1)
-    red=Color(0xff00000,1)
+    red=Color(0xff0000,1)
     brown=Color(0x934b14,1)
     
     blackoutline=LineStyle(1, black)
