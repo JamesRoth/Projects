@@ -91,6 +91,10 @@ def pickWord(): #picks a word to use
         return "monkey"
     if num==16:
         return "repiration"
+    if num==17:
+        return "system"
+    if num==18:
+        return "computer"
 
 if __name__ == "__main__":
     
