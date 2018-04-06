@@ -49,9 +49,9 @@ def printHangman(length): #prints hangman based on incorrect answers
         if i==5:
             Sprite(leg1, (240,270))
         if i==6:
+            data["loss"]=1
             Sprite(leg2, (190,270))
             print("You lose! Game over.")
-            break
 
 def pickWord(): #picks a word to use
     num=randint(1,10)
@@ -81,6 +81,7 @@ if __name__ == "__main__":
     data={}
     data["badGuess"]=""
     data["goodGuess"]=""
+    data["loss"]=0
     
     word=pickWord()
     
@@ -101,6 +102,7 @@ if __name__ == "__main__":
         Sprite(blank, (200+i*70, 500))
     
     for ch in "abcdefghijklmnopqrstuvwxyz":
-        App().listenKeyEvent("keydown",ch, guess)
+        if data["loss"]==0:
+            App().listenKeyEvent("keydown",ch, guess)
     
     App().run()
