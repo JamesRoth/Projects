@@ -8,16 +8,15 @@ from random import randint
 def wordComplete(): #checking to see if the whole word is guessed
     if len(data["goodGuess"])==len(word):
         print("You win! Good job.")
+        data["loss"]=2
 
 def guess(event): #when a letter is guessed - is it right or wrong?
     if data["loss"]==0:
-        print(len(data["badGuess"]))
         ch=event.key
         if ch not in data["badGuess"] and ch not in word:
             data["badGuess"]+=ch
-            print(len(data["badGuess"]))
             printHangman(len(data["badGuess"]))
-        if ch in wordand ch not in data["goodGuess"]:
+        if ch in word and ch not in data["goodGuess"]:
             printLetter(word,ch)
 
 def printLetter(string,char): #prints a correct letter on the correct line
