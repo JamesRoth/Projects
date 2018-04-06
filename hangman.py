@@ -10,14 +10,15 @@ def wordComplete(): #checking to see if the whole word is guessed
         print("You win! Good job.")
 
 def guess(event): #when a letter is guessed - is it right or wrong?
-    print(len(data["badGuess"]))
-    ch=event.key
-    if ch not in data["badGuess"] and ch not in word:
-        data["badGuess"]+=ch
+    if data["loss"]==0:
         print(len(data["badGuess"]))
-        printHangman(len(data["badGuess"]))
-    if ch in word:
-        printLetter(word,ch)
+        ch=event.key
+        if ch not in data["badGuess"] and ch not in word:
+            data["badGuess"]+=ch
+            print(len(data["badGuess"]))
+            printHangman(len(data["badGuess"]))
+        if ch in wordand ch not in data["goodGuess"]:
+            printLetter(word,ch)
 
 def printLetter(string,char): #prints a correct letter on the correct line
     i=0
@@ -102,7 +103,6 @@ if __name__ == "__main__":
         Sprite(blank, (200+i*70, 500))
     
     for ch in "abcdefghijklmnopqrstuvwxyz":
-        if data["loss"]==0:
-            App().listenKeyEvent("keydown",ch, guess)
+        App().listenKeyEvent("keydown",ch, guess)
     
     App().run()
