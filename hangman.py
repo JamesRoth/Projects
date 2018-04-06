@@ -57,7 +57,7 @@ def printHangman(length): #prints hangman based on incorrect answers
             Sprite(TextAsset("You lose! The word was: " + word,fill=red,style="30pt Arial"),(400,150))
 
 def pickWord(): #picks a word to use
-    num=randint(1,10)
+    num=randint(1,12)
     if num==1:
         return "apocalypse"
     if num==2:
@@ -78,6 +78,10 @@ def pickWord(): #picks a word to use
         return "radians"
     if num==10:
         return "tornado"
+    if num==11:
+        return "hanging"
+    if num==12:
+        return "blackboard"
 
 if __name__ == "__main__":
     
