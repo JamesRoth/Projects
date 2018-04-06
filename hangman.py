@@ -78,7 +78,7 @@ def pickWord(): #picks a word to use
     if num==9:
         return "radians"
     if num==10:
-        return "tornado"
+        return "tornado"  #haven't gotten this one yet
     if num==11:
         return "hanging"
     if num==12:
@@ -87,6 +87,10 @@ def pickWord(): #picks a word to use
         return "planetary"
     if num==14:
         return "bullfight"
+    if num==15:
+        return "monkey"
+    if num==16:
+        return "repiration"
 
 if __name__ == "__main__":
     
@@ -105,7 +109,7 @@ if __name__ == "__main__":
     
     gallows1=RectangleAsset(30,1000,blackoutline,brown)
     gallows2=RectangleAsset(240,30,blackoutline,brown)
-    gallows3=RectangleAsset(10, 50, blackoutline,black)
+    gallows3=RectangleAsset(7, 50, blackoutline,black)
     gallows4=PolygonAsset([(0,160),(0,130),(130,0),(160,0)],blackoutline,brown)
     blank=RectangleAsset(50,7,blackoutline,black)
     
