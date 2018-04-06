@@ -83,6 +83,8 @@ def pickWord(): #picks a word to use
         return "hanging"
     if num==12:
         return "blackboard"
+    if num==13:
+        return "planetary"
 
 if __name__ == "__main__":
     
