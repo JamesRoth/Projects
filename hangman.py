@@ -106,13 +106,13 @@ if __name__ == "__main__":
     gallows1=RectangleAsset(30,1000,blackoutline,brown)
     gallows2=RectangleAsset(240,30,blackoutline,brown)
     gallows3=RectangleAsset(10, 50, blackoutline,black)
-    gallows4=PolygonAsset([(0,150),(10,150),(150,0),(1400,0)],blackoutline,brown)
+    gallows4=PolygonAsset([(0,150),(0,130),(130,0),(150,0)],blackoutline,brown)
     blank=RectangleAsset(50,7,blackoutline,black)
     
     Sprite(gallows1,(20,50))
     Sprite(gallows2, (40,30))
     Sprite(gallows3, (240,60))
-    Sprite(gallows4, (200,50))
+    Sprite(gallows4, (20,30))
     for i in range(1,len(word)+1):
         Sprite(blank, (200+i*70, 500))
     
