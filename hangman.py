@@ -27,7 +27,6 @@ def printLetter(string,char): #prints a correct letter on the correct line
             letter=TextAsset(ch,fill=black,style="30pt Arial")
             Sprite(letter,(210+i*70, 460))
             data["goodGuess"]+=ch
-            print(str(len(data["goodGuess"])) + " correct")
     wordComplete()
 
 def printHangman(length): #prints hangman based on incorrect answers
@@ -51,7 +50,7 @@ def printHangman(length): #prints hangman based on incorrect answers
         if i==6:
             data["loss"]=1
             Sprite(leg2, (190,270))
-            print("You lose! Game over.")
+            print("You lose! Game over. The word was: " + word)
 
 def pickWord(): #picks a word to use
     num=randint(1,10)
