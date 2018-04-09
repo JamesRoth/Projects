@@ -5,6 +5,12 @@
 from ggame import *
 from random import randint
 
+def reset():
+    word=pickword
+    data["badGuess"]=""
+    data["goodGuess"]=""
+    data["loss"]=0
+
 def wordComplete(): #checking to see if the whole word is guessed
     if len(data["goodGuess"])==len(word):
         print("You win! Good job.")
@@ -128,6 +134,8 @@ if __name__ == "__main__":
     Sprite(gallows5, (0,510))
     for i in range(1,len(word)+1):
         Sprite(blank, (200+i*70, 500))
+
+    App().listenKeyEvent("keydown"," ",reset)
     
     for ch in "abcdefghijklmnopqrstuvwxyz":
         App().listenKeyEvent("keydown",ch, guess)
