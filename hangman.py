@@ -105,6 +105,8 @@ def pickWord(): #picks a word to use
         return "computer"
     if num==19:
         return "behest"
+    if num==20:
+        return "jerry-rigged"
 
 if __name__ == "__main__":
     
