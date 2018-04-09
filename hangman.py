@@ -23,8 +23,9 @@ def guess(event): #when a letter is guessed - is it right or wrong?
     if data["loss"]==0:
         ch=event.key
         if ch not in data["used"]:
-            Sprite(TextAsset(ch,fill=black,style="25pt Arial"),((450+25*len(data["used"]),50)) # - drawing letters on top of each other
+            Sprite(TextAsset(ch,fill=black,style="25pt Arial"),(450+25*len(data["used"]),50)) # - drawing letters on top of each other
             ch+=data["used"]
+            print(data["used"]
         if ch not in data["badGuess"] and ch not in word:
             data["badGuess"]+=ch
             printHangman(len(data["badGuess"]))
