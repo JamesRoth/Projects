@@ -5,11 +5,12 @@
 from ggame import *
 from random import randint
 
-def reset():
-    word=pickword
+def reset(event): #want to play a new game without hitting stop and go again? this one's for you (well, if it worked)
+    word=pickWord
     data["badGuess"]=""
     data["goodGuess"]=""
     data["loss"]=0
+    print(data["badGuess"], data["goodGuess"], data["loss"])
 
 def wordComplete(): #checking to see if the whole word is guessed
     if len(data["goodGuess"])==len(word):
@@ -71,7 +72,7 @@ def pickWord(): #picks a word to use
     if num==2:
         return "lizard"
     if num==3:
-        return "garden"
+        return "suburban"
     if num==4:
         return "starboard"
     if num==5:
@@ -134,10 +135,10 @@ if __name__ == "__main__":
     Sprite(gallows5, (0,510))
     for i in range(1,len(word)+1):
         Sprite(blank, (200+i*70, 500))
-
-    App().listenKeyEvent("keydown"," ",reset)
     
     for ch in "abcdefghijklmnopqrstuvwxyz":
         App().listenKeyEvent("keydown",ch, guess)
+    
+    #App().listenKeyEvent("keydown","up arrow", reset) #reset doesn't want to work
     
     App().run()
