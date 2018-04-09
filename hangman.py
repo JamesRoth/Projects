@@ -14,7 +14,7 @@ def wordComplete(): #checking to see if the whole word is guessed
 def guess(event): #when a letter is guessed - is it right or wrong?
     if data["loss"]==0:
         ch=event.key
-         Sprite(TextAsset(ch,fill=black,style="25pt Arial"),((450+25*len(data["goodGuess"]+data["badGuess"])),50)) # - drawing letters on top of each other
+        Sprite(TextAsset(ch,fill=black,style="25pt Arial"),((450+25*len(data["goodGuess"]+data["badGuess"])),50)) # - drawing letters on top of each other
         if ch not in data["badGuess"] and ch not in word:
             data["badGuess"]+=ch
             printHangman(len(data["badGuess"]))
