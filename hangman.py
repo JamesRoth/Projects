@@ -9,6 +9,7 @@ def reset(event): #want to play a new game without hitting stop and go again? th
     word=pickWord
     data["badGuess"]=""
     data["goodGuess"]=""
+    data["used"]=""
     data["loss"]=0
     print(data["badGuess"], data["goodGuess"], data["loss"])
 
@@ -21,8 +22,9 @@ def wordComplete(): #checking to see if the whole word is guessed
 def guess(event): #when a letter is guessed - is it right or wrong?
     if data["loss"]==0:
         ch=event.key
-        if ch not in data["badGuess"] and ch not in data["goodGuess"]:
-            Sprite(TextAsset(ch,fill=black,style="25pt Arial"),((450+25*len(data["goodGuess"]+data["badGuess"])),50)) # - drawing letters on top of each other
+        if ch not in data["used"]:
+            Sprite(TextAsset(ch,fill=black,style="25pt Arial"),((450+25*len(data["used"]),50)) # - drawing letters on top of each other
+            ch+=data["used"]
         if ch not in data["badGuess"] and ch not in word:
             data["badGuess"]+=ch
             printHangman(len(data["badGuess"]))
@@ -113,6 +115,7 @@ if __name__ == "__main__":
     data={}
     data["badGuess"]=""
     data["goodGuess"]=""
+    data["used"]=""
     data["loss"]=0
     
     word=pickWord()
