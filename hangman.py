@@ -25,7 +25,6 @@ def guess(event): #when a letter is guessed - is it right or wrong?
         if ch not in data["used"]:
             Sprite(TextAsset(ch,fill=black,style="25pt Arial"),(450+25*len(data["used"]),50)) # - drawing letters on top of each other
             data["used"]+=ch
-            print(len(data["used"]))
         if ch not in data["badGuess"] and ch not in word:
             data["badGuess"]+=ch
             printHangman(len(data["badGuess"]))
@@ -69,7 +68,7 @@ def printHangman(length): #prints hangman based on incorrect answers
             Sprite(TextAsset("You lose! The word was: " + word,fill=red,style="30pt Arial"),(400,150))
 
 def pickWord(): #picks a word to use
-    num=randint(1,12)
+    num=randint(1,21)
     if num==1:
         return "apocalypse"
     if num==2:
@@ -110,6 +109,8 @@ def pickWord(): #picks a word to use
         return "behest"
     if num==20:
         return "jackhammer"
+    if num==21:
+        return "rythym"
 
 if __name__ == "__main__":
     
