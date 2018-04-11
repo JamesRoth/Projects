@@ -94,7 +94,7 @@ def pickWord(): #picks a word to use
     if num==12:
         return "blackboard"
     if num==13:
-        return "planetary"
+        return "planet"
     if num==14:
         return "bullfight"
     if num==15:
