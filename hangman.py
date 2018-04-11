@@ -149,6 +149,6 @@ if __name__ == "__main__":
         for ch in "abcdefghijklmnopqrstuvwxyz": #checks for each key pressed
             App().listenKeyEvent("keydown",ch, guess)
         
-    App().listenKeyEvent("keydown","space", reset)
+        App().listenKeyEvent("keydown","space", reset)
         
-    App().run()
+        App().run()
