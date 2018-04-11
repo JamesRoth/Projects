@@ -5,7 +5,7 @@
 from ggame import *
 from random import randint
 
-def reset(event): #resets game
+def reset(event): #resets game (if it worked)
     word=pickWord
     data["badGuess"]=""
     data["goodGuess"]=""
