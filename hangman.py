@@ -128,7 +128,7 @@ if __name__ == "__main__":
     
     blackoutline=LineStyle(1, black)
     
-    gallows1=RectangleAsset(30,800,blackoutline,brown) #makes the gallows
+    gallows1=RectangleAsset(30,500,blackoutline,brown) #makes the gallows
     gallows2=RectangleAsset(240,30,blackoutline,brown)
     gallows3=RectangleAsset(7, 50, blackoutline,black)
     gallows4=PolygonAsset([(0,160),(0,130),(130,0),(160,0)],blackoutline,brown)
