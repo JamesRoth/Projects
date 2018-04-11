@@ -5,7 +5,7 @@
 from ggame import *
 from random import randint
 
-def reset(event): #want to play a new game without hitting stop and go again? this one's for you (well, if it worked)
+def reset(event): #resets game
     word=pickWord
     data["badGuess"]=""
     data["goodGuess"]=""
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     data["used"]=""
     data["loss"]=0
     
-    word=pickWord()
+    word=pickWord() 
     
     black=Color(0x000000,1)
     red=Color(0xff0000,1)
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     
     blackoutline=LineStyle(1, black)
     
-    gallows1=RectangleAsset(30,1000,blackoutline,brown)
+    gallows1=RectangleAsset(30,1000,blackoutline,brown) #makes the gallows
     gallows2=RectangleAsset(240,30,blackoutline,brown)
     gallows3=RectangleAsset(7, 50, blackoutline,black)
     gallows4=PolygonAsset([(0,160),(0,130),(130,0),(160,0)],blackoutline,brown)
@@ -143,7 +143,7 @@ if __name__ == "__main__":
     for i in range(1,len(word)+1):
         Sprite(blank, (200+i*70, 500))
     
-    for ch in "abcdefghijklmnopqrstuvwxyz":
+    for ch in "abcdefghijklmnopqrstuvwxyz": #checks for each key pressed
         App().listenKeyEvent("keydown",ch, guess)
     
     #App().listenKeyEvent("keydown","up arrow", reset) #reset doesn't want to work
