@@ -13,12 +13,12 @@ def reset(event): #resets game (if it worked)
     for item in App().spritelist[:]:
         item.destroy()
     a=1
-    word=pickWord()
+    data["word"]=pickWord()
     gallows()
     print(word)
 
 def wordComplete(): #checking to see if the whole word is guessed
-    if len(data["goodGuess"])==len(word):
+    if len(data["goodGuess"])==len(data["word"]):
         print("You win! Good job.")
         Sprite(TextAsset("You win!",fill=black,style="70pt Arial"),(400,150))
         data["loss"]=2
@@ -33,7 +33,7 @@ def guess(event): #when a letter is guessed - is it right or wrong?
             data["badGuess"]+=ch
             printHangman(len(data["badGuess"]))
         elif ch in word and ch not in data["goodGuess"]:
-            printLetter(word,ch)
+            printLetter(data["word"],ch)
         elif ch in data["badGuess"] or ch in data["goodGuess"]:
             print("You've already guessed this letter!")
 
@@ -53,7 +53,7 @@ def gallows():
     Sprite(gallows3, (240,60))
     Sprite(gallows4, (20,30))
     Sprite(gallows5, (0,510))
-    for i in range(1,len(word)+1):
+    for i in range(1,len(data["word"])+1):
         Sprite(blank, (200+i*70, 500))
 
 def printHangman(length): #prints hangman based on incorrect answers
@@ -77,8 +77,8 @@ def printHangman(length): #prints hangman based on incorrect answers
         if i==6:
             data["loss"]=1
             Sprite(leg2, (190,270))
-            print("You lose! Game over. The word was: " + word)
-            Sprite(TextAsset("You lose! The word was: " + word,fill=red,style="30pt Arial"),(400,150))
+            print("You lose! Game over. The word was: " + data["word"])
+            Sprite(TextAsset("You lose! The word was: " + data["word"],fill=red,style="30pt Arial"),(400,150))
 
 def pickWord(): #picks a word to use
     num=randint(1,21)
@@ -130,12 +130,13 @@ if __name__ == "__main__":
     while a==1:
         a=0
         data={}
+        data["word"]=""
         data["badGuess"]=""
         data["goodGuess"]=""
         data["used"]=""
         data["loss"]=0
         
-        word=pickWord() 
+        data["word"]=pickWord() 
         
         black=Color(0x000000,1)
         red=Color(0xff0000,1)
