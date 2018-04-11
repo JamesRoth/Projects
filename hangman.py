@@ -47,6 +47,15 @@ def printLetter(string,char): #prints a correct letter on the correct line
             data["goodGuess"]+=ch
     wordComplete()
 
+def gallows():
+    Sprite(gallows1, (20,50))
+    Sprite(gallows2, (40,30))
+    Sprite(gallows3, (240,60))
+    Sprite(gallows4, (20,30))
+    Sprite(gallows5, (0,510))
+    for i in range(1,len(word)+1):
+        Sprite(blank, (200+i*70, 500))
+
 def printHangman(length): #prints hangman based on incorrect answers
     head=EllipseAsset(30,40,blackoutline,Color(0xfffffff,1))
     body=RectangleAsset(10,90,blackoutline,black)
@@ -141,14 +150,7 @@ if __name__ == "__main__":
         gallows5=RectangleAsset(210,25,blackoutline,brown)
         blank=RectangleAsset(50,7,blackoutline,black)
         
-        def gallows():
-            Sprite(gallows1, (20,50))
-            Sprite(gallows2, (40,30))
-            Sprite(gallows3, (240,60))
-            Sprite(gallows4, (20,30))
-            Sprite(gallows5, (0,510))
-            for i in range(1,len(word)+1):
-                Sprite(blank, (200+i*70, 500))
+        gallows()
         
         for ch in "abcdefghijklmnopqrstuvwxyz": #checks for each key pressed
             App().listenKeyEvent("keydown",ch, guess)
