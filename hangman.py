@@ -6,7 +6,6 @@ from ggame import *
 from random import randint
 
 def reset(event): #resets game (if it worked)
-    word=pickWord
     data["badGuess"]=""
     data["goodGuess"]=""
     data["used"]=""
@@ -14,8 +13,9 @@ def reset(event): #resets game (if it worked)
     for item in App().spritelist[:]:
         item.destroy()
     a=1
+    word=pickWord()
     gallows()
-    print(data["badGuess"], data["goodGuess"], data["loss"])
+    print(word)
 
 def wordComplete(): #checking to see if the whole word is guessed
     if len(data["goodGuess"])==len(word):
