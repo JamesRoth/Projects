@@ -11,7 +11,8 @@ def reset(event): #resets game (if it worked)
     data["goodGuess"]=""
     data["used"]=""
     data["loss"]=0
-    guess()
+    for item in App().spritelist[:]:
+        item.destroy()
     print(data["badGuess"], data["goodGuess"], data["loss"])
 
 def wordComplete(): #checking to see if the whole word is guessed
@@ -114,41 +115,40 @@ def pickWord(): #picks a word to use
         return "rythym"
 
 if __name__ == "__main__":
-    
-    data={}
-    data["badGuess"]=""
-    data["goodGuess"]=""
-    data["used"]=""
-    data["loss"]=0
-    
-    word=pickWord() 
-    
-    black=Color(0x000000,1)
-    red=Color(0xff0000,1)
-    brown=Color(0x934b14,1)
-    
-    blackoutline=LineStyle(1, black)
-    
-    gallows1=RectangleAsset(30,500,blackoutline,brown) #makes the gallows
-    gallows2=RectangleAsset(240,30,blackoutline,brown)
-    gallows3=RectangleAsset(7, 50, blackoutline,black)
-    gallows4=PolygonAsset([(0,160),(0,130),(130,0),(160,0)],blackoutline,brown)
-    gallows5=RectangleAsset(210,25,blackoutline,brown)
-    blank=RectangleAsset(50,7,blackoutline,black)
-    
-    Sprite(gallows1, (20,50))
-    Sprite(gallows2, (40,30))
-    Sprite(gallows3, (240,60))
-    Sprite(gallows4, (20,30))
-    Sprite(gallows5, (0,510))
-    for i in range(1,len(word)+1):
-        Sprite(blank, (200+i*70, 500))
-    
-    for ch in "abcdefghijklmnopqrstuvwxyz": #checks for each key pressed
-        App().listenKeyEvent("keydown",ch, guess)
-    
+    while True:
+        a=0
+        data={}
+        data["badGuess"]=""
+        data["goodGuess"]=""
+        data["used"]=""
+        data["loss"]=0
+        
+        word=pickWord() 
+        
+        black=Color(0x000000,1)
+        red=Color(0xff0000,1)
+        brown=Color(0x934b14,1)
+        
+        blackoutline=LineStyle(1, black)
+        
+        gallows1=RectangleAsset(30,500,blackoutline,brown) #makes the gallows
+        gallows2=RectangleAsset(240,30,blackoutline,brown)
+        gallows3=RectangleAsset(7, 50, blackoutline,black)
+        gallows4=PolygonAsset([(0,160),(0,130),(130,0),(160,0)],blackoutline,brown)
+        gallows5=RectangleAsset(210,25,blackoutline,brown)
+        blank=RectangleAsset(50,7,blackoutline,black)
+        
+        Sprite(gallows1, (20,50))
+        Sprite(gallows2, (40,30))
+        Sprite(gallows3, (240,60))
+        Sprite(gallows4, (20,30))
+        Sprite(gallows5, (0,510))
+        for i in range(1,len(word)+1):
+            Sprite(blank, (200+i*70, 500))
+        
+        for ch in "abcdefghijklmnopqrstuvwxyz": #checks for each key pressed
+            App().listenKeyEvent("keydown",ch, guess)
+        
     App().listenKeyEvent("keydown","space", reset)
-    
-    #App().listenKeyEvent("keydown","up arrow", reset) #reset doesn't want to work
-    
+        
     App().run()
