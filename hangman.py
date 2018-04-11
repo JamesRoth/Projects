@@ -13,6 +13,8 @@ def reset(event): #resets game (if it worked)
     data["loss"]=0
     for item in App().spritelist[:]:
         item.destroy()
+    a=1
+    gallows()
     print(data["badGuess"], data["goodGuess"], data["loss"])
 
 def wordComplete(): #checking to see if the whole word is guessed
@@ -115,7 +117,8 @@ def pickWord(): #picks a word to use
         return "rythym"
 
 if __name__ == "__main__":
-    while True:
+    a=1
+    while a==1:
         a=0
         data={}
         data["badGuess"]=""
@@ -138,13 +141,14 @@ if __name__ == "__main__":
         gallows5=RectangleAsset(210,25,blackoutline,brown)
         blank=RectangleAsset(50,7,blackoutline,black)
         
-        Sprite(gallows1, (20,50))
-        Sprite(gallows2, (40,30))
-        Sprite(gallows3, (240,60))
-        Sprite(gallows4, (20,30))
-        Sprite(gallows5, (0,510))
-        for i in range(1,len(word)+1):
-            Sprite(blank, (200+i*70, 500))
+        def gallows():
+            Sprite(gallows1, (20,50))
+            Sprite(gallows2, (40,30))
+            Sprite(gallows3, (240,60))
+            Sprite(gallows4, (20,30))
+            Sprite(gallows5, (0,510))
+            for i in range(1,len(word)+1):
+                Sprite(blank, (200+i*70, 500))
         
         for ch in "abcdefghijklmnopqrstuvwxyz": #checks for each key pressed
             App().listenKeyEvent("keydown",ch, guess)
