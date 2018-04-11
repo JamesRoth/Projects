@@ -5,7 +5,7 @@
 from ggame import *
 from random import randint
 
-def reset(event): #resets game (if it worked)
+def reset(event): #resets game (not 100% sure why it works, but if it works, i don't really care)
     data["badGuess"]=""
     data["goodGuess"]=""
     data["used"]=""
@@ -46,7 +46,7 @@ def printLetter(string,char): #prints a correct letter on the correct line
             data["goodGuess"]+=ch
     wordComplete()
 
-def gallows():
+def gallows(): #sprites the gallows
     Sprite(gallows1, (20,50))
     Sprite(gallows2, (40,30))
     Sprite(gallows3, (240,60))
