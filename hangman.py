@@ -32,7 +32,7 @@ def guess(event): #when a letter is guessed - is it right or wrong?
         if ch not in data["badGuess"] and ch not in data["word"]:
             data["badGuess"]+=ch
             printHangman(len(data["badGuess"]))
-        elif ch in word and ch not in data["goodGuess"]:
+        elif ch in data["word"] and ch not in data["goodGuess"]:
             printLetter(data["word"],ch)
         elif ch in data["badGuess"] or ch in data["goodGuess"]:
             print("You've already guessed this letter!")
