@@ -15,7 +15,7 @@ def reset(event): #resets game (if it worked)
     a=1
     data["word"]=pickWord()
     gallows()
-    print(word)
+    print(data["word"])
 
 def wordComplete(): #checking to see if the whole word is guessed
     if len(data["goodGuess"])==len(data["word"]):
