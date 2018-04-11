@@ -11,6 +11,7 @@ def reset(event): #resets game (if it worked)
     data["goodGuess"]=""
     data["used"]=""
     data["loss"]=0
+    guess()
     print(data["badGuess"], data["goodGuess"], data["loss"])
 
 def wordComplete(): #checking to see if the whole word is guessed
@@ -145,6 +146,8 @@ if __name__ == "__main__":
     
     for ch in "abcdefghijklmnopqrstuvwxyz": #checks for each key pressed
         App().listenKeyEvent("keydown",ch, guess)
+    
+    App().listenKeyEvent("keydown","space", reset)
     
     #App().listenKeyEvent("keydown","up arrow", reset) #reset doesn't want to work
     
