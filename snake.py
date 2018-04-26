@@ -12,12 +12,16 @@ COLUMNS=52
 
 #functions
 def moveDown():
-    headMove()
+    headMove(0,-1)
+    
 def moveUp():
+    headMove(0,1)
     
 def moveLeft():
+    headMove(1,0)
     
-def moveLeft():
+def moveRight():
+    headMove(0,-1)
     
 def headMove(rowC, colC)
 
