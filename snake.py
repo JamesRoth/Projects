@@ -41,8 +41,8 @@ def spriteSnake(headX, headY): #sprites the snake - but snake not showing up
         Sprite(snakeBox, (CELLSIZE*data["snakePos"][i*2], CELLSIZE*data["snakePos"][i*2+1]))
 
 def moveApple():
-    data["appleX"]=randint(1,ROWS)
-    data["appleY"]=randint(1,COLUMNS)
+    data["appleX"]=randint(1,COLUMNS)
+    data["appleY"]=randint(1,ROWS)
     spriteApple()
 
 def moveDown():
@@ -77,8 +77,8 @@ if __name__ == "__main__":
     #dictionary
     data={}
     data["lengthChange"]=0
-    data["appleX"]=randint(1,ROWS)
-    data["appleY"]=randint(1,COLUMNS)
+    data["appleX"]=randint(1,COLUMNS)
+    data["appleY"]=randint(1,ROWS)
     data["headX"]=ROWS/2-3
     data["headY"]=COLUMNS/2
     data["length"]=4
