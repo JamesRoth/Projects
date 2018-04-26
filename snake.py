@@ -39,8 +39,11 @@ def moveRight():
     headMove(1,0)
     
 def headMove(rowC, colC): #updates the snake's position
-    data["snakePos"].remove(data["snakePos"][1])
-    data["snakePos"].remove(data["snakePos"][0])
+    if data["lengthChange"]==0:
+        data["snakePos"].remove(data["snakePos"][1])
+        data["snakePos"].remove(data["snakePos"][0])
+    else:
+        data["lengthChange"]=0
     data["headX"]+=rowC
     data["headY"]+colC
     data["snakePos"].append(data["headX"])
