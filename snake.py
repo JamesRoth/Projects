@@ -11,10 +11,10 @@ ROWS=28
 COLUMNS=52
 
 #functions
-def touchingApple():
+def touchingApple(): #checks for consumption of apple
     
 
-def touchingSelf():
+def collision(): #checks for collision with self or wall
     
 
 def spriteSnake(length): #sprites the snake, takes length as an input so I dont have to type data["length"] every time
@@ -42,7 +42,7 @@ def headMove(rowC, colC): #updates the snake's position
     data["snakePos"].append(data["headX"]+rowC)
     data["snakePos"].append(data["headY"]+colC)
     touchingApple()
-    touchingSelf()
+    collision()
 
 if __name__ == "__main__":
     
