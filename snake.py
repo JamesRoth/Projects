@@ -20,7 +20,7 @@ def collision(): #checks for collision with self or wall
         break
 
 def spriteApple():
-    Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red)
+    Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red), (data["appleX"]*CELLSIZE, data["appleY"]*CELLSIZE))
 
 def spriteSnake(headX, headY): #sprites the snake
     Sprite(snakeBox, (headX*CELLSIZE,headY*CELLSIZE)
@@ -80,7 +80,7 @@ if __name__ == "__main__":
     
     #spriting the assets
     Sprite(background)
-    spriteSnake(data["length"])
+    spriteApple()
     spriteSnake(data["headX"],data["headY"])
     
     #arrow controls
