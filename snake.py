@@ -23,7 +23,9 @@ def spriteApple():
     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red), (data["appleX"]*CELLSIZE, data["appleY"]*CELLSIZE))
 
 def spriteSnake(headX, headY): #sprites the snake
-    Sprite(snakeBox, (headX*CELLSIZE,headY*CELLSIZE)
+    Sprite(snakeBox, (headX*CELLSIZE, headY*CELLSIZE)
+    for i in range (1, len(data["snakePos"])):
+        Sprite
 
 def moveApple():
     data["appleX"]=randint(1,ROWS)
