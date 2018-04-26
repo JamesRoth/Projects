@@ -23,7 +23,7 @@ def step():
     
 
 def touchingApple(): #checks for consumption of apple
-    if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
+    if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]: #may have a slight postion problem, cant test now
         data["length"]+=1
         data["lengthChange"]=1
 
