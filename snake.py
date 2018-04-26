@@ -7,12 +7,12 @@ from random import randint
 
 #constants
 CELLSIZE=20
-ROWS=26
-COLUMNS=48
+ROWS=20
+COLUMNS=36
 
 #functions
 def spriteMain():
-    Sprite(background, (5,5))
+    Sprite(background)
     spriteApple()
     spriteSnake(data["headX"],data["headY"])
 
@@ -33,6 +33,7 @@ def collision(): #checks for collision with self or wall - current placeholder w
 
 def spriteApple():
     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red), (data["appleX"]*CELLSIZE, data["appleY"]*CELLSIZE))
+    print(data["appleX"], data["appleY"])
 
 def spriteSnake(headX, headY): #sprites the snake - but snake not showing up
     Sprite(snakeBox, (headX*CELLSIZE, headY*CELLSIZE))
