@@ -81,6 +81,7 @@ if __name__ == "__main__":
     #spriting the assets
     Sprite(background)
     spriteSnake(data["length"])
+    spriteSnake()
     
     #arrow controls
     App().listenKeyEvent("keydown","right arrow",moveRight)
