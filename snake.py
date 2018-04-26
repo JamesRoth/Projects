@@ -12,7 +12,7 @@ COLUMNS=50
 
 #functions
 def step():
-    for item in app.spritelist[:]:
+    for item in App().spritelist[:]:
         item.destroy()
 
 def touchingApple(): #checks for consumption of apple
