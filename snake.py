@@ -15,4 +15,6 @@ red=Color(0xff0000,1)
 blackOutline=LineStyle(1,black)
 
 if __name__ == "__main__":
-    background=RectangleAsset(1000,700,blackOutline,green)
+    background=RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green)
+    
+    Sprite(background)
