@@ -14,16 +14,16 @@ COLUMNS=52
 def touchingApple(): #checks for consumption of apple
     if data["headX"]=data["appleX"] and data["headY"]=data["appleY"]:
         data["length"]+=1
-        
 
 def collision(): #checks for collision with self or wall
-    
+    while True:
+        break
 
 def spriteApple():
     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red)
 
-def spriteSnake(length): #sprites the snake, takes length as an input so I dont have to type data["length"] every time
-    Sprite(snakeBox)
+def spriteSnake(headX, headY): #sprites the snake
+    Sprite(snakeBox, (headX*CELLSIZE,headY*CELLSIZE)
 
 def moveApple():
     data["appleX"]=randint(1,ROWS)
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     #spriting the assets
     Sprite(background)
     spriteSnake(data["length"])
-    spriteSnake()
+    spriteSnake(data["headX"],data["headY"])
     
     #arrow controls
     App().listenKeyEvent("keydown","right arrow",moveRight)
