@@ -64,10 +64,10 @@ if __name__ == "__main__":
     data["lengthChange"]=0
     data["appleX"]=randint(0,ROWS)
     data["appleY"]=randint(0,COLUMNS)
-    data["headX"]=ROWS/2
-    data["headY"]=COLUMNS/2
+    data["headX"]=ROWS/2-3
+    data["headY"]=COLUMNS/2-3
     data["length"]=4
-    data["snakePos"]=[ROWS/2-3, COLUMNS/2-3, ROWS/2-2, COLUMNS/2-2, ROWS/2-1, COLUMNS/2-1, ROWS/2, COLUMNS/2] #initial snake position
+    data["snakePos"]=[ROWS/2-3, COLUMNS/2-3, ROWS/2-2, COLUMNS/2-2, ROWS/2-1, COLUMNS/2-1, ROWS/2, COLUMNS/2] #initial snake position - head is 1st
     
     #colors
     green=Color(0x006600,1)
