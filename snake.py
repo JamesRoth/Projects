@@ -25,10 +25,10 @@ def moveUp():
     headMove(0,1)
     
 def moveLeft():
-    headMove(1,0)
+    headMove(-1,0)
     
 def moveRight():
-    headMove(0,-1)
+    headMove(1,0)
     
 def headMove(rowC, colC): #updates the snake's position
     data["snakePos"].remove(data["snakePos"][1])
