@@ -52,8 +52,10 @@ def headMove(rowC, colC): #updates the snake's position
         data["lengthChange"]=0
     data["headX"]+=rowC
     data["headY"]+colC
-    data["snakePos"].append(data["headX"])
+    data["snakePos"].reverse()
     data["snakePos"].append(data["headY"])
+    data["snakePos"].append(data["headX"])
+    data["snakePos"].reverse()
     touchingApple()
     collision()
 
