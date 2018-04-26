@@ -1,6 +1,6 @@
 #James Roth
 #4/26/18
-#snake.py - snake game (for fun)
+#snake.py - snake game (not for class)
 
 from ggame import *
 from random import randint
@@ -33,7 +33,8 @@ def moveRight():
 def headMove(rowC, colC): #updates the snake's position
     data["snakePos"].remove(data["snakePos"][1])
     data["snakePos"].remove(data["snakePos"][0])
-    data["snakePos"].append
+    data["snakePos"].append(data["headX"]+rowC)
+    data["snakePos"].append(data["headY"]+colC)
 
 if __name__ == "__main__":
     
