@@ -12,7 +12,9 @@ COLUMNS=52
 
 #functions
 def touchingApple(): #checks for consumption of apple
-    if 
+    if data["headX"]=data["appleX"] and data["headY"]=data["appleY"]:
+        data["length"]+=1
+        
 
 def collision(): #checks for collision with self or wall
     
@@ -50,6 +52,7 @@ if __name__ == "__main__":
     
     #dictionary
     data={}
+    data["lengthChange"]=0
     data["appleX"]=randint(0,ROWS)
     data["appleY"]=randint(0,COLUMNS)
     data["headX"]=ROWS/2
@@ -72,6 +75,7 @@ if __name__ == "__main__":
     Sprite(background)
     spriteSnake(data["length"])
     
+    #arrow controls
     App().listenKeyEvent("keydown","right arrow",moveRight)
     App().listenKeyEvent("keydown","left arrow",moveLeft)
     App().listenKeyEvent("keydown","up arrow",moveUp)
