@@ -50,4 +50,4 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
     
-    App.run(step)
+    App().run()
