@@ -19,7 +19,8 @@ def spriteMain():
 def step():
     for item in App().spritelist[:]:
         item.destroy()
-    spriteMain()
+    spriteMain() #seems to creat some sort of infinite loop, doesn't let me stop the program
+    break
 
 def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
