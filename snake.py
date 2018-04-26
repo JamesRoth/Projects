@@ -12,7 +12,7 @@ COLUMNS=52
 
 #functions
 def touchingApple(): #checks for consumption of apple
-    if data["headX"]=data["appleX"] and data["headY"]=data["appleY"]:
+    if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
         data["length"]+=1
 
 def collision(): #checks for collision with self or wall
