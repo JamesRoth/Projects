@@ -20,7 +20,6 @@ def step():
     for item in App().spritelist[:]:
         item.destroy()
     spriteMain() #seems to create some sort of infinite loop, doesn't let me stop the program - still not clear how ggame works
-    
 
 def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]: #may have a slight postion problem, cant test now
