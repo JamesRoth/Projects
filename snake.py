@@ -17,7 +17,8 @@ if __name__ == "__main__":
     
     #dictionary
     data={}
-    data["length"]=0
+    data["length"]=4
+    data["snakePos"]=[ROWS/2,COLUMNS/2,ROWS/2-1,COLUMNS/2-1,ROWS/2-2,COLUMNS/2-2,ROWS/2-3,COLUMNS/2-3]
     
     #colors
     green=Color(0x006600,1)
