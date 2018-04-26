@@ -12,7 +12,7 @@ COLUMNS=52
 
 #functions
 def touchingApple(): #checks for consumption of apple
-    
+    if 
 
 def collision(): #checks for collision with self or wall
     
@@ -39,6 +39,8 @@ def moveRight():
 def headMove(rowC, colC): #updates the snake's position
     data["snakePos"].remove(data["snakePos"][1])
     data["snakePos"].remove(data["snakePos"][0])
+    data["headX"]+=rowC
+    data["headY"]+colC
     data["snakePos"].append(data["headX"]+rowC)
     data["snakePos"].append(data["headY"]+colC)
     touchingApple()
