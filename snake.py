@@ -7,8 +7,8 @@ from random import randint
 
 #constants
 CELLSIZE=20
-ROWS=30
-COLUMNS=50
+ROWS=26
+COLUMNS=48
 
 #functions
 def spriteMain():
@@ -20,7 +20,7 @@ def step():
     for item in App().spritelist[:]:
         item.destroy()
     spriteMain() #seems to create some sort of infinite loop, doesn't let me stop the program - still not clear how ggame works
-    break
+    
 
 def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
@@ -103,4 +103,4 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
     
-    App().run(step)
+    App().run()
