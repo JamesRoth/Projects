@@ -11,6 +11,9 @@ ROWS=28
 COLUMNS=52
 
 #functions
+def spriteSnake(length):
+    Sprite(snakeBox)
+
 def moveApple():
     data["appleX"]=randint(0,ROWS)
     data["appleY"]=randint(0,COLUMNS)
@@ -47,12 +50,15 @@ if __name__ == "__main__":
     green=Color(0x006600,1)
     black=Color(0xffffff,1)
     red=Color(0xff0000,1)
+    tan=Color(0xd2b48c,1)
     blackOutline=LineStyle(1,black)
 
     background=RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green)
+    snakeBox=RectangleAsset(COLUMNS,ROWS,blackOutline,tan)
     
     #spriting the assets
     Sprite(background)
+    spriteSnake(data["length"])
     
     App().listenKeyEvent("keydown","right arrow",moveRight)
     App().listenKeyEvent("keydown","left arrow",moveLeft)
