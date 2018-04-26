@@ -19,12 +19,16 @@ def touchingApple(): #checks for consumption of apple
 def collision(): #checks for collision with self or wall
     
 
+def spriteApple():
+    Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red)
+
 def spriteSnake(length): #sprites the snake, takes length as an input so I dont have to type data["length"] every time
     Sprite(snakeBox)
 
 def moveApple():
     data["appleX"]=randint(1,ROWS)
     data["appleY"]=randint(1,COLUMNS)
+    spriteApple()
 
 def moveDown():
     headMove(0,-1)
@@ -72,7 +76,7 @@ if __name__ == "__main__":
 
     #assets
     background=RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green)
-    snakeBox=RectangleAsset(COLUMNS,ROWS,blackOutline,tan)
+    snakeBox=RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)
     
     #spriting the assets
     Sprite(background)
