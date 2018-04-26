@@ -12,8 +12,8 @@ COLUMNS=50
 
 #functions
 def step():
-    while True:
-        break
+    for item in app.spritelist[:]:
+        item.destroy()
 
 def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
@@ -97,4 +97,4 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
     
-    App().run()
+    App().run(step)
