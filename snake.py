@@ -11,6 +11,12 @@ ROWS=28
 COLUMNS=52
 
 #functions
+def touchingApple():
+    
+
+def touchingSelf():
+    
+
 def spriteSnake(length): #sprites the snake, takes length as an input so I dont have to type data["length"] every time
     Sprite(snakeBox)
 
@@ -35,6 +41,8 @@ def headMove(rowC, colC): #updates the snake's position
     data["snakePos"].remove(data["snakePos"][0])
     data["snakePos"].append(data["headX"]+rowC)
     data["snakePos"].append(data["headY"]+colC)
+    touchingApple()
+    touchingSelf()
 
 if __name__ == "__main__":
     
