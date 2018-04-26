@@ -11,9 +11,15 @@ ROWS=30
 COLUMNS=50
 
 #functions
+def spriteMain():
+    Sprite(background)
+    spriteApple()
+    spriteSnake(data["headX"],data["headY"])
+
 def step():
     for item in App().spritelist[:]:
         item.destroy()
+    spriteMain()
 
 def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
@@ -87,9 +93,7 @@ if __name__ == "__main__":
     snakeBox=RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)
     
     #spriting the assets
-    Sprite(background)
-    spriteApple()
-    spriteSnake(data["headX"],data["headY"])
+    spriteMain()
     
     #arrow controls
     App().listenKeyEvent("keydown","right arrow",moveRight)
