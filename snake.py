@@ -12,7 +12,7 @@ COLUMNS=48
 
 #functions
 def spriteMain():
-    Sprite(background)
+    Sprite(background, (5,5))
     spriteApple()
     spriteSnake(data["headX"],data["headY"])
 
