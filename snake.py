@@ -40,8 +40,8 @@ def spriteSnake(headX, headY): #sprites the snake - but snake not showing up
         Sprite(snakeBox, (CELLSIZE*data["snakePos"][i*2], CELLSIZE*data["snakePos"][i*2+1]))
 
 def moveApple():
-    data["appleY"]=randint(1,ROWS)
-    data["appleX"]=randint(1,COLUMNS)
+    data["appleX"]=randint(1,ROWS)
+    data["appleY"]=randint(1,COLUMNS)
     spriteApple()
 
 def moveDown():
