@@ -23,7 +23,9 @@ def moveLeft():
 def moveRight():
     headMove(0,-1)
     
-def headMove(rowC, colC)
+def headMove(rowC, colC):
+    data["snakePos"].remove(data["snakePos"][-1])
+    data["snakePos"].remove(data["snakePos"][-2])
 
 if __name__ == "__main__":
     
