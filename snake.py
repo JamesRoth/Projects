@@ -32,7 +32,7 @@ def collision(): #checks for collision with self or wall - current placeholder w
 
 def spriteApple():
     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red), (data["appleX"]*CELLSIZE, data["appleY"]*CELLSIZE))
-    print("AppleX:", data["appleX"], "AppleY:", data["appleY"], "Rows:", ROWS, "Columns:", COLUMNS)
+    #print("AppleX:", data["appleX"], "AppleY:", data["appleY"], "Rows:", ROWS, "Columns:", COLUMNS)
 
 def spriteSnake(headX, headY): #sprites the snake - but snake not showing up
     Sprite(snakeBox, (headX*CELLSIZE, headY*CELLSIZE))
