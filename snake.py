@@ -11,12 +11,12 @@ ROWS=28
 COLUMNS=52
 
 #functions
-def spriteSnake(length):
+def spriteSnake(length): #sprites the snake, takes length as an input so I dont have to type data["length"] every time
     Sprite(snakeBox)
 
 def moveApple():
-    data["appleX"]=randint(0,ROWS)
-    data["appleY"]=randint(0,COLUMNS)
+    data["appleX"]=randint(1,ROWS)
+    data["appleY"]=randint(1,COLUMNS)
 
 def moveDown():
     headMove(0,-1)
@@ -53,6 +53,7 @@ if __name__ == "__main__":
     tan=Color(0xd2b48c,1)
     blackOutline=LineStyle(1,black)
 
+    #assets
     background=RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green)
     snakeBox=RectangleAsset(COLUMNS,ROWS,blackOutline,tan)
     
