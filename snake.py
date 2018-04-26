@@ -19,14 +19,15 @@ def spriteMain():
 def step():
     for item in App().spritelist[:]:
         item.destroy()
-    spriteMain() #seems to creat some sort of infinite loop, doesn't let me stop the program
+    spriteMain() #seems to create some sort of infinite loop, doesn't let me stop the program - still not clear how ggame works
     break
 
 def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
         data["length"]+=1
+        data["lengthChange"]=1
 
-def collision(): #checks for collision with self or wall
+def collision(): #checks for collision with self or wall - current placeholder while I work out mechanics
     while True:
         break
 
