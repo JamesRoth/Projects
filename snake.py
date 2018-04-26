@@ -7,10 +7,14 @@ from random import randint
 
 #constants
 CELLSIZE=20
-ROWS=28
-COLUMNS=52
+ROWS=40
+COLUMNS=28
 
 #functions
+def step():
+    while True:
+        break
+
 def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]:
         data["length"]+=1
@@ -22,9 +26,9 @@ def collision(): #checks for collision with self or wall
 def spriteApple():
     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red), (data["appleX"]*CELLSIZE, data["appleY"]*CELLSIZE))
 
-def spriteSnake(headX, headY): #sprites the snake
+def spriteSnake(headX, headY): #sprites the snake - but snake not showing up
     Sprite(snakeBox, (headX*CELLSIZE, headY*CELLSIZE))
-    for i in range (1, int(len(data["snakePos"])/2)): #giving me a float error for dividing snakePos by 2, but snakePos is always even? 
+    for i in range (1, int(len(data["snakePos"])/2)): 
         Sprite(snakeBox, (CELLSIZE*data["snakePos"][i*2], CELLSIZE*data["snakePos"][i*2+1]))
 
 def moveApple():
@@ -93,4 +97,4 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
     
-    App().run(step)
+    App().run()
