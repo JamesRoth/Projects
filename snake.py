@@ -11,6 +11,10 @@ ROWS=28
 COLUMNS=52
 
 #functions
+def moveApple():
+    data["appleX"]=randint(0,ROWS)
+    data["appleY"]=randint(0,COLUMNS)
+
 def moveDown():
     headMove(0,-1)
     
@@ -23,7 +27,7 @@ def moveLeft():
 def moveRight():
     headMove(0,-1)
     
-def headMove(rowC, colC):
+def headMove(rowC, colC): #updates the snake's position
     data["snakePos"].remove(data["snakePos"][-1])
     data["snakePos"].remove(data["snakePos"][-2])
 
@@ -31,6 +35,8 @@ if __name__ == "__main__":
     
     #dictionary
     data={}
+    data["appleX"]=randint(0,ROWS)
+    data["appleY"]=randint(0,COLUMNS)
     data["length"]=4
     data["snakePos"]=[ROWS/2, COLUMNS/2, ROWS/2-1, COLUMNS/2-1, ROWS/2-2, COLUMNS/2-2, ROWS/2-3, COLUMNS/2-3] #initial snake position
     
