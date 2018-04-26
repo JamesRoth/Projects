@@ -24,7 +24,7 @@ def spriteApple():
 
 def spriteSnake(headX, headY): #sprites the snake
     Sprite(snakeBox, (headX*CELLSIZE, headY*CELLSIZE))
-    for i in range (1, len(data["snakePos"]/2)):
+    for i in range (1, len(data["snakePos"])/2):
         Sprite(snakeBox, (CELLSIZE*data["snakePos"][i*2], CELLSIZE*data["snakePos"][i*2+1]))
 
 def moveApple():
