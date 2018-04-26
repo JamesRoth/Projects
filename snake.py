@@ -11,7 +11,15 @@ ROWS=28
 COLUMNS=52
 
 #functions
-def 
+def moveDown():
+    headMove()
+def moveUp():
+    
+def moveLeft():
+    
+def moveLeft():
+    
+def headMove(rowC, colC)
 
 if __name__ == "__main__":
     
@@ -30,3 +38,10 @@ if __name__ == "__main__":
     
     #spriting the assets
     Sprite(background)
+    
+    App().listenKeyEvent("keydown","right arrow",moveRight)
+    App().listenKeyEvent("keydown","left arrow",moveLeft)
+    App().listenKeyEvent("keydown","up arrow",moveUp)
+    App().listenKeyEvent("keydown","down arrow",moveDown)
+    
+    App.run(step)
