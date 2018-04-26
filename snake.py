@@ -76,8 +76,8 @@ if __name__ == "__main__":
     #dictionary
     data={}
     data["lengthChange"]=0
-    data["appleX"]=randint(0,ROWS)
-    data["appleY"]=randint(0,COLUMNS)
+    data["appleX"]=randint(1,ROWS)
+    data["appleY"]=randint(1,COLUMNS)
     data["headX"]=ROWS/2-3
     data["headY"]=COLUMNS/2
     data["length"]=4
