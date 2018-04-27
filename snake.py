@@ -82,6 +82,7 @@ def updateSnake(rowC, colC): #updates the snake's position - need to update all,
     data["snakePos"].append(data["snakePos"][1]+colC)
     data["snakePos"].remove(data["snakePos"][0])
     data["snakePos"].remove(data["snakePos"][1])
+    print(data["snakePos"][0], data["snakePos"][1])
     print(data["snakePos"], "edit")
     touchingApple()
     collision()
