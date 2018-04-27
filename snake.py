@@ -44,16 +44,16 @@ def moveApple():
     data["appleY"]=randint(1,ROWS)
     spriteApple()
 
-def moveDown():
+def moveDown(event):
     headMove(0,-1)
     
-def moveUp():
+def moveUp(event):
     headMove(0,1)
     
-def moveLeft():
+def moveLeft(event):
     headMove(-1,0)
     
-def moveRight():
+def moveRight(event):
     headMove(1,0)
     
 def headMove(rowC, colC): #updates the snake's position
@@ -103,4 +103,4 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
     
-    App().run(step)
+    App().run()
