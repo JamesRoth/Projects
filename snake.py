@@ -35,8 +35,8 @@ def spriteApple():
     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red), (data["appleX"]*CELLSIZE, data["appleY"]*CELLSIZE))
     #print("AppleX:", data["appleX"], "AppleY:", data["appleY"], "Rows:", ROWS, "Columns:", COLUMNS)
 
-def spriteSnake(headX, headY): #sprites the snake - but snake not showing up
-    Sprite(snakeBox, (headX*CELLSIZE, headY*CELLSIZE))
+def spriteSnake(): #sprites the snake - but snake not showing up
+    Sprite(snakeBox, (data["headX"]*CELLSIZE, data["headY"]*CELLSIZE))
     for i in range (1, int(len(data["snakePos"])/2)): 
         Sprite(snakeBox, (CELLSIZE*data["snakePos"][i*2], CELLSIZE*data["snakePos"][i*2+1]))
 
@@ -58,6 +58,7 @@ def moveRight(event):
     updateSnake(1,0)
     
 def updateSnake(rowC, colC): #updates the snake's position - need to update all, not just head - currently just moves head
+    """
     if data["lengthChange"]==0:
         data["snakePos"].remove(data["snakePos"][1])
         data["snakePos"].remove(data["snakePos"][0])
@@ -69,9 +70,18 @@ def updateSnake(rowC, colC): #updates the snake's position - need to update all,
     data["snakePos"].append(data["headY"])
     data["snakePos"].append(data["headX"])
     data["snakePos"].reverse()
+    """
+    if data["lengthChange"]==0:
+        data["snakePos"].remove(data["snakePos"][1])
+        data["snakePos"].remove(data["snakePos"][0])
+    else:
+        data["lengthChange"]=0
+    for i in range(0,len(data["snakePos"]),2):
+        data["snakePos"][i]+=rowC
+        data["snakePos"][i]+=colC
     touchingApple()
     collision()
-    spriteSnake(data["headX"],data["headY"])
+    spriteSnake()
 
 if __name__ == "__main__":
     
