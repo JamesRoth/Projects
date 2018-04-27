@@ -70,6 +70,7 @@ def headMove(rowC, colC): #updates the snake's position
     data["snakePos"].reverse()
     touchingApple()
     collision()
+    print(data["snakePos"])
 
 if __name__ == "__main__":
     
