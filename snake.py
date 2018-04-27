@@ -64,7 +64,7 @@ def headMove(rowC, colC): #updates the snake's position
         data["lengthChange"]=0
     data["headX"]+=rowC
     data["headY"]+colC
-    data["snakePos"].reverse()
+    data["snakePos"].reverse() #allows me to add data for the head without a more complicated process
     data["snakePos"].append(data["headY"])
     data["snakePos"].append(data["headX"])
     data["snakePos"].reverse()
@@ -103,4 +103,4 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
     
-    App().run()
+    App().run(step)
