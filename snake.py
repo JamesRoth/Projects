@@ -75,8 +75,8 @@ def updateSnake(rowC, colC): #updates the snake's position - need to update all,
     """
     print(data["snakePos"])
     data["snakePos"].reverse() #allows me to add data for the head without a more complicated process
-    data["snakePos"].append(data["snakePos"][-2]+colC)
     data["snakePos"].append(data["snakePos"][-1]+rowC)
+    data["snakePos"].append(data["snakePos"][-2]+colC)
     data["snakePos"].reverse()
     if data["lengthChange"]==0:
         data["snakePos"].remove(data["snakePos"][-2])
