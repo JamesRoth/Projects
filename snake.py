@@ -45,10 +45,10 @@ def moveApple():
     spriteApple()
 
 def moveDown(event):
-    headMove(0,-1)
+    headMove(0,1)
     
 def moveUp(event):
-    headMove(0,1)
+    headMove(0,-1)
     
 def moveLeft(event):
     headMove(-1,0)
