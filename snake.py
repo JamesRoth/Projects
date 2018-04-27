@@ -46,18 +46,18 @@ def moveApple():
     spriteApple()
 
 def moveDown(event):
-    headMove(0,1)
+    updateSnake(0,1)
     
 def moveUp(event):
-    headMove(0,-1)
+    updateSnake(0,-1)
     
 def moveLeft(event):
-    headMove(-1,0)
+    updateSnake(-1,0)
     
 def moveRight(event):
-    headMove(1,0)
+    updateSnake(1,0)
     
-def headMove(rowC, colC): #updates the snake's position
+def updateSnake(rowC, colC): #updates the snake's position - need to update all, not just head - currently just moves head
     if data["lengthChange"]==0:
         data["snakePos"].remove(data["snakePos"][1])
         data["snakePos"].remove(data["snakePos"][0])
