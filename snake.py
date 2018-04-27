@@ -56,6 +56,10 @@ def moveLeft(event):
 def moveRight(event):
     updateSnake(1,0)
     
+def stop():
+    while True:
+        break
+
 def updateSnake(rowC, colC): #updates the snake's position - need to update all, not just head - currently just moves head
     """
     if data["lengthChange"]==0:
@@ -115,5 +119,6 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","left arrow",moveLeft)
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
+    App().listenKeyEvent("keydown","down arrow",stop)
     
     App().run(step)
