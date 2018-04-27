@@ -25,6 +25,7 @@ def touchingApple(): #checks for consumption of apple
     if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]: #seems to have a slight postion problem
         data["length"]+=1
         data["lengthChange"]=1
+        data["score"]+=1
 
 def collision(): #checks for collision with self or wall - currently a placeholder
     while True:
@@ -80,6 +81,7 @@ if __name__ == "__main__":
     
     #dictionary
     data={}
+    data["score"]=0
     data["lengthChange"]=0
     data["appleX"]=randint(1,COLUMNS)
     data["appleY"]=randint(1,ROWS)
