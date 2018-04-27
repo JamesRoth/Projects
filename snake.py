@@ -14,7 +14,7 @@ COLUMNS=36
 def spriteMain():
     Sprite(background)
     spriteApple()
-    spriteSnake(data["headX"],data["headY"])
+    spriteSnake()
 
 def step():
     for item in App().spritelist[:]:
