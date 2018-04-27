@@ -62,6 +62,7 @@ def headMove(rowC, colC): #updates the snake's position
         data["snakePos"].remove(data["snakePos"][0])
     else:
         data["lengthChange"]=0
+    print(data["lengthChange"])
     data["headX"]+=rowC
     data["headY"]+=colC
     data["snakePos"].reverse() #allows me to add data for the head without a more complicated process
@@ -71,7 +72,6 @@ def headMove(rowC, colC): #updates the snake's position
     touchingApple()
     collision()
     spriteSnake(data["headX"],data["headY"])
-    print(data["snakePos"])
 
 if __name__ == "__main__":
     
