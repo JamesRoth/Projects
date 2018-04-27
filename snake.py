@@ -73,7 +73,7 @@ def updateSnake(rowC, colC): #updates the snake's position - need to update all,
     collision()
     spriteSnake()
     """
-    
+    print(data["snakePos"])
     data["snakePos"].reverse() #allows me to add data for the head without a more complicated process
     data["snakePos"].append(data["snakePos"][-2]+colC)
     data["snakePos"].append(data["snakePos"][-1]+rowC)
