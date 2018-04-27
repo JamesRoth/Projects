@@ -22,11 +22,11 @@ def step():
     spriteMain() #seems to create some sort of infinite loop, doesn't let me stop the program - still not clear how ggame works
 
 def touchingApple(): #checks for consumption of apple
-    if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]: #may have a slight postion problem, cant test now
+    if data["headX"]==data["appleX"] and data["headY"]==data["appleY"]: #seems to have a slight postion problem
         data["length"]+=1
         data["lengthChange"]=1
 
-def collision(): #checks for collision with self or wall - current placeholder while I work out mechanics
+def collision(): #checks for collision with self or wall - currently a placeholder
     while True:
         break
 
