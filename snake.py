@@ -70,6 +70,9 @@ def updateSnake(rowC, colC): #updates the snake's position - need to update all,
     data["snakePos"].append(data["headY"])
     data["snakePos"].append(data["headX"])
     data["snakePos"].reverse()
+    touchingApple()
+    collision()
+    spriteSnake()
     """
     if data["lengthChange"]==0:
         data["snakePos"].remove(data["snakePos"][1])
