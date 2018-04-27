@@ -63,7 +63,7 @@ def headMove(rowC, colC): #updates the snake's position
     else:
         data["lengthChange"]=0
     data["headX"]+=rowC
-    data["headY"]+colC
+    data["headY"]+=colC
     data["snakePos"].reverse() #allows me to add data for the head without a more complicated process
     data["snakePos"].append(data["headY"])
     data["snakePos"].append(data["headX"])
