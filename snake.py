@@ -76,9 +76,11 @@ def updateSnake(rowC, colC): #updates the snake's position - need to update all,
     print(data["snakePos"])
     if colC==0:
         data["snakePos"].append(data["snakePos"][0]+rowC)
+        data["snakePos"].append(data["snakePos"][1]+colC)
         data["snakePos"].remove(data["snakePos"][0])
         data["snakePos"].remove(data["snakePos"][2])
     elif rowC==0:
+        data["snakePos"].append(data["snakePos"][0]+rowC)
         data["snakePos"].append(data["snakePos"][1]+colC)
         data["snakePos"].remove(data["snakePos"][1])
         data["snakePos"].remove(data["snakePos"][3])
