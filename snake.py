@@ -55,10 +55,6 @@ def moveLeft(event):
     
 def moveRight(event):
     updateSnake(1,0)
-    
-def stop():
-    while True:
-        break
 
 def updateSnake(rowC, colC): #updates the snake's position - need to update all, not just head - currently just moves head
     """
@@ -79,7 +75,7 @@ def updateSnake(rowC, colC): #updates the snake's position - need to update all,
     """
     print(data["snakePos"])
     data["snakePos"].append(data["snakePos"][0]+rowC)
-    data["snakePos"].append(data["snakePos"][2]+colC)
+    data["snakePos"].append(data["snakePos"][1]+colC)
     data["snakePos"].remove(data["snakePos"][0])
     data["snakePos"].remove(data["snakePos"][2])
     print(data["snakePos"][0], data["snakePos"][2])
@@ -120,6 +116,5 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","left arrow",moveLeft)
     App().listenKeyEvent("keydown","up arrow",moveUp)
     App().listenKeyEvent("keydown","down arrow",moveDown)
-    App().listenKeyEvent("keydown","down arrow",stop)
     
     App().run(step)
