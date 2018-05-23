@@ -26,10 +26,10 @@ def drawSnakeBoard(): #draws bakcground, calls snake creation
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
     #Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)) - snake cell
 
-def loadSnakeBoard():
+def loadSnakeBoard(): #need this current code to only be the initial load, not every time....
     for i in range(1, ROWS+1):
         data["board"].append(0*COLUMNS)
-    data["board"][ROWS/2][COLUMNS/2] = 1
+    data["board"][ROWS/2][COLUMNS/2] = 1 #initial snake position
 
 if __name__ == "__main__":
     #dictionary
