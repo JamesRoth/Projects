@@ -22,13 +22,17 @@ def redrawAll(): #clears board
     for item in App().spritelist[:]:
         item.destroy()
 
-def drawSnakeBoard():
+def drawSnakeBoard(): #draws bakcground, calls snake creation
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
     #Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)) - snake cell
 
 def loadSnakeBoard():
-    data["board"] = []
     for i in range(1, ROWS+1)
 
 if __name__ == "__main__":
+    #dictionary
     data = {}
+    data["board"] = []
+    
+    
+    
