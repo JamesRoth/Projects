@@ -37,7 +37,7 @@ def loadSnakeBoard(): #initial matrix of board
     placeFood()
     print(data["board"])
 
-def drawSnakeCell(): #draws snake annd food
+def drawSnakeCell(): #draws snake and food
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
@@ -45,10 +45,11 @@ def drawSnakeCell(): #draws snake annd food
             if data["board"][i][j] == -1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
-def moveSnake(Row, Col, event):
+def moveSnake(Row, Col):
     data["headY"] += Col
     data["headX"] += Row
     data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
+    print(data["board"])
     drawSnakeCell()
     
 def placeFood():
@@ -82,10 +83,10 @@ if __name__ == "__main__":
     redrawAll()
     
     #arrow controls
-    App().listenKeyEvent("keydown","right arrow",moveSnake(1, 0))
-    App().listenKeyEvent("keydown","left arrow",moveSnake(-1, 0))
-    App().listenKeyEvent("keydown","up arrow",moveSnake(0, 1))
-    App().listenKeyEvent("keydown","down arrow",moveSnake(0, -1))
-    
+    App().listenKeyEvent("keydown","right arrow", moveSnake(1, 0))
+    App().listenKeyEvent("keydown","left arrow", moveSnake(-1, 0))
+    App().listenKeyEvent("keydown","up arrow", moveSnake(0, 1))
+    App().listenKeyEvent("keydown","down arrow", moveSnake(0, -1))
+     
     App().run()
     
