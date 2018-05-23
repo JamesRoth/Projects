@@ -68,4 +68,5 @@ if __name__ == "__main__":
     data["board"] = []
     loadSnakeBoard()
     
+    App().run()
     
