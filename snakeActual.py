@@ -45,7 +45,7 @@ def drawSnakeCell(): #draws snake annd food
             if data["board"][i][j] == -1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
-def moveSnake(Row, Col):
+def moveSnake(Row, Col, event):
     data["headY"] += Col
     data["headX"] += Row
     data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
