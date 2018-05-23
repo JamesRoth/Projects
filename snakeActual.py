@@ -27,7 +27,8 @@ def drawSnakeBoard(): #draws bakcground, calls snake creation
     #Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)) - snake cell
 
 def loadSnakeBoard():
-    for i in range(1, ROWS+1)
+    for i in range(1, ROWS+1):
+        data["board"].append()
 
 if __name__ == "__main__":
     #dictionary
