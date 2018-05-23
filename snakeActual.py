@@ -42,7 +42,7 @@ def drawSnakeCell():
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
-                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*i+1,CELLSIZE*j+1))
+                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
 
 def moveSnake(Row, Col):
     while True:
