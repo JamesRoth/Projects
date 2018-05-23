@@ -49,12 +49,17 @@ def removeTail():
     for item in data["board"]:
         if 1 in item:
            break 
-    
+
+def findSnakeHead():
+    largest = [0,0,0]
+    for i in range(0, len(data["board"])):
+        for j in range(0, len(data["board"][i])):
+            if data["board"][i][j] > largest[2]:
+                
 
 if __name__ == "__main__":
     #dictionary
     data = {}
     data["board"] = []
-    loadSnakeBoard()
     
     
