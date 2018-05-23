@@ -28,7 +28,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
 
 
-def loadSnakeBoard(): #need this current code to only be the initial load, not every time....
+def loadSnakeBoard(): #initial matrix of board
     for i in range(1, ROWS+1):
         list1 = []
         for j in range(1, COLUMNS+1):
@@ -38,11 +38,13 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
     placeFood()
     print(data["board"])
 
-def drawSnakeCell():
+def drawSnakeCell(): #draws snake
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
+            if data["board"][i][j] == -1:
+                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
 def moveSnake(Row, Col):
     data["headY"] += Col
