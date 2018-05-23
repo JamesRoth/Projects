@@ -87,6 +87,6 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","left arrow", moveSnake(-1, 0))
     App().listenKeyEvent("keydown","up arrow", moveSnake(0, 1))
     App().listenKeyEvent("keydown","down arrow", moveSnake(0, -1))
-     
+    
     App().run()
     
