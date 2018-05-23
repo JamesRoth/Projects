@@ -69,6 +69,8 @@ if __name__ == "__main__":
     #dictionary
     data = {}
     data["board"] = []
+    data["headX"] = COLUMNS/2
+    data["headY"] = ROWS/2
     loadSnakeBoard()
     redrawAll()
     
