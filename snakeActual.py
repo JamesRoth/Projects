@@ -47,7 +47,7 @@ def drawSnakeCell():
 def moveSnake(Row, Col):
     data["headY"] += Col
     data["headX"] += Row
-    data["board"][data["headY"]data["headX"] = data["lenSnake"]
+    data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     drawSnakeCell
     
 def placeFood():
