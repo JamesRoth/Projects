@@ -25,8 +25,8 @@ def redrawAll(): #clears board
 
 def drawSnakeBoard(): #draws background, calls snake creation
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
-    #drawSnakeCell()
-    #Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)) - snake cell
+    drawSnakeCell()
+
 
 def loadSnakeBoard(): #need this current code to only be the initial load, not every time....
     for i in range(1, ROWS+1):
@@ -39,7 +39,10 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
     print(data["board"])
 
 def drawSnakeCell():
-    return(null)
+    for i in range(0, len(data["board"])):
+        for j in range(0, len(data["board"][i])):
+            if data["board"][i][j] >= 1:
+                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*i+1,CELLSIZE*j+1)
 
 def moveSnake(Row, Col):
     while True:
