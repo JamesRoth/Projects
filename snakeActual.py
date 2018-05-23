@@ -31,7 +31,7 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
         data["board"].append(0*COLUMNS)
     data["board"][ROWS/2][COLUMNS/2] = 1 #initial snake position
 
-def moveSnake():
+def moveSnake(Row, Col):
 
 if __name__ == "__main__":
     #dictionary
