@@ -7,8 +7,8 @@ from random import randint
 
 #constants
 CELLSIZE = 20
-ROWS = 40
-COLUMNS = 26
+ROWS = 26
+COLUMNS = 44
 
 #colors
 green=Color(0x006600,1)
@@ -25,7 +25,7 @@ def redrawAll(): #clears board
 
 def drawSnakeBoard(): #draws background, calls snake creation
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
-    drawSnakeCell()
+    #drawSnakeCell()
     #Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)) - snake cell
 
 def loadSnakeBoard(): #need this current code to only be the initial load, not every time....
