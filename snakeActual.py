@@ -28,7 +28,10 @@ def drawSnakeBoard(): #draws background, calls snake creation
 
 def loadSnakeBoard(): #need this current code to only be the initial load, not every time....
     for i in range(1, ROWS+1):
-        data["board"].append(0*COLUMNS)
+        list1 = []
+        for j in range(1, COLUMNS+1):
+            list1.append(0)
+        data["board"].append(list1)
     data["board"][ROWS/2][COLUMNS/2] = 1 #initial snake position
     print(data["board"])
 
@@ -45,7 +48,7 @@ def placeFood():
 def removeTail():
     for item in data["board"]:
         if 1 in item:
-            
+           break 
     
 
 if __name__ == "__main__":
