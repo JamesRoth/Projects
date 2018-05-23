@@ -33,8 +33,10 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
     print(data["board"])
 
 def moveSnake(Row, Col):
+    while True:
+        break
     
-def placeFood(): #places the food if space available
+def placeFood():
     Col = randint(1,COLUMNS)
     Row = randint(1, ROWS)
     if data["board"][Row][Col] == 0:
@@ -50,6 +52,6 @@ if __name__ == "__main__":
     #dictionary
     data = {}
     data["board"] = []
-    
+    loadSnakeBoard()
     
     
