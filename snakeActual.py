@@ -32,6 +32,10 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
     data["board"][ROWS/2][COLUMNS/2] = 1 #initial snake position
 
 def moveSnake(Row, Col):
+    
+def placeFood():
+    Col = randint(1,COLUMNS)
+    Row = randint(1, ROWS)
 
 if __name__ == "__main__":
     #dictionary
