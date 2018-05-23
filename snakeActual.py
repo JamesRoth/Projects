@@ -17,11 +17,13 @@ red=Color(0xff0000,1)
 tan=Color(0xd2b48c,1)
 blackOutline=LineStyle(1,black)
 
-def redrawAll():
+def redrawAll(): #clears board
     for item in App().spritelist[:]:
         item.destroy()
 
-spriteAll():
+def drawSnakeBoard():
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
-    Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan))
+    #Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)) - snake cell
 
+if __name__ == "__main__":
+    
