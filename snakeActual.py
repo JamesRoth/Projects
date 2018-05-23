@@ -80,5 +80,11 @@ if __name__ == "__main__":
     loadSnakeBoard()
     redrawAll()
     
+    #arrow controls
+    App().listenKeyEvent("keydown","right arrow",moveSnake(1, 0))
+    App().listenKeyEvent("keydown","left arrow",moveSnake(-1, 0))
+    App().listenKeyEvent("keydown","up arrow",moveSnake(0, 1))
+    App().listenKeyEvent("keydown","down arrow",moveSnake(0, -1))
+    
     App().run()
     
