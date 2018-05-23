@@ -27,7 +27,6 @@ def drawSnakeBoard(): #draws background, calls snake creation
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
     drawSnakeCell()
 
-
 def loadSnakeBoard(): #initial matrix of board
     for i in range(1, ROWS+1):
         list1 = []
@@ -38,7 +37,7 @@ def loadSnakeBoard(): #initial matrix of board
     placeFood()
     print(data["board"])
 
-def drawSnakeCell(): #draws snake
+def drawSnakeCell(): #draws snake annd food
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
