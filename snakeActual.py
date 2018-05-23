@@ -45,8 +45,7 @@ def drawSnakeCell():
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
 
 def moveSnake(Row, Col):
-    while True:
-        break
+    data["board"][data["headY"]data["headX"]]
     
 def placeFood():
     Col = randint(1,COLUMNS)
