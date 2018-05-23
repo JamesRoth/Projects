@@ -45,7 +45,9 @@ def drawSnakeCell():
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
 
 def moveSnake(Row, Col):
-    data["board"][data["headY"]data["headX"]]
+    data["headY"] += Col
+    data["head
+    data["board"][data["headY"]data["headX"] = data["lenSnake"]
     
 def placeFood():
     Col = randint(1,COLUMNS)
@@ -73,6 +75,7 @@ if __name__ == "__main__":
     data["board"] = []
     data["headX"] = COLUMNS/2
     data["headY"] = ROWS/2
+    data["lenSnake"] = 1
     loadSnakeBoard()
     redrawAll()
     
