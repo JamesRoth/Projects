@@ -30,6 +30,7 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
     for i in range(1, ROWS+1):
         data["board"].append(0*COLUMNS)
     data["board"][ROWS/2][COLUMNS/2] = 1 #initial snake position
+    print(data["board"])
 
 def moveSnake(Row, Col):
     
@@ -40,6 +41,9 @@ def placeFood(): #places the food if space available
         data["board"][Row][Col] = -1
 
 def removeTail():
+    for item in data["board"]:
+        if 1 in item:
+            
     
 
 if __name__ == "__main__":
