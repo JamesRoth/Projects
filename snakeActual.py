@@ -21,9 +21,11 @@ blackOutline=LineStyle(1,black)
 def redrawAll(): #clears board
     for item in App().spritelist[:]:
         item.destroy()
+    drawSnakeBoard()
 
 def drawSnakeBoard(): #draws background, calls snake creation
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
+    drawSnakeCell()
     #Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan)) - snake cell
 
 def loadSnakeBoard(): #need this current code to only be the initial load, not every time....
@@ -33,6 +35,7 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
             list1.append(0)
         data["board"].append(list1)
     data["board"][ROWS/2][COLUMNS/2] = 1 #initial snake position
+    placeFood()
     print(data["board"])
 
 def moveSnake(Row, Col):
@@ -63,5 +66,6 @@ if __name__ == "__main__":
     #dictionary
     data = {}
     data["board"] = []
+    loadSnakeBoard()
     
     
