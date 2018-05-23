@@ -34,7 +34,7 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
         for j in range(1, COLUMNS+1):
             list1.append(0)
         data["board"].append(list1)
-    data["board"][data["headX"]][data["headY"]] = 1 #initial snake position
+    data["board"][data["headY"]][data["headX"]] = 1 #initial snake position
     placeFood()
     print(data["board"])
 
