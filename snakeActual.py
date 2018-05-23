@@ -33,11 +33,14 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
 
 def moveSnake(Row, Col):
     
-def placeFood():
+def placeFood(): #places the food if space available
     Col = randint(1,COLUMNS)
     Row = randint(1, ROWS)
     if data["board"][Row][Col] == 0:
         data["board"][Row][Col] = -1
+
+def removeTail():
+    
 
 if __name__ == "__main__":
     #dictionary
