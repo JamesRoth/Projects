@@ -29,6 +29,7 @@ def drawSnakeBoard(): #draws bakcground, calls snake creation
 def loadSnakeBoard():
     for i in range(1, ROWS+1):
         data["board"].append(0*COLUMNS)
+    data["board"][ROWS/2]
 
 if __name__ == "__main__":
     #dictionary
