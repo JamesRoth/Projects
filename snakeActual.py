@@ -38,8 +38,8 @@ def loadSnakeBoard(): #need this current code to only be the initial load, not e
     placeFood()
     print(data["board"])
 
-def drawSnakeCell:
-    return
+def drawSnakeCell():
+    return(null)
 
 def moveSnake(Row, Col):
     while True:
