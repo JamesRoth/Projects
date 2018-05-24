@@ -59,9 +59,10 @@ def placeFood():
         data["board"][Row][Col] = -1
 
 def removeTail():
-    for item in data["board"]:
-        if 1 in item:
-           break 
+    for i in range(0, len(data["board"])):
+        for j in range(0, len(data["board"][i])):
+            if data["board"][i][j] >= 1:
+                data["board"][i][j]
 
 def findSnakeHead():
     largest = [0,0,0]
