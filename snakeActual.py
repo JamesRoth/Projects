@@ -68,6 +68,8 @@ def moveSnake(row, col):
     data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     drawSnakeCell()
     removeTail()
+    redrawAll()
+    drawSnakeCell()
     
 def placeFood():
     Col = randint(0,COLUMNS-1)
