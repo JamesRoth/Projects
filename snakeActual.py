@@ -65,7 +65,7 @@ def moveLeft(event):
 def moveRight(event):
     moveSnake(1, 0)
 
-def moveSnake(Row, Col): #seems to be creating two more snake parts - but I'm not pressing the arrow keys, the only time its being called?
+def moveSnake(Row, Col): 
     data["headY"] += Col
     data["headX"] += Row
     data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
