@@ -32,7 +32,6 @@ def step():
     if data["frames"] == 50:
         data["frames"] = 0
         redrawAll()
-        drawSnakeCell()
 
 def loadSnakeBoard(): #initial matrix of board
     for i in range(1, ROWS+1):
@@ -42,7 +41,6 @@ def loadSnakeBoard(): #initial matrix of board
         data["board"].append(list1)
     data["board"][data["headY"]][data["headX"]] = 1 #initial snake position
     placeFood()
-    print(data["board"])
 
 def drawSnakeCell(): #draws snake and food
     for i in range(0, len(data["board"])):
