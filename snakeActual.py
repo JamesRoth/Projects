@@ -45,7 +45,19 @@ def drawSnakeCell(): #draws snake and food
             if data["board"][i][j] == -1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
-def moveSnake(event, Row, Col): #seems to be creating two more snake parts - but I'm not pressing the arrow keys, the only time its being called?
+def moveUp(event):
+    moveSnake(0, -1)
+
+def moveDown(event):
+    moveSnake(0, 1)
+
+def moveLeft(event):
+    moveSnake(-1, 0)
+
+def moveRight(event):
+    moveSnake(1, 0)
+
+def moveSnake(Row, Col): #seems to be creating two more snake parts - but I'm not pressing the arrow keys, the only time its being called?
     data["headY"] += Col
     data["headX"] += Row
     data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
@@ -84,10 +96,10 @@ if __name__ == "__main__":
     redrawAll()
     
     #arrow controls
-    App().listenKeyEvent("keydown","right arrow", moveSnake(1, 0))
-    App().listenKeyEvent("keydown","left arrow", moveSnake(-1, 0))
-    App().listenKeyEvent("keydown","up arrow", moveSnake(0, 1))
-    App().listenKeyEvent("keydown","down arrow", moveSnake(0, -1))
+    App().listenKeyEvent("keydown","right arrow", moveRight())
+    App().listenKeyEvent("keydown","left arrow", moveLeft())
+    App().listenKeyEvent("keydown","up arrow", moveUp())
+    App().listenKeyEvent("keydown","down arrow", moveDown())
     
     App().run()
     
