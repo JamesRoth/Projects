@@ -96,10 +96,10 @@ if __name__ == "__main__":
     redrawAll()
     
     #arrow controls
-    App().listenKeyEvent("keydown","right arrow", moveRight())
-    App().listenKeyEvent("keydown","left arrow", moveLeft())
-    App().listenKeyEvent("keydown","up arrow", moveUp())
-    App().listenKeyEvent("keydown","down arrow", moveDown())
+    App().listenKeyEvent("keydown","right arrow", moveRight)
+    App().listenKeyEvent("keydown","left arrow", moveLeft)
+    App().listenKeyEvent("keydown","up arrow", moveUp)
+    App().listenKeyEvent("keydown","down arrow", moveDown)
     
     App().run()
     
