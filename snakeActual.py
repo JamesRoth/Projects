@@ -76,7 +76,7 @@ def removeTail():
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
                 data["board"][i][j] -= 1
-    redrawAll()
+   
 
 def findSnakeHead():
     largest = [0,0,0]
