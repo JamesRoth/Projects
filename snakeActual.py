@@ -65,8 +65,8 @@ def moveSnake(Row, Col): #seems to be creating two more snake parts - but I'm no
     removeTail()
     
 def placeFood():
-    Col = randint(1,COLUMNS)
-    Row = randint(1, ROWS)
+    Col = randint(0,COLUMNS-1)
+    Row = randint(0, ROWS-1)
     if data["board"][Row][Col] == 0:
         data["board"][Row][Col] = -1
 
