@@ -24,7 +24,7 @@ def redrawAll(): #clears board
     drawSnakeBoard()
 
 def drawSnakeBoard(): #draws background, calls snake creation
-    Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
+    #Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
     drawSnakeCell()
 
 def step():
