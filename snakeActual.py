@@ -27,6 +27,12 @@ def drawSnakeBoard(): #draws background, calls snake creation
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
     drawSnakeCell()
 
+def step():
+    data["frames"] += 1
+    if data["frames"] == 50:
+        data["frames"] = 0
+        redrawAll
+
 def loadSnakeBoard(): #initial matrix of board
     for i in range(1, ROWS+1):
         list1 = []
@@ -94,6 +100,7 @@ if __name__ == "__main__":
     data["headX"] = COLUMNS/2
     data["headY"] = ROWS/2
     data["lenSnake"] = 1
+    data["frames"] = 0
     loadSnakeBoard()
     redrawAll()
     
@@ -103,5 +110,5 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow", moveUp)
     App().listenKeyEvent("keydown","down arrow", moveDown)
     
-    App().run()
+    App().run(step)
     
