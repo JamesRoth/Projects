@@ -32,6 +32,7 @@ def step():
     if data["frames"] == 50:
         data["frames"] = 0
         redrawAll()
+        drawSnakeCell()
 
 def loadSnakeBoard(): #initial matrix of board
     for i in range(1, ROWS+1):
