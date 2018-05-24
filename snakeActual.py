@@ -66,8 +66,10 @@ def moveSnake(row, col):
     
     data["headY"] += col
     data["headX"] += row
-    
-    if data["board"][data["headY"]][data["headX"]] = 0 or data["board"][data["headY"]][data["headX"]] = -1:
+    if data["board"][data["headY"]][data["headX"]] = -1: #found food?
+        data["lenSnake"] += 1
+        data["board"][data["headY"]][data["headX"]] = 0
+    if data["board"][data["headY"]][data["headX"]] = 0: #cell empty?
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     drawSnakeCell()
     removeTail()
