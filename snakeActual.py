@@ -65,9 +65,9 @@ def moveLeft(event):
 def moveRight(event):
     moveSnake(1, 0)
 
-def moveSnake(Row, Col): 
-    data["headY"] += Col
-    data["headX"] += Row
+def moveSnake(row, col): 
+    data["headY"] += col
+    data["headX"] += row
     data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     drawSnakeCell()
     removeTail()
