@@ -61,7 +61,6 @@ def moveSnake(Row, Col): #seems to be creating two more snake parts - but I'm no
     data["headY"] += Col
     data["headX"] += Row
     data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
-    print(data["board"], "BREAK \n")
     drawSnakeCell()
     
 def placeFood():
