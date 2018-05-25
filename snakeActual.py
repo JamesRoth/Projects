@@ -70,6 +70,7 @@ def moveSnake(row, col):
         data["board"][data["headY"]][data["headX"]] = 0
         placeFood()
         print("Meal")
+    if data["board"][data["headY"]][data["headX"]]
     if data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     drawSnakeCell()
