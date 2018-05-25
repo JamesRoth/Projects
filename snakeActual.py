@@ -29,7 +29,7 @@ def gameOver(): #collided with edge/self - ends game
 
 def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
-    Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,LineStyle(1,black),white))
+    Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,LineStyle(1,black),white)) #spriting after any "clears", but still is deleted?
 
 def step():
     data["frames"] += 1
