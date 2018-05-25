@@ -82,20 +82,20 @@ def moveSnake(row, col): #updates the matrix with the snake's position
     drawSnakeCell()
     removeTail()
     
-def placeFood():
+def placeFood(): #places food in the matrix
     Col = randint(0,COLUMNS-1)
     Row = randint(0, ROWS-1)
     if data["board"][Row][Col] == 0:
         data["board"][Row][Col] = -1
 
-def removeTail():
+def removeTail(): #subtracts 1 from every snake cell, removing the end of the snake
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
                 data["board"][i][j] -= 1
    
 
-def findSnakeHead():
+def findSnakeHead(): #not needed currently, just tracking the snake head with variables
     largest = [0,0,0]
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
