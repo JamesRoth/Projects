@@ -15,7 +15,7 @@ green=Color(0x006600,1)
 black=Color(0x000000,1)
 red=Color(0xff0000,1)
 tan=Color(0xd2b48c,1)
-blackOutline=LineStyle(1,black)
+blackOutline=LineStyle(0,black)
 
 #functions
 def redrawAll(): #clears board
