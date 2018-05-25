@@ -68,9 +68,9 @@ def moveLeft(event):
 def moveRight(event):
     moveSnake(1, 0)
 
-def moveSnake(row, col): #updates the matrix with the snake's position
-    data["headY"] += col
-    data["headX"] += row
+def moveSnake(col, row): #updates the matrix with the snake's position
+    data["headY"] += row
+    data["headX"] += col
     if data["board"][data["headY"]][data["headX"]] == -1: #found food?
         data["lenSnake"] += 1
         data["board"][data["headY"]][data["headX"]] = 0
@@ -78,7 +78,7 @@ def moveSnake(row, col): #updates the matrix with the snake's position
         print("Meal")
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
-    elif data["headY"] + col > ROWS or data["headY"] + col <= 0 or data["headX"] + row > COLUMNS or data["headX"] + row <= 0: #hit edge?
+    elif data["headY"] + col > ROWS-1 or data["headY"] + col <= 0 or data["headX"] + row > COLUMNS-1 or data["headX"] + row <= 0: #hit edge?
         gameOver()
         print("edge" , "Y:", data["headY"] + col > ROWS or data["headY"] + col, "X:", data["headX"] + row > COLUMNS or data["headX"] + row <= 0  )
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
