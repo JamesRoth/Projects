@@ -46,7 +46,8 @@ def loadSnakeBoard(): #initial matrix of board
     placeFood()
 
 def drawSnakeCell(): #draws snake and food
-    redrawAll()
+    for item in App().spritelist[:]:
+        item.destroy()
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
