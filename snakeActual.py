@@ -80,6 +80,7 @@ def moveSnake(row, col): #updates the matrix with the snake's position
         gameOver()
     elif data["headY"] + col > COLUMNS or data["headY"] + col <= 0 or data["headX"] + row > ROWS or data["headX"] + row <= 0: #hit edge?
         gameOver()
+        print("edge" , "Y: ", data["headY"] + col > COLUMNS or data["headY"] + col, "X: ", data["headX"] + row > ROWS or data["headX"] + row <= 0  )
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     drawSnakeCell()
