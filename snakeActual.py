@@ -82,8 +82,8 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         gameOver()
         print("edge" , "Y:", data["headY"] + row > ROWS or data["headY"] + row < 0, "X:", data["headX"] + col > COLUMNS or data["headX"] + col < 0  )
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
+    removeTail()
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
-        removeTail()
     redrawAll()
     
 def placeFood(): #places food in the matrix
