@@ -73,7 +73,7 @@ def moveSnake(row, col):
         data["board"][data["headY"]][data["headX"]] = 0
         placeFood()
         print("Meal")
-    elif data["board"][data["headY"]][data["headX"]] >= 1:
+    elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
