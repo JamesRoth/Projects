@@ -23,6 +23,9 @@ def redrawAll(): #clears board
         item.destroy()
     drawSnakeBoard()
 
+def gameOver(): #collided with edge/self - ends game
+    print("collision")
+
 def drawSnakeBoard(): #draws background, calls snake creation
     #Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
     drawSnakeCell()
