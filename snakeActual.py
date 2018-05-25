@@ -15,6 +15,7 @@ green=Color(0x006600,1)
 black=Color(0x000000,1)
 red=Color(0xff0000,1)
 tan=Color(0xd2b48c,1)
+white=Color(0xffffff,0)
 blackOutline=LineStyle(0,black)
 
 #functions
@@ -27,7 +28,7 @@ def gameOver(): #collided with edge/self - ends game
     print("collision")
 
 def drawSnakeBoard(): #draws background, calls snake creation
-    #Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,blackOutline,green))
+    Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,LineStyle(1,black),white))
     drawSnakeCell()
 
 def step():
