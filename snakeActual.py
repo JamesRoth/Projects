@@ -47,8 +47,8 @@ def loadSnakeBoard(): #initial matrix of board
     placeFood()
 
 def drawSnakeCell(): #draws snake and food
-    for item in App().spritelist[:]:
-        item.destroy()
+    #for item in App().spritelist[:]:
+       # item.destroy()
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
@@ -83,8 +83,8 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         print("edge" , "Y:", data["headY"] + row > ROWS or data["headY"] + row < 0, "X:", data["headX"] + col > COLUMNS or data["headX"] + col < 0  )
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
-    drawSnakeCell()
-    removeTail()
+        removeTail()
+    redrawAll()
     
 def placeFood(): #places food in the matrix
     Col = randint(1,COLUMNS-1)
