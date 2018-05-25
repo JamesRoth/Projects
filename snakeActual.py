@@ -51,7 +51,7 @@ def drawSnakeCell(): #draws snake and food
             if data["board"][i][j] >= 1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
             if data["board"][i][j] == -1:
-                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,red),(CELLSIZE*j+1,CELLSIZE*i+1))
+                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
 def moveUp(event):
     moveSnake(0, -1)
