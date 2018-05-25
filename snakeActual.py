@@ -75,6 +75,8 @@ def moveSnake(row, col):
         print("Meal")
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
+    elif data["headY"] + col > COLUMNS or data["headY"] + col <= 0 or data["headX"] + row > ROWS or data["headX"] <= 0: #hit edge?
+        gameOver()
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     drawSnakeCell()
