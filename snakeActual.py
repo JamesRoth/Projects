@@ -31,7 +31,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,LineStyle(1,black),white)) #spriting after any "clears", but still is deleted?
 
-def step():
+def step(): #runs game
     data["frames"] += 1
     if data["frames"] == 50:
         data["frames"] = 0
@@ -75,7 +75,7 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         data["lenSnake"] += 1
         data["board"][data["headY"]][data["headX"]] = 0
         placeFood()
-        print("Meal")
+        print("meal")
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
     elif data["headY"] + row > ROWS or data["headY"] + row < -1 or data["headX"] + col > COLUMNS or data["headX"] + col < -1: #hit edge?
