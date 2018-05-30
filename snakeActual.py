@@ -69,12 +69,12 @@ def moveDown(event):
     data["movement"] = [0,1]
 
 def moveLeft(event):
-
-    data["movement"] = [-1,0]
+    if data["movement"] != [1,0]:
+        data["movement"] = [-1,0]
 
 def moveRight(event):
-
-    data["movement"] = [1,0]
+    if data["movement"] != [-1,0]:
+        data["movement"] = [1,0]
 
 def moveSnake(col, row): #updates the matrix with the snake's position
     data["headY"] += row
