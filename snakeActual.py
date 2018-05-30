@@ -26,7 +26,6 @@ def redrawAll(): #clears board
     drawSnakeBoard()
 
 def gameOver(): #collided with edge/self - ends game
-    print("Help")
     data["gameOver"] = 1 #doesn't allow snake to move
     Sprite(TextAsset("Game Over", fill = red, style = "20pt Arial"),(CELLSIZE*COLUMNS/2,CELLSIZE*ROWS/2))
     print("Game over")
@@ -86,11 +85,11 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
         placeFood()
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
+        print("gameOver")
         gameOver()
-    elif data["headY"] + row > ROWS or data["headY"] + row < -1 or data["headX"] + col > COLUMNS or data["headX"] + col < -1: #hit edge?
-        print("edge hit")
+    elif data["headY"] + row >= ROWS or data["headY"] + row < -1 or data["headX"] + col >= COLUMNS or data["headX"] + col < -1: #hit edge?
         gameOver()
-        #print("edge" , "Y:", data["headY"] + row > ROWS or data["headY"] + row < 0, "X:", data["headX"] + col > COLUMNS or data["headX"] + col < 0)
+        print("edge" , "Y:", data["headY"] + row > ROWS or data["headY"] + row < 0, "X:", data["headX"] + col > COLUMNS or data["headX"] + col < 0)
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         removeTail()
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
