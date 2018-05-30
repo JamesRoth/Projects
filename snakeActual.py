@@ -26,6 +26,7 @@ def redrawAll(): #clears board
     drawSnakeBoard()
 
 def gameOver(): #collided with edge/self - ends game
+    data["gameOver"] = 1
     print("collision")
 
 def drawSnakeBoard(): #draws background, calls snake creation
@@ -117,6 +118,7 @@ if __name__ == "__main__":
     #dictionary
     data = {}
     data["board"] = []
+    data["gameOver"] = 0
     data["headX"] = COLUMNS/2
     data["headY"] = ROWS/2
     data["lenSnake"] = 1
