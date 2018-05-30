@@ -37,7 +37,7 @@ def step(): #runs game
     data["frames"] += 1
     if data["frames"] == 50:
         data["frames"] = 0
-        redrawAll()
+        moveSnake(data["movement"][0], data["movement"][1])
 
 def loadSnakeBoard(): #initial matrix of board
     for i in range(1, ROWS+1):
