@@ -35,6 +35,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
     Sprite(TextAsset("Length: " + str(data["lenSnake"]), fill = black, style = "15pt Arial"),(CELLSIZE*COLUMNS+15, 10))
     if data["gameOver"] == 1: #game over message
         Sprite(TextAsset("Game Over", fill = red, style = "20pt Arial"),(CELLSIZE*COLUMNS/2,CELLSIZE*ROWS/2))
+        print("Game over")
 
 def step(): #runs game
     data["frames"] += 1
