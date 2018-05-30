@@ -38,7 +38,8 @@ def step(): #runs game
     data["frames"] += 1
     if data["frames"] == 15:
         data["frames"] = 0
-        moveSnake(data["movement"][0], data["movement"][1])
+        if data["gameOver"] = 0:
+            moveSnake(data["movement"][0], data["movement"][1])
 
 def loadSnakeBoard(): #initial matrix of board
     for i in range(1, ROWS+1):
