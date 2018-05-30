@@ -59,16 +59,20 @@ def drawSnakeCell(): #draws snake and food
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
 def moveUp(event):
-    moveSnake(0, -1)
+    #moveSnake(0, -1)
+    data["movement"] = [0,-1]
 
 def moveDown(event):
-    moveSnake(0, 1)
+    #moveSnake(0, 1)
+    data["movement"] = [0,1]
 
 def moveLeft(event):
-    moveSnake(-1, 0)
+    #moveSnake(-1, 0)
+    data["movement"] = [-1,0]
 
 def moveRight(event):
-    moveSnake(1, 0)
+    #moveSnake(1, 0)
+    data["movement"] = [1,0]
 
 def moveSnake(col, row): #updates the matrix with the snake's position
     data["headY"] += row
