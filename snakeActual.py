@@ -27,6 +27,7 @@ def redrawAll(): #clears board
 
 def gameOver(): #collided with edge/self - ends game
     data["gameOver"] = 1 #doesn't allow snake to move
+    redrawAll()
 
 def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
