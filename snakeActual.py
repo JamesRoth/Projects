@@ -121,7 +121,7 @@ if __name__ == "__main__":
     data["headY"] = ROWS/2
     data["lenSnake"] = 1
     data["frames"] = 0
-    data["movement"] = []
+    data["movement"] = [1,0]
     loadSnakeBoard()
     redrawAll()
     
@@ -131,5 +131,5 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","up arrow", moveUp)
     App().listenKeyEvent("keydown","down arrow", moveDown)
     
-    App().run()
+    App().run(step)
     
