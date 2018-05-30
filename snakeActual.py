@@ -35,7 +35,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
 
 def step(): #runs game
     data["frames"] += 1
-    if data["frames"] == 10:
+    if data["frames"] == 15:
         data["frames"] = 0
         moveSnake(data["movement"][0], data["movement"][1])
 
