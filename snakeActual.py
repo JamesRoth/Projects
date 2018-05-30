@@ -117,6 +117,7 @@ if __name__ == "__main__":
     data["headY"] = ROWS/2
     data["lenSnake"] = 1
     data["frames"] = 0
+    data["movement"] = []
     loadSnakeBoard()
     redrawAll()
     
