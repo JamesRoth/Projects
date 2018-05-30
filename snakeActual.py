@@ -26,9 +26,10 @@ def redrawAll(): #clears board
     drawSnakeBoard()
 
 def gameOver(): #collided with edge/self - ends game
+    print("Help")
     data["gameOver"] = 1 #doesn't allow snake to move
     Sprite(TextAsset("Game Over", fill = red, style = "20pt Arial"),(CELLSIZE*COLUMNS/2,CELLSIZE*ROWS/2))
-        print("Game over")
+    print("Game over")
 
 def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
