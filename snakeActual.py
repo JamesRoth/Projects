@@ -6,9 +6,9 @@ from ggame import *
 from random import randint
 
 #constants
-CELLSIZE = 50
-ROWS = 10
-COLUMNS = 16
+CELLSIZE = 20
+ROWS = 18
+COLUMNS = 30
 
 #colors
 green=Color(0x006600,1)
@@ -36,7 +36,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
 
 def step(): #runs game
     data["frames"] += 1
-    if data["frames"] == 15:
+    if data["frames"] == 3:
         data["frames"] = 0
         if data["gameOver"] == 0:
             moveSnake(data["movement"][0], data["movement"][1])
