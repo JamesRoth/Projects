@@ -77,7 +77,6 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         data["lenSnake"] += 1
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
         placeFood()
-        print("meal")
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
     elif data["headY"] + row > ROWS or data["headY"] + row < -1 or data["headX"] + col > COLUMNS or data["headX"] + col < -1: #hit edge?
