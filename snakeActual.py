@@ -85,8 +85,8 @@ def moveSnake(col, row): #updates the matrix with the snake's position
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
     elif data["headY"] >= ROWS or data["headY"] < 0 or data["headX"] >= COLUMNS or data["headX"] < 0: #hit edge?
-        gameOver()
         print("edge" , "Y:", data["headY"] >= ROWS or data["headY"] < 0, "X:", data["headX"] >= COLUMNS or data["headX"] < 0)
+        gameOver
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         removeTail()
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
