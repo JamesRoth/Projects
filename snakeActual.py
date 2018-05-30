@@ -73,7 +73,7 @@ def moveSnake(col, row): #updates the matrix with the snake's position
     data["headX"] += col
     if data["board"][data["headY"]][data["headX"]] == -1: #found food?
         data["lenSnake"] += 1
-        data["board"][data["headY"]][data["headX"]] = 0
+        data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
         placeFood()
         print("meal")
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
