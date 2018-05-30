@@ -61,12 +61,12 @@ def drawSnakeCell(): #draws snake and food
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
 def moveUp(event):
-    if data["movement"] != [0,-1]:
+    if data["movement"] != [0,1]:
         data["movement"] = [0,-1]
 
 def moveDown(event):
-
-    data["movement"] = [0,1]
+    if data["movement"] != [0,-1]:
+        data["movement"] = [0,1]
 
 def moveLeft(event):
     if data["movement"] != [1,0]:
