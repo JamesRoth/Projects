@@ -37,7 +37,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
 
 def step(): #runs game
     data["frames"] += 1
-    if data["frames"] == 10:
+    if data["frames"] == 5:
         data["frames"] = 0
         if data["gameOver"] == 0:
             moveSnake(data["movement"][0], data["movement"][1])
@@ -84,9 +84,9 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         placeFood()
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
-    elif data["headY"] >= ROWS or data["headY"] < 0 or data["headX"] >= COLUMNS or data["headX"] < 0: #hit edge?
+    elif data["headY"] >= ROWS-1 or data["headY"] < 0 or data["headX"] >= COLUMNS-1 or data["headX"] < 0: #hit edge?
         print("edge" , "Y:", data["headY"] >= ROWS or data["headY"] < 0, "X:", data["headX"] >= COLUMNS or data["headX"] < 0)
-        gameOver
+        gameOver() 
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         removeTail()
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
