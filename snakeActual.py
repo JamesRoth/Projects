@@ -6,9 +6,9 @@ from ggame import *
 from random import randint
 
 #constants
-CELLSIZE = 20
-ROWS = 18
-COLUMNS = 30
+CELLSIZE = 30
+ROWS = 14
+COLUMNS = 20
 
 #colors
 green=Color(0x006600,1)
@@ -27,12 +27,13 @@ def redrawAll(): #clears board
 
 def gameOver(): #collided with edge/self - ends game
     data["gameOver"] = 1
-    print("collision")
+    Sprite(TextAsset("Game Over", fill = red, style = "20pt Arial"),(CELLSIZE*COLUMNS/2,CELLSIZE*ROWS/2))
+    
 
 def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,LineStyle(1,black),white)) #border
-    Sprite(TextAsset("Length: " + str(data["lenSnake"]), fill = black, style = "15pt Arial"),(CELLSIZE*COLUMNS+30, 10))
+    Sprite(TextAsset("Length: " + str(data["lenSnake"]), fill = black, style = "15pt Arial"),(CELLSIZE*COLUMNS+15, 10))
 
 def step(): #runs game
     data["frames"] += 1
