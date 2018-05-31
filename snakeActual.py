@@ -41,7 +41,7 @@ def step(): #runs game
         if data["gameOver"] == 0:
             moveSnake(data["movement"][0], data["movement"][1])
         else:
-            Sprite(TextAsset("Game Over", fill = red, style = "30pt Arial"),(CELLSIZE*(COLUMNS-2)/2,CELLSIZE*(ROWS-2)/2))
+            Sprite(TextAsset("Game Over", fill = red, style = "30pt Arial"),(CELLSIZE*(COLUMNS-4)/2,CELLSIZE*(ROWS-4)/2))
 
 def loadSnakeBoard(): #initial matrix of board
     for i in range(0, ROWS+1):
