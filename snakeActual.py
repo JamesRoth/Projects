@@ -68,7 +68,7 @@ def drawSnakeCell(): #draws snake and food
                 elif data["movement"] == [0,1]:
                     Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.33,(CELLSIZE*i+1)+CELLSIZE*0.67))
                     Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.67,(CELLSIZE*i+1)+CELLSIZE*0.67))
-                elif data["movement"] == [1,0]:
+                elif data["movement"] == [0,-1]:
                     Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.33,(CELLSIZE*i+1)+CELLSIZE*0.33))
                     Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.67,(CELLSIZE*i+1)+CELLSIZE*0.33))
             elif data["board"][i][j] == -1:
