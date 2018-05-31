@@ -26,7 +26,7 @@ def redrawAll(): #clears board
     drawSnakeBoard()
 
 def gameOver(): #collided with edge/self - ends game
-    print("Game over")
+    print("Game Over")
     data["gameOver"] = 1 #doesn't allow snake to move
 
 def drawSnakeBoard(): #draws background, calls snake creation
