@@ -81,7 +81,7 @@ def moveRight(event):
 def moveSnake(col, row): #updates the matrix with the snake's position
     data["headY"] += row
     data["headX"] += col
-    print("moved snake")
+    print("Moved snake")
     if data["board"][data["headY"]][data["headX"]] == -1: #found food?
         data["lenSnake"] += 1
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
