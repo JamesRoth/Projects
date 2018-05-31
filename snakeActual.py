@@ -55,7 +55,7 @@ def loadSnakeBoard(): #initial matrix of board
 def findLargest():
     largest = 0
     for i in range(0, len(data["board"])):
-        for j in range(0, len(data["board"]):
+        for j in range(0, len(data["board"])):
             if data["board"][i][j] > largest:
                 largest == data["board"][i][j]
 
