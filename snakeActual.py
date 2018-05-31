@@ -62,6 +62,7 @@ def findLargest():
     return(largest)
 
 def drawSnakeCell(): #draws snake and food
+    #slow version with eyes
     largest = findLargest()
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
@@ -81,6 +82,13 @@ def drawSnakeCell(): #draws snake and food
                 elif data["movement"] == [0,-1]:
                     Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.33,(CELLSIZE*i+1)+CELLSIZE*0.33))
                     Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.67,(CELLSIZE*i+1)+CELLSIZE*0.33))
+            elif data["board"][i][j] == -1:
+                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
+    #fastest, no eyes
+    for i in range(0, len(data["board"])):
+        for j in range(0, len(data["board"][i])):
+            if data["board"][i][j] >= 1:
+                Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
             elif data["board"][i][j] == -1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
