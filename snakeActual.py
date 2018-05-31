@@ -97,6 +97,8 @@ def placeFood(): #places food in the matrix
     Row = randint(0, ROWS-1)
     if data["board"][Row][Col] == 0:
         data["board"][Row][Col] = -1
+    else:
+        placeFood()
 
 def removeTail(): #subtracts 1 from every snake cell, removing the end of the snake
     for i in range(0, len(data["board"])):
