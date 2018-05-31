@@ -58,6 +58,7 @@ def findLargest():
         for j in range(0, len(data["board"])):
             if data["board"][i][j] > largest:
                 largest == data["board"][i][j]
+    print(largest)
 
 def drawSnakeCell(): #draws snake and food
     largest = findLargest()
