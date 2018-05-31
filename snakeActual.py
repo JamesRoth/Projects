@@ -52,10 +52,15 @@ def loadSnakeBoard(): #initial matrix of board
     data["board"][data["headY"]][data["headX"]] = 1 #initial snake position
     placeFood()
 
+def findLargest():
+    for i in range(0, len(data["board"])):
+        for j in range(0, len(data["board"])
+
 def drawSnakeCell(): #draws snake and food
+    largest = findLargest()
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
-            if data["board"][i][j] >= 2:
+            if data["board"][i][j] >= 1 and data["board"][i][j] != largest:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
             elif data["board"][i][j] == 1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
