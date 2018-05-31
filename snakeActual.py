@@ -59,6 +59,7 @@ def findLargest():
             if data["board"][i][j] > largest:
                 largest == data["board"][i][j]
     print(largest)
+    return(largest)
 
 def drawSnakeCell(): #draws snake and food
     largest = findLargest()
