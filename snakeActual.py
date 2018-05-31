@@ -93,6 +93,7 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         gameOver() 
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         removeTail()
+        print("Removed tail")
         data["board"][data["headY"]][data["headX"]] = data["lenSnake"]
     redrawAll()
     
