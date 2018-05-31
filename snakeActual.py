@@ -33,7 +33,7 @@ def gameOver(): #collided with edge/self - ends game
 def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,LineStyle(1,black),white)) #border
-    Sprite(TextAsset("Length: " + str(data["lenSnake"]), fill = black, style = "15pt Arial"),(CELLSIZE*COLUMNS+15, 10))
+    Sprite(TextAsset("Length: " + str(data["lenSnake"]), fill = black, style = "15pt Arial"),(CELLSIZE*COLUMNS+10, 10))
 
 def step(): #runs game
     data["frames"] += 1
