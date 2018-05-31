@@ -7,8 +7,8 @@ from random import randint
 
 #constants
 CELLSIZE = 30
-ROWS = 15
-COLUMNS = 21
+ROWS = 14
+COLUMNS = 20
 
 #colors
 green=Color(0x006600,1)
@@ -37,18 +37,15 @@ def drawSnakeBoard(): #draws background, calls snake creation
 
 def step(): #runs game
     data["frames"] += 1
-    #print("Game over:", data["gameOver"])
-    #print("X:",data["headX"],"Y:",data["headY"])
-    #print("Frames:", data["frames"]) 
     if data["frames"] == 5:
         data["frames"] = 0
         if data["gameOver"] == 0:
             moveSnake(data["movement"][0], data["movement"][1])
 
 def loadSnakeBoard(): #initial matrix of board
-    for i in range(1, ROWS+1):
+    for i in range(0, ROWS+1):
         list1 = []
-        for j in range(1, COLUMNS+1):
+        for j in range(0, COLUMNS+1):
             list1.append(0)
         data["board"].append(list1)
     data["board"][data["headY"]][data["headX"]] = 1 #initial snake position
@@ -87,8 +84,7 @@ def moveSnake(col, row): #updates the matrix with the snake's position
         placeFood()
     elif data["board"][data["headY"]][data["headX"]] >= 1: #hit yourself?
         gameOver()
-    elif data["headY"] >= ROWS-1 or data["headY"] < 0 or data["headX"] >= COLUMNS-1 or data["headX"] < 0: #hit edge?
-        #print("edge" , "Y:", data["headY"] >= ROWS or data["headY"] < 0, "X:", data["headX"] >= COLUMNS or data["headX"] < 0)
+    elif data["headY"] >= ROWS or data["headY"] < 0 or data["headX"] >= COLUMNS or data["headX"] < 0: #hit edge?
         gameOver() 
     elif data["board"][data["headY"]][data["headX"]] == 0: #cell empty?
         removeTail()
