@@ -28,7 +28,6 @@ def redrawAll(): #clears board
 def gameOver(): #collided with edge/self - ends game
     print("Game over")
     data["gameOver"] = 1 #doesn't allow snake to move
-    Sprite(TextAsset("Game Over", fill = red, style = "20pt Arial"),(CELLSIZE*COLUMNS/2,CELLSIZE*ROWS/2))
 
 def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
@@ -41,6 +40,8 @@ def step(): #runs game
         data["frames"] = 0
         if data["gameOver"] == 0:
             moveSnake(data["movement"][0], data["movement"][1])
+        else:
+            Sprite(TextAsset("Game Over", fill = red, style = "20pt Arial"),(CELLSIZE*COLUMNS/2,CELLSIZE*ROWS/2))
 
 def loadSnakeBoard(): #initial matrix of board
     for i in range(0, ROWS+1):
