@@ -93,8 +93,8 @@ def moveSnake(col, row): #updates the matrix with the snake's position
     redrawAll()
     
 def placeFood(): #places food in the matrix
-    Col = randint(1,COLUMNS-1)
-    Row = randint(1, ROWS-1)
+    Col = randint(0,COLUMNS-1)
+    Row = randint(0, ROWS-1)
     if data["board"][Row][Col] == 0:
         data["board"][Row][Col] = -1
 
