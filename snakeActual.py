@@ -114,8 +114,8 @@ if __name__ == "__main__":
     data = {}
     data["board"] = []
     data["gameOver"] = 0
-    data["headX"] = COLUMNS/2
-    data["headY"] = ROWS/2
+    data["headX"] = COLUMNS/2-1
+    data["headY"] = ROWS/2-1
     data["lenSnake"] = 1
     data["frames"] = 0
     data["movement"] = [1,0]
