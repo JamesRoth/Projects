@@ -6,7 +6,7 @@ from ggame import *
 from random import randint
 
 #constants
-CELLSIZE = 30
+CELLSIZE = 10
 ROWS = 14
 COLUMNS = 20
 
