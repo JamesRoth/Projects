@@ -38,7 +38,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
 def step(): #runs game
     data["frames"] += 1
     print("Game over:", data["gameOver"])
-    print("X:",data["headX"],"Y",data["headY"])
+    print("X:",data["headX"],"Y:",data["headY"])
     print("frames:", data["frames"]) 
     if data["frames"] == 5:
         data["frames"] = 0
