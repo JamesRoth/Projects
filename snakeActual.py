@@ -55,8 +55,13 @@ def loadSnakeBoard(): #initial matrix of board
 def drawSnakeCell(): #draws snake and food
     for i in range(0, len(data["board"])):
         for j in range(0, len(data["board"][i])):
-            if data["board"][i][j] >= 1:
+            if data["board"][i][j] >= 2:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
+            elif data["board"][i][j] == 1:
+                if data["movement"] == [1,0]:
+                elif data["movement"] == [1,0]:
+                elif data["movement"] == [1,0]:
+                elif data["movement"] == [1,0]:
             elif data["board"][i][j] == -1:
                 Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
