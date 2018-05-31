@@ -7,8 +7,8 @@ from random import randint
 
 #constants
 CELLSIZE = 70
-ROWS = 6
-COLUMNS = 10
+ROWS = 8
+COLUMNS = 12
 
 #colors
 green=Color(0x006600,1)
