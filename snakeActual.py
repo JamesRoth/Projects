@@ -107,16 +107,6 @@ def removeTail(): #subtracts 1 from every snake cell, removing the end of the sn
         for j in range(0, len(data["board"][i])):
             if data["board"][i][j] >= 1:
                 data["board"][i][j] -= 1
-"""
-def findSnakeHead(): #not needed currently, just tracking the snake head with variables
-    largest = [0,0,0]
-    for i in range(0, len(data["board"])):
-        for j in range(0, len(data["board"][i])):
-            if data["board"][i][j] > largest[2]:
-                largest[2] = data["board"][i][j]
-                largest[0] = i+1
-                largest[1] = j+1
-"""
 
 if __name__ == "__main__":
     #dictionary
