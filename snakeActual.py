@@ -26,7 +26,7 @@ def reset(event):
         data["headX"] = COLUMNS/2
         data["headY"] = ROWS/2
         data["lenSnake"] = 1
-        data["board"] = 0
+        data["board"] = []
         data["frames"] = 0
         data["movement"] = [1,0]
         loadSnakeBoard()
