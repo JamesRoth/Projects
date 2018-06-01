@@ -7,11 +7,10 @@ from random import randint
 
 #constants
 CELLSIZE = 15
-ROWS = 10
-COLUMNS = 16
+ROWS = 8
+COLUMNS = 14
 
 #colors
-green=Color(0x006600,1)
 black=Color(0x000000,1)
 red=Color(0xff0000,1)
 tan=Color(0xd2b48c,1)
