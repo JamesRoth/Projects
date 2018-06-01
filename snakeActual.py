@@ -156,5 +156,6 @@ if __name__ == "__main__":
     App().listenKeyEvent("keydown","left arrow", moveLeft)
     App().listenKeyEvent("keydown","up arrow", moveUp)
     App().listenKeyEvent("keydown","down arrow", moveDown)
+    App().listenKeyEvent("keydown","space", reset)
     
     App().run(step)
