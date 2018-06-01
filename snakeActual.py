@@ -45,6 +45,7 @@ def drawSnakeBoard(): #draws background, calls snake creation
     drawSnakeCell()
     Sprite(RectangleAsset(CELLSIZE*COLUMNS,CELLSIZE*ROWS,LineStyle(1,black),white)) #border
     Sprite(TextAsset("Length: " + str(data["lenSnake"]), fill = black, style = "15pt Arial"),(CELLSIZE*COLUMNS+10, 10))
+    Sprite(TextAsset("High Score:" + str(data["bestScore"]), fill = black, style = "15pt Arial"),(CELLSIZE*COLUMNS+10, 50))
 
 def step(): #runs game
     data["frames"] += 1
@@ -154,6 +155,7 @@ if __name__ == "__main__":
     data["headY"] = ROWS/2
     data["lenSnake"] = 1
     data["frames"] = 0
+    data["bestScore"] = 0
     data["movement"] = [1,0]
     loadSnakeBoard()
     redrawAll()
