@@ -6,7 +6,7 @@ from ggame import *
 from random import randint
 
 #constants
-CELLSIZE = 20
+CELLSIZE = 15
 ROWS = 14
 COLUMNS = 20
 
@@ -136,6 +136,7 @@ if __name__ == "__main__":
     #dictionary
     data = {}
     data["board"] = []
+    data["eyes"] = 0
     data["gameOver"] = 0
     data["headX"] = COLUMNS/2
     data["headY"] = ROWS/2
@@ -144,6 +145,11 @@ if __name__ == "__main__":
     data["movement"] = [1,0]
     loadSnakeBoard()
     redrawAll()
+    
+    #do you want eyes?
+    data["eyes"] = input("Eyes? y(0)/n(1). Eyes make the game run slower")
+    if data["eyes"] == 1:
+        data["eyes"] = 10
     
     #arrow controls
     App().listenKeyEvent("keydown","right arrow", moveRight)
