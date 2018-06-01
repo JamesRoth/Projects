@@ -150,7 +150,6 @@ if __name__ == "__main__":
     data["eyes"] = int(input("Eyes? y(1)/n(0). Eyes make the game run slower. "))
     if data["eyes"] == 0:
         data["eyes"] = 5
-    print(data["eyes"])
     
     #arrow controls
     App().listenKeyEvent("keydown","right arrow", moveRight)
