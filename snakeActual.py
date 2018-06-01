@@ -77,7 +77,7 @@ def drawSnakeCell(): #draws snake and food
                 elif data["board"][i][j] == -1:
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
     #fastest, no eyes
-    if data["eyes"] == 10:
+    if data["eyes"] == 5:
         for i in range(0, len(data["board"])):
             for j in range(0, len(data["board"][i])):
                 if data["board"][i][j] >= 1:
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     #do you want eyes?
     data["eyes"] = int(input("Eyes? y(1)/n(0). Eyes make the game run slower. "))
     if data["eyes"] == 0:
-        data["eyes"] = 10
+        data["eyes"] = 5
     print(data["eyes"])
     
     #arrow controls
