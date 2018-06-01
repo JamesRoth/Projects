@@ -92,7 +92,7 @@ def drawSnakeCell(): #draws snake and food
                 elif data["board"][i][j] == -1:
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
     #fastest, no eyes
-    if data["eyes"] == 5:
+    if data["eyes"] == 3:
         for i in range(0, len(data["board"])):
             for j in range(0, len(data["board"][i])):
                 if data["board"][i][j] >= 1:
