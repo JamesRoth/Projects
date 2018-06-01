@@ -6,9 +6,9 @@ from ggame import *
 from random import randint
 
 #constants
-CELLSIZE = 15
-ROWS = 14
-COLUMNS = 20
+CELLSIZE = 20
+ROWS = 10
+COLUMNS = 16
 
 #colors
 green=Color(0x006600,1)
