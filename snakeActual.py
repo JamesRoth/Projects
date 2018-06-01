@@ -147,7 +147,7 @@ if __name__ == "__main__":
     redrawAll()
     
     #do you want eyes?
-    data["eyes"] = input("Eyes? y(1)/n(0). Eyes make the game run slower.")
+    data["eyes"] = input("Eyes? y(1)/n(0). Eyes make the game run slower. ")
     if data["eyes"] == 0:
         data["eyes"] = 10
     
