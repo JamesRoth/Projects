@@ -20,6 +20,19 @@ black=Color(0x000000,1)
 blackOutline=LineStyle(1,black)
 
 #functions
+def reset(event):
+    if data["gameOver"] == 1:
+    data["board"] = []
+    data["eyes"] = 0
+    data["gameOver"] = 0
+    data["headX"] = COLUMNS/2
+    data["headY"] = ROWS/2
+    data["lenSnake"] = 1
+    data["frames"] = 0
+    data["movement"] = [1,0]
+    loadSnakeBoard()
+    redrawAll()
+
 def redrawAll(): #clears board
     for item in App().spritelist[:]:
         item.destroy()
