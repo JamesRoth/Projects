@@ -22,8 +22,6 @@ blackOutline=LineStyle(1,black)
 #functions
 def reset(event):
     if data["gameOver"] == 1:
-        data["board"] = []
-        data["eyes"] = 0
         data["gameOver"] = 0
         data["headX"] = COLUMNS/2
         data["headY"] = ROWS/2
