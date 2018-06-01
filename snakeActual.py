@@ -165,7 +165,7 @@ if __name__ == "__main__":
     #do you want eyes?
     data["eyes"] = int(input("Eyes? Y(1)/N(0). Eyes make the game run slower. "))
     if data["eyes"] == 0:
-        data["eyes"] = 5
+        data["eyes"] = 3
     
     #arrow controls
     App().listenKeyEvent("keydown","right arrow", moveRight)
