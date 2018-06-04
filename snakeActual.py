@@ -7,8 +7,8 @@ from random import randint
 
 #constants
 CELLSIZE = 20
-ROWS = 14
-COLUMNS = 10
+ROWS = 10
+COLUMNS = 14
 
 #colors
 black=Color(0x000000,1)
