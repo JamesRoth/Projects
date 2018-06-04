@@ -104,18 +104,22 @@ def drawSnakeCell(): #draws snake and food
 
 
 def moveUp(event):
+    ignoreTimerEvent = True
     if data["movement"] != [0,1]:
         data["movement"] = [0,-1]
 
 def moveDown(event):
+    ignoreTimerEvent = True
     if data["movement"] != [0,-1]:
         data["movement"] = [0,1]
 
 def moveLeft(event):
+    ignoreTimerEvent = True
     if data["movement"] != [1,0]:
         data["movement"] = [-1,0]
 
 def moveRight(event):
+    ignoreTimerEvent = True
     if data["movement"] != [-1,0]:
         data["movement"] = [1,0]
 
