@@ -99,7 +99,6 @@ def drawSnakeCell(): #draws snake and food
                 elif data["board"][i][j] == -1:
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
-
 def moveUp(event):
     ignoreTimerEvent = True
     if data["movement"] != [0,1]:
@@ -170,7 +169,7 @@ if __name__ == "__main__":
     if data["eyes"] == 0:
         data["eyes"] = 3
     
-    #arrow controls
+    #key controls
     App().listenKeyEvent("keydown","right arrow", moveRight)
     App().listenKeyEvent("keydown","left arrow", moveLeft)
     App().listenKeyEvent("keydown","up arrow", moveUp)
