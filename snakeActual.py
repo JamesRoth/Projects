@@ -98,25 +98,20 @@ def drawSnakeCell(): #draws snake and food
                 elif data["board"][i][j] == -1:
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
-def moveUp(event):
+def move(event):
     ignoreTimerEvent = True
-    if data["movement"] != [0,1]:
-        data["movement"] = [0,-1]
-
-def moveDown(event):
-    ignoreTimerEvent = True
-    if data["movement"] != [0,-1]:
-        data["movement"] = [0,1]
-
-def moveLeft(event):
-    ignoreTimerEvent = True
-    if data["movement"] != [1,0]:
-        data["movement"] = [-1,0]
-
-def moveRight(event):
-    ignoreTimerEvent = True
-    if data["movement"] != [-1,0]:
-        data["movement"] = [1,0]
+    if event.key == "down arrow":
+        if data["movement"] != [0,-1]:
+            data["movement"] = [0,1]
+    if event.key == "up arrow":
+        if data["movement"] != [0,1]:
+            data["movement"] = [0,-1]
+    if event.key == "right arrow":
+        if data["movement"] != [-1,0]:
+            data["movement"] = [1,0]
+    if event.key == "left arrow":
+        if data["movement"] != [1,0]:
+            data["movement"] = [-1,0]
 
 def moveSnake(col, row): #updates the matrix with the snake's position
     data["headY"] += row
@@ -169,10 +164,10 @@ if __name__ == "__main__":
         data["eyes"] = 3
     
     #key controls
-    App().listenKeyEvent("keydown","right arrow", moveRight)
-    App().listenKeyEvent("keydown","left arrow", moveLeft)
-    App().listenKeyEvent("keydown","up arrow", moveUp)
-    App().listenKeyEvent("keydown","down arrow", moveDown)
+    App().listenKeyEvent("keydown","right arrow", move)
+    App().listenKeyEvent("keydown","left arrow", move)
+    App().listenKeyEvent("keydown","up arrow", move)
+    App().listenKeyEvent("keydown","down arrow", move)
     App().listenKeyEvent("keydown","space", reset)
     
     App().run(step)
