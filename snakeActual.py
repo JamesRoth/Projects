@@ -30,9 +30,6 @@ def reset(event):
         data["board"] = []
         data["frames"] = 0
         data["movement"] = [1,0]
-        data["eyes"] = int(input("Eyes? Y(1)/N(0). Eyes make the game run slower. "))
-        if data["eyes"] == 0:
-            data["eyes"] = 3
         loadSnakeBoard()
         redrawAll()
 
