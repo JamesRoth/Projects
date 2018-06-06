@@ -33,7 +33,7 @@ def reset(event):
         loadSnakeBoard()
         redrawAll()
 
-def redrawAll(): #clears board
+def redrawAll(): #clears everything
     for item in App().spritelist[:]:
         item.destroy()
     drawSnakeBoard()
@@ -103,13 +103,13 @@ def move(event):
     if event.key == "down arrow":
         if data["movement"] != [0,-1]:
             data["movement"] = [0,1]
-    if event.key == "up arrow":
+    elif event.key == "up arrow":
         if data["movement"] != [0,1]:
             data["movement"] = [0,-1]
-    if event.key == "right arrow":
+    elif event.key == "right arrow":
         if data["movement"] != [-1,0]:
             data["movement"] = [1,0]
-    if event.key == "left arrow":
+    elif event.key == "left arrow":
         if data["movement"] != [1,0]:
             data["movement"] = [-1,0]
 
