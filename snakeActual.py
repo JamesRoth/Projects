@@ -69,9 +69,9 @@ def drawSnakeCell(): #draws snake and food
         largest = data["lenSnake"]
         for i in range(0, len(data["board"])):
             for j in range(0, len(data["board"][i])):
-                if data["board"][i][j] >= 1 and data["board"][i][j] != largest:
+                if data["board"][i][j] >= 1 and data["board"][i][j] != largest: #snake body
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
-                elif data["board"][i][j] == largest:
+                elif data["board"][i][j] == largest: #eyes for each direction
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,blackOutline,tan),(CELLSIZE*j+1,CELLSIZE*i+1))
                     if data["movement"] == [-1,0]:
                         Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.33,(CELLSIZE*i+1)+CELLSIZE*0.33))
@@ -85,7 +85,7 @@ def drawSnakeCell(): #draws snake and food
                     else:
                         Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.33,(CELLSIZE*i+1)+CELLSIZE*0.33))
                         Sprite(CircleAsset(1,blackOutline,black),((CELLSIZE*j+1)+CELLSIZE*0.67,(CELLSIZE*i+1)+CELLSIZE*0.33))
-                elif data["board"][i][j] == -1:
+                elif data["board"][i][j] == -1: #food 
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
     #fastest, no eyes
     if data["eyes"] == 3:
