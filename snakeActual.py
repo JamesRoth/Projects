@@ -96,7 +96,7 @@ def drawSnakeCell(): #draws snake and food
                 elif data["board"][i][j] == -1:
                     Sprite(RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,black),red),(CELLSIZE*j+1,CELLSIZE*i+1))
 
-def move(event):
+def move(event): #changes the movement pattern wich will update the snake's position in moveSnake
     ignoreTimerEvent = True
     if event.key == "down arrow":
         if data["movement"] != [0,-1]:
