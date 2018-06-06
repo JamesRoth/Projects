@@ -58,7 +58,7 @@ def step(): #runs game
 
 def loadSnakeBoard(): #initial matrix of board
     for i in range(0, ROWS+1):
-        list1 = [0]*COLUMNS
+        list1 = [0]*(COLUMNS+1)
         data["board"].append(list1)
     data["board"][data["headY"]][data["headX"]] = 1 #initial snake position
     placeFood()
