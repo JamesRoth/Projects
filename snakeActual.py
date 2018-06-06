@@ -141,7 +141,7 @@ def removeTail(): #subtracts 1 from every snake cell, removing the end of the sn
             if data["board"][i][j] >= 1:
                 data["board"][i][j] -= 1
 
-if __name__ == "__main__":
+if __name__ == "__main__": #main loop
     #dictionary
     data = {}
     data["board"] = []
