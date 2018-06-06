@@ -57,8 +57,10 @@ def step(): #runs game
             Sprite(TextAsset("Game Over", fill = red, style = "20pt Arial"),(CELLSIZE*(COLUMNS-4)/2,CELLSIZE*(ROWS-4)/2))
 
 def loadSnakeBoard(): #initial matrix of board
-    list1 = [0]*(COLUMNS+1)
     for i in range(0, ROWS+1):
+        list1=[]
+        for j in range(0, COLUMNS+1):
+            list1.append[0]
         data["board"].append(list1)
     data["board"][data["headY"]][data["headX"]] = 1 #initial snake position
     placeFood()
