@@ -60,7 +60,7 @@ def loadSnakeBoard(): #initial matrix of board
     for i in range(0, ROWS+1):
         list1=[]
         for j in range(0, COLUMNS+1):
-            list1.append[0]
+            list1.append(0)
         data["board"].append(list1)
     data["board"][data["headY"]][data["headX"]] = 1 #initial snake position
     placeFood()
