@@ -35,9 +35,10 @@ def adjustments(mechanic):
 #each different production strategy
 def strat1:
     adjustments(1)
+    
 def strat2:
     adjustments(0)
     
 def strat3:
-
+    
 
