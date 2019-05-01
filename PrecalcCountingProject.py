@@ -12,4 +12,24 @@ W = 81
 N = 72
 S = 2
 
-adjustments = 
+adjustProb = randint(0,100)
+
+def newRunTheoretical:
+    adjustments(0)
+
+def newRunExperimental:
+    adjustments(0)
+
+def adjustments(mechanic):
+    if mechanic == 0:
+        if adjustProb <= 80: #number of correct adjustments
+            adj = 2
+        elif adjustProb <= 95:
+            adj = 1
+        else:
+            adj = 0
+    else:
+        adj = 2
+
+    
+
