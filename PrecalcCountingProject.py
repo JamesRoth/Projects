@@ -17,7 +17,9 @@ adjustProb = randint(1,100)
 def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
-        
+        return 1
+    else: 
+        return 0
 
 def noDefective(chance,parts):
     numDefective = 0
