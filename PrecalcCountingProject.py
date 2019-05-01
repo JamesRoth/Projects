@@ -24,7 +24,8 @@ def probability(chance):
 def noDefective(chance,parts):
     numDefective = 0
     for i in range(1,parts+1):
-        if randint 
+        if probability(chance) == 0:
+            numDefectice+=1
 
 def newRunTheoretical():
     adjustments(0)
