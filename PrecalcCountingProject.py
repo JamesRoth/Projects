@@ -41,7 +41,7 @@ def strat2():
     
 def strat3():
     sampleAmount = []
-    for i in range(0, N+1):
+    for i in range(1, N+1):
         sampleAmount.append(i)
     print(sampleAmount)
     
