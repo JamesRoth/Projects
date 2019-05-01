@@ -31,5 +31,10 @@ def adjustments(mechanic):
     else:
         adj = 2
 
+def strat1:
     
+def strat2:
+
+def strat3:
+
 
