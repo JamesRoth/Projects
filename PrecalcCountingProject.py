@@ -14,6 +14,11 @@ S = 2
 
 adjustProb = randint(0,100)
 
+def noDefective(chance,parts):
+    numDefective = 0
+    for i in range(1,parts+1):
+        if 
+
 def newRunTheoretical():
     adjustments(0)
 
