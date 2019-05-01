@@ -14,10 +14,10 @@ S = 2
 
 adjustProb = randint(0,100)
 
-def newRunTheoretical:
+def newRunTheoretical():
     adjustments(0)
 
-def newRunExperimental:
+def newRunExperimental():
     adjustments(0)
 
 def adjustments(mechanic):
@@ -33,15 +33,15 @@ def adjustments(mechanic):
 
 
 #each different production strategy
-def strat1:
+def strat1():
     adjustments(1)
     
-def strat2:
+def strat2():
     adjustments(0)
     
-def strat3:
+def strat3():
     sampleAmount = range(N)
     print(sampleAmount)
     
-strat3
+strat3()
 
