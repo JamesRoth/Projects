@@ -37,20 +37,24 @@ def strat1Theo():
     cost1Theo = M
     adjustments(1)
     
+    
 def strat2Theo():
     cost2Theo = 0
     adjustments(0)
     
+    
 def strat3Theo():
     cost3Theo = 0
+    adjustments(0)
+    
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
     sampleCost = []
     for item in sampleAmount:
         sampleCost.append(item*S)
-    print(sampleCost)
     
+
 #strat3Theo()
 
 def strat1Exp():
