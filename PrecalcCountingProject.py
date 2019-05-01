@@ -4,13 +4,13 @@
 
 from random import *
 
-N = 634
-D = 7
-G = 98
-K = 89
-W = 81
-M = 72
-S = 2
+N = 634     #number of parts
+D = 7       #
+G = 98      #% of good parts w/ both adjusments correct
+K = 89      #% of good parts w/ one adjusments correct
+W = 81      #% of good parts w/ no adjusment correct
+M = 72      #cost of mechanic
+S = 2       #
 
 adjustProb = randint(1,100)
 
