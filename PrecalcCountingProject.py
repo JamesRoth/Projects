@@ -43,7 +43,6 @@ def strat3():
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
-    print(sampleAmount)
     
 strat3()
 
