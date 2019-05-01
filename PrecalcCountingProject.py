@@ -67,6 +67,12 @@ def strat3Theo():
     for item in sampleAmount:
         sampleCost.append(item*S)
     
+    for item in sampleAmount:
+        if adj == 0:
+            if noDefective(0.8, item) == 0:
+                
+            
+    
 
 #strat3Theo()
 
