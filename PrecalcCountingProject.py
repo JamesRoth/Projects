@@ -10,7 +10,7 @@ G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
 W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
-S = 2       #
+S = 2       #cost per test part?
 
 adjustProb = randint(1,100)
 
@@ -60,13 +60,14 @@ def strat3Theo():
     cost3Theo = 0
     adjustments(0)
     
+    #running the sample batch
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
     sampleCost = []
     for item in sampleAmount:
         sampleCost.append(item*S)
-    
+    #checking the cost of running different amounts of samples
     for item in sampleAmount:
         if adj == 0:
             if noDefective(0.8, item) == 0:
