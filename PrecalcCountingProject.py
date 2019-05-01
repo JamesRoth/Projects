@@ -33,16 +33,25 @@ def adjustments(mechanic):
 
 
 #each different production strategy
-def strat1():
+def strat1Theo():
     adjustments(1)
     
-def strat2():
+def strat2Theo():
     adjustments(0)
     
-def strat3():
+def strat3Theo():
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
     
-strat3()
+def strat1Exp():
+    adjustments(1)
+    
+def strat2Exp():
+    adjustments(0)
+    
+def strat3Exp():
+    sampleAmount = []
+    for i in range(1, N+1):
+        sampleAmount.append(i)
 
