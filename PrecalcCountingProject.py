@@ -41,4 +41,7 @@ def strat2:
     
 def strat3:
     sampleAmount = range(N)
+    print(sampleAmount)
+    
+strat3
 
