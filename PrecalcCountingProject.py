@@ -31,10 +31,13 @@ def adjustments(mechanic):
     else:
         adj = 2
 
-def strat1:
-    
-def strat2:
 
+#each different production strategy
+def strat1:
+    adjustments(1)
+def strat2:
+    adjustments(0)
+    
 def strat3:
 
 
