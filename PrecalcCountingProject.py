@@ -48,7 +48,7 @@ def strat3Theo():
         sampleCost.append(item*S)
     print(sampleCost)
     
-strat3Theo()
+#strat3Theo()
 
 def strat1Exp():
     adjustments(1)
