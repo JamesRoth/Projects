@@ -71,7 +71,8 @@ def strat3Theo():
         if adj == 0:
             if noDefective(0.8, item) == 0:
                 
-            
+            else:
+                cost3Theo+= M
     
 
 #strat3Theo()
