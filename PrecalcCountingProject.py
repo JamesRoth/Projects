@@ -45,7 +45,7 @@ def strat3Theo():
         sampleAmount.append(i)
     sampleCost = []
     for item in sampleAmount:
-        sampleCost.append(item*s)
+        sampleCost.append(item*S)
     print(sampleCost)
     
 strat3Theo()
