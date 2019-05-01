@@ -43,6 +43,9 @@ def strat3Theo():
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
+    sampleCost = []
+    for item in sampleAmount:
+        sampleCost.append(item*s)
     
 def strat1Exp():
     adjustments(1)
