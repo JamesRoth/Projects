@@ -9,7 +9,7 @@ D = 7
 G = 98
 K = 89
 W = 81
-N = 72
+M = 72
 S = 2
 
 adjustProb = randint(0,100)
