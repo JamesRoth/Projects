@@ -12,12 +12,16 @@ W = 81
 M = 72
 S = 2
 
-adjustProb = randint(0,100)
+adjustProb = randint(1,100)
+
+def probability(chance):
+    num = randint(1,100)
+    
 
 def noDefective(chance,parts):
     numDefective = 0
     for i in range(1,parts+1):
-        if 
+        if randint 
 
 def newRunTheoretical():
     adjustments(0)
