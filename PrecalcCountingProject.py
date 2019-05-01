@@ -40,5 +40,5 @@ def strat2:
     adjustments(0)
     
 def strat3:
-    
+    sampleAmount = range(N)
 
