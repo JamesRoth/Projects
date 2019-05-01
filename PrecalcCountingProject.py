@@ -40,7 +40,9 @@ def strat2():
     adjustments(0)
     
 def strat3():
-    sampleAmount = range(N)
+    sampleAmount = []
+    for i in range(0, N+1):
+        sampleAmount.append(i)
     print(sampleAmount)
     
 strat3()
