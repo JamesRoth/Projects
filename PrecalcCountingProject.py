@@ -8,7 +8,7 @@ from math import floor
 #declaring variables:
 
 N = 634     #number of parts
-N = 200     #this N for testing purposes only
+N = 634     #this N for testing purposes only
 D = 7       #cost per defective part
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
@@ -143,9 +143,9 @@ def partsCostTheo(mechanic):
     partsCostNum = 0
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        partsCostNum+=floor(N*(100-G)/100)*D
+        partsCostNum+=(N*(100-G)/100)*D
     else:
-        partsCostNum+=floor(N*.8*(100-G)/100)*D+floor(N*.15*(100-K)/100)*D+floor(N*.05*(100-W)/100)*D
+        partsCostNum+=(N*.8*(100-G)/100)*D+(N*.15*(100-K)/100)*D+(N*.05*(100-W)/100)*D
     return partsCostNum
 
 #each different theroetical production strategy
@@ -162,7 +162,8 @@ def strat3Theo():
     sampleCost = []
     for i in range(1, 11):
         sampleAmount.append(i)
-    
+    for i in range(1,(len(sampleAmount)+1):
+        
     
 
 #a new experimental production run
