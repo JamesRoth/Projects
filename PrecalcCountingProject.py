@@ -7,6 +7,7 @@ from random import *
 #declaring variables:
 
 N = 634     #number of parts
+N = 6       #this N for testing purposes only
 D = 7       #
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
@@ -79,12 +80,11 @@ def strat3Theo():
     
 
 strat3Theo()
+print(sampleCost)
 
 def strat1Exp():
-    adjustments(1)
     
 def strat2Exp():
-    adjustments(0)
     
 def strat3Exp():
     sampleAmount = []
