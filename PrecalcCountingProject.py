@@ -19,6 +19,16 @@ adj = 0
 
 adjustProb = randint(1,100)
 
+#generates new numbers for the inital values for the project
+def generateNewNums():
+    N = randint(300,1000)
+    D = randint(3,9)
+    G = randint(96,99)
+    K = randint(88,92)
+    W = randint(78,84)
+    M = randint(50,100)
+    S = randint(2,6)
+
 def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
