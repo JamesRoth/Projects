@@ -80,25 +80,25 @@ def strat3Theo():
         if adj == 0:
             if noDefective(W/100, item) == 0:
                 sampleCost.append(S*item)
-                partsAndSampleCost(0)
+                partsCost(0)
             else:
                 sampleCost.append(S*item+M)
-                partsAndSampleCost(1)
+                partsCost(1)
         elif adj == 1:
             if noDefective(K/100, item) == 0:
                 sampleCost.append(S*item)
-                partsAndSampleCost(0)
+                partsCost(0)
             else:
                 sampleCost.append(S*item+M)
                 mechanic = 1
-                partsAndSampleCost(1)
+                partsCost(1)
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 sampleCost.append(S*item)
-                partsAndSampleCost(0)
+                partsCost(0)
             else:
                 sampleCost.append(S*item+M)
-                partsAndSampleCost(1)
+                partsCost(1)
     
     print(sampleAmount)
     print(sampleCost)
@@ -109,23 +109,25 @@ def strat3Theo():
         finalCost.append
 
 #gives us the cost of parts and their accompanying sample
-def partsAndSampleCost(mechanic):
+def partsCost(mechanic):
     #if any sample parts are defective, we hire the mechanic
     if mechanic == 1:
         adjustments(mechanic)
     
     #costs from defective parts
-    partsCost = 0
+    partsCostNum = 0
     for i in range(0,N):
         if adj == 0:
             if probability(W/100) == 0:
-                partsCost+=D
+                partsCostNum+=D
         elif adj == 1:
             if probability(K/100) == 0:
-                partsCost+=D
+                partsCostNum+=D
         elif adj == 2:
             if probability(G/100) == 0:
-                partsCost+=D
+                partsCostNum+=D
+    return partsCostNum
+    
 
 strat3Theo()
 
