@@ -36,17 +36,6 @@ def noDefective(chance,parts):
             numDefective+=1
     return numDefective
 
-def newRunTheoretical():
-    adjustments(0)
-    strat1Theo()
-    strat2Theo()
-    strat3Theo()
-
-def newRunExperimental():
-    adjustments(0)
-
-newRunTheoretical()
-
 #calculates the number of correct adjustments
 def adjustments(mechanic):
     if mechanic == 0:
@@ -62,6 +51,17 @@ def adjustments(mechanic):
     else: #if the mechanic argument is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
         global adj 
         adj = 2
+
+def newRunTheoretical():
+    adjustments(0)
+    strat1Theo()
+    strat2Theo()
+    strat3Theo()
+
+def newRunExperimental():
+    adjustments(0)
+
+newRunTheoretical()
 
 #each different production strategy
 def strat1Theo():
