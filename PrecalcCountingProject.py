@@ -162,7 +162,7 @@ def strat3Theo():
     samplePercentDefective = []
     for i in range(1, 11):
         sampleAmount.append(i)
-    for i in range(0,(len(sampleAmount)):
+    for i in range(0,len(sampleAmount)):
         samplePercentDefective.append(sampleAmount[0]*.8*(100-G) + sampleAmount[0]*.15*(100-K) + sampleAmount[0]*.05*(100-W))
     print(samplePercentDefective)
 
