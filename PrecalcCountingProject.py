@@ -73,19 +73,19 @@ def strat3Theo():
     #checking the cost of running different amounts of sample parts
     for item in sampleAmount:
         if adj == 0:
-            if noDefective(W, item) == 0:
+            if noDefective(W/100, item) == 0:
                 sampleCost.append(S*item)
             else:
                 sampleCost.append(S*item+M)
                 print("Mechanic")
         elif adj == 1:
-            if noDefective(K, item) == 0:
+            if noDefective(K/100, item) == 0:
                 sampleCost.append(S*item)
             else:
                 sampleCost.append(S*item+M)
                 print("Mechanic")
         elif adj == 2:
-            if noDefective(G, item) == 0:
+            if noDefective(G/100, item) == 0:
                 sampleCost.append(S*item)
             else:
                 sampleCost.append(S*item+M)
