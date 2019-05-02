@@ -38,6 +38,9 @@ def noDefective(chance,parts):
 
 def newRunTheoretical():
     adjustments(0)
+    strat1Theo()
+    strat2Theo()
+    strat3Theo()
 
 def newRunExperimental():
     adjustments(0)
@@ -69,7 +72,6 @@ def strat2Theo():
     
 def strat3Theo():
     cost3Theo = 0
-    adjustments(0)
     
     #running the sample batch
     sampleAmount = []
