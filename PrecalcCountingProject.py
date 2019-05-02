@@ -119,7 +119,7 @@ def strat3Theo():
 
 #gives us the cost of parts 
 def partsCost(mechanic):
-    #if any sample parts are defective, we hire the mechanic (this cost, however, is accounted for in the sampleCost list, so we don't need to add it
+    #if any sample parts are defective, we hire the mechanic (for strategy 3 this cost, however, is accounted for in the sampleCost list, so we don't need to add it
     if mechanic == 1:
         adjustments(mechanic)
     
