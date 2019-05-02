@@ -63,15 +63,15 @@ def adjustments(mechanic):
         adj = 2
 
 #each different theoretical production strategy
-def strat1Theo():
+def strat1Exp():
     cost1Theo = M + partsCost(1)
     print("Cost (strat 1): ", cost1Theo)
     
-def strat2Theo():
+def strat2Exp():
     cost2Theo = partsCost(0)
     print("Cost (strat 2): ", cost2Theo)
     
-def strat3Theo():
+def strat3Exp():
     cost3Theo = 0
     
     #running the sample batch
@@ -137,25 +137,25 @@ def partsCost(mechanic):
                 partsCostNum+=D
     return partsCostNum
 
-#each different experimental production strategy
-def strat1Exp():
+#each different theroetical production strategy
+def strat1Theo():
     print("")
     
-def strat2Exp():
+def strat2Theo():
     print("")
     
-def strat3Exp():
+def strat3Theo():
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
 
-#a new theoretical production run - although I don't get the distinction between theoretical and experimental
-def newRunTheoretical():
+#a new experimental production run
+def newRunExperimental():
     adjustments(0)
-    print("Theoretical")
-    strat1Theo()
-    strat2Theo()
-    strat3Theo()
+    print("Experimental")
+    strat1Exp()
+    strat2Exp()
+    strat3Exp()
 
 #a new experimental production run
 def newRunExperimental():
