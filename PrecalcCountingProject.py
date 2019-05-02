@@ -45,6 +45,8 @@ def newRunTheoretical():
 def newRunExperimental():
     adjustments(0)
 
+newRunTheoretical()
+
 #calculates the number of correct adjustments
 def adjustments(mechanic):
     if mechanic == 0:
@@ -139,9 +141,6 @@ def partsCost(mechanic):
                 partsCostNum+=D
                 print("defective")
     return partsCostNum
-    
-
-strat3Theo()
 
 def strat1Exp():
     print("")
