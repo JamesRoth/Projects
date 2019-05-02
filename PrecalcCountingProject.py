@@ -170,7 +170,7 @@ def strat3Theo():
     print(samplePercentDefective)
     #finding the total cost
     for i in range(0,len(sampleAmount)):
-        
+        samplePercentDefective[i]*M + partsCostTheo(1)
 
 #a new experimental production run
 def newRunExperimental():
