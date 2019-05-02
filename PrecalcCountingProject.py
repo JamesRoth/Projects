@@ -123,7 +123,7 @@ def partsAndSampleCost(mechanic):
             
         elif adj == 2:
             if probability(G/100) == 0:
-                partsCost = 
+                partsCost+=D
 
 strat3Theo()
 
