@@ -171,8 +171,8 @@ def newRunExperimental():
 def newRunTheoretical():
     strat1Theo()
     strat2Theo()
-    strat3Theo()
+    #strat3Theo()
 
 newRunExperimental()
-
+newRunTheoretical()
 
