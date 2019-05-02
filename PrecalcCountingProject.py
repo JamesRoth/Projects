@@ -142,7 +142,7 @@ partsCostTheo(mechanic):
     if mechanic == 1:
         adjustments(mechanic)
     partsCostNum = 0
-    for i in range(0,(N*/100
+    partsCostNum+=floor(N*.8*(G-100)/100)
 
 #each different theroetical production strategy
 def strat1Theo():
