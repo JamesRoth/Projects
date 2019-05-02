@@ -72,31 +72,41 @@ def strat3Theo():
         sampleAmount.append(i)
     sampleCost = []
    
-    #checking the cost of running different amounts of sample parts
+    #listing the cost of running all amounts of sample parts
     mechanic = 0
     for item in sampleAmount:
         if adj == 0:
             if noDefective(W/100, item) == 0:
                 sampleCost.append(S*item)
+                partsCost(0)
             else:
                 sampleCost.append(S*item+M)
-                mechanic = 1
+                partsCost(1)
         elif adj == 1:
             if noDefective(K/100, item) == 0:
                 sampleCost.append(S*item)
+                partsCost(0)
             else:
                 sampleCost.append(S*item+M)
                 mechanic = 1
+                partsCost(1)
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 sampleCost.append(S*item)
+                partsCost(0)
             else:
                 sampleCost.append(S*item+M)
-                mechanic = 1
+                partsCost(1)
     print(sampleAmount)
     print(sampleCost)
     
-    #if sample parts are defective, we hire the mechanic
+    #adding up total cost:
+    finalCost = []
+    for item in sampleCost:
+        finalCost.append
+
+def partsCost(mechanic):
+    #if any sample parts are defective, we hire the mechanic
     if mechanic == 1:
         adjustments(mechanic)
     
@@ -108,14 +118,8 @@ def strat3Theo():
         elif adj == 1:
             
         elif adj == 2:
-            
-        
-    
-    #adding up total cost:
-    finalCost = []
-    for item in sampleCost:
-        finalCost.append
-    
+            if probability(G/100) == 0:
+                partsCost = 
 
 strat3Theo()
 
