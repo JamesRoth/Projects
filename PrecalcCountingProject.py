@@ -159,12 +159,12 @@ def strat2Theo():
     
 def strat3Theo():
     sampleAmount = []
-    sampleCost = []
+    samplePercentDefective = []
     for i in range(1, 11):
         sampleAmount.append(i)
     for i in range(0,(len(sampleAmount)):
-        sampleAmount[0]*.8*(100-G) + sampleAmount[0]*.15*(100-K) + sampleAmount[0]*.05*(100-W)
-        
+        samplePercentDefective.append(sampleAmount[0]*.8*(100-G) + sampleAmount[0]*.15*(100-K) + sampleAmount[0]*.05*(100-W))
+    print(samplePercentDefective)
 
 #a new experimental production run
 def newRunExperimental():
