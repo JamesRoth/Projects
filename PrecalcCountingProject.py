@@ -113,7 +113,7 @@ def strat3Theo():
     
     print("Sample no. of parts: ", sampleAmount)
     print("Sample cost: ", sampleCost)
-    print("Total cost (sample cost + parts cost): ", totalCost)
+    print("Total cost: ", totalCost)
 
 #gives us the cost of parts 
 def partsCost(mechanic):
