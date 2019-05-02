@@ -111,12 +111,13 @@ def strat3Theo():
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i]+partsCost(1))
     
+    #debugging purposes only:
     print("Sample no. of parts: ", sampleAmount)
     print("Total cost: ", totalCost)
 
 #gives us the cost of parts 
 def partsCost(mechanic):
-    #if any sample parts are defective, we hire the mechanic
+    #if any sample parts are defective, we hire the mechanic (this cost, however, is accounted for in the sampleCost list, so we don't need to add it
     if mechanic == 1:
         adjustments(mechanic)
     
