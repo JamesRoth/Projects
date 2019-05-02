@@ -8,7 +8,7 @@ from random import *
 
 N = 634     #number of parts
 N = 6       #this N for testing purposes only
-D = 7       #
+D = 7       #cost per defective part
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
 W = 81      #% of good parts w/ no adjusment correct
