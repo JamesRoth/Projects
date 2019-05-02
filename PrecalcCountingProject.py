@@ -65,15 +65,14 @@ def strat3Theo():
     for i in range(1, N+1):
         sampleAmount.append(i)
     sampleCost = []
-    for item in sampleAmount:
-        sampleCost.append(item*S)
-    #checking the cost of running different amounts of samples
+   
+    #checking the cost of running different amounts of sample parts
     for item in sampleAmount:
         if adj == 0:
             if noDefective(0.8, item) == 0:
-                
+                sampleCost.append(S*item)
             else:
-                cost3Theo+= M
+                sampleCost.append(S*item+M)
     
 
 #strat3Theo()
