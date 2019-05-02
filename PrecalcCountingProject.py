@@ -169,7 +169,7 @@ def strat3Theo(): #- NEED TO CHECK WITH DONNELLY - THINK MY CALCULATIONS FOR tot
     #% of the time the master mechanic will be called for each amount of sample parts
     for i in range(0,len(sampleAmount)):
         samplePercentDefective.append(round(sampleAmount[i]*.8*(100-G) + sampleAmount[i]*.15*(100-K) + sampleAmount[i]*.05*(100-W)))
-    print(samplePercentDefective)
+    print("Percent defective: ", samplePercentDefective)
    
     #finding the total cost - NEEDS FIXING AS OF 5/2/19
     for i in range(0,len(sampleAmount)):
