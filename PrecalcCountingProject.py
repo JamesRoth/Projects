@@ -152,6 +152,7 @@ def strat3Exp():
 #a new theoretical production run - although I don't get the distinction between theoretical and experimental
 def newRunTheoretical():
     adjustments(0)
+    print("Theoretical")
     strat1Theo()
     strat2Theo()
     strat3Theo()
