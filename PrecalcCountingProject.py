@@ -158,7 +158,7 @@ def newRunExperimental():
     strat3Exp()
 
 #a new experimental production run
-def newRunExperimental():
+def newRunTheoretical():
     adjustments(0)
 
 newRunExperimental()
