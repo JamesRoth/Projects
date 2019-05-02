@@ -157,7 +157,7 @@ def strat2Theo():
     cost2Theo = partsCostTheo(0,N)
     print("Cost (strat 2): ",cost2Theo)
     
-def strat3Theo(): #REMEMBER COST OF DEFECTIVE PARTS AND COST OF SAMPLES
+def strat3Theo(): #REMEMBER COST OF DEFECTIVE PARTS
     sampleAmount = []
     samplePercentDefective = []
     totalCost = []
