@@ -115,7 +115,7 @@ def strat3Theo():
                 totalCost.append(sampleCost[i]+partsCost(1))
     
     #debugging purposes only:
-    print("(Strat 3): Sample amount: ", sampleAmount
+    print("(Strat 3): Sample amount: ", sampleAmount)
     print("(Strat 3): Total cost: ", totalCost)
 
 #gives us the cost of parts 
