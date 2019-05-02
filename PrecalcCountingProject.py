@@ -84,7 +84,9 @@ print(sampleCost)
 
 def strat1Exp():
     
+    
 def strat2Exp():
+    
     
 def strat3Exp():
     sampleAmount = []
