@@ -138,11 +138,12 @@ def partsCost(mechanic):
     return partsCostNum
 
 partsCostTheo(mechanic):
-     #if any sample parts are defective, we hire the mechanic 
+     partsCostNum = 0
+    #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        partsCostNum+=floor(N*(G-100)/100)
-    partsCostNum = 0
-    partsCostNum+=floor(N*.8*(G-100)/100)
+        partsCostNum+=floor(N*(G-100)/100)*D
+    else:
+        partsCostNum+=floor(N*.8*(G-100)/100)*D+floor(N*.8*(K-100)/100)*D+floor(N*.8*(W-100)/100)*D
 
 #each different theroetical production strategy
 def strat1Theo():
