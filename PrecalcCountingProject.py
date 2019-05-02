@@ -117,7 +117,7 @@ def strat3Exp():
     #debugging purposes only:
     print("(Strat 3): Total cost: ", totalCost)
 
-#gives us the cost of parts 
+#gives us the cost of parts - for experimental
 def partsCost(mechanic):
     #if any sample parts are defective, we hire the mechanic (for strategy 3 this cost, however, is accounted for in the sampleCost list, so we don't need to add it
     if mechanic == 1:
@@ -137,9 +137,16 @@ def partsCost(mechanic):
                 partsCostNum+=D
     return partsCostNum
 
+partsCostTheo(mechanic):
+     #if any sample parts are defective, we hire the mechanic (for strategy 3 this cost, however, is accounted for in the sampleCost list, so we don't need to add it
+    if mechanic == 1:
+        adjustments(mechanic)
+    partsCostNum = 0
+    for i in range(0,(N*/100
+
 #each different theroetical production strategy
 def strat1Theo():
-    print("")
+    
     
 def strat2Theo():
     print("")
