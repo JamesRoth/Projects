@@ -52,17 +52,6 @@ def adjustments(mechanic):
         global adj 
         adj = 2
 
-def newRunTheoretical():
-    adjustments(0)
-    strat1Theo()
-    strat2Theo()
-    strat3Theo()
-
-def newRunExperimental():
-    adjustments(0)
-
-newRunTheoretical()
-
 #each different production strategy
 def strat1Theo():
     cost1Theo = M + partsCost(1)
@@ -152,4 +141,18 @@ def strat3Exp():
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
+
+
+def newRunTheoretical():
+    adjustments(0)
+    strat1Theo()
+    strat2Theo()
+    strat3Theo()
+
+def newRunExperimental():
+    adjustments(0)
+
+newRunTheoretical()
+
+
 
