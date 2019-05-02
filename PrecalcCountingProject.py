@@ -111,9 +111,9 @@ def strat3Theo():
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i]+partsCost(1))
     
-    print(sampleAmount)
-    print(sampleCost)
-    print(totalCost)
+    print("Sample no. of parts: ", sampleAmount)
+    print("Sample cost: ", sampleCost)
+    print("Total cost (sample cost + parts cost): ", totalCost)
 
 #gives us the cost of parts 
 def partsCost(mechanic):
@@ -136,10 +136,7 @@ def partsCost(mechanic):
     return partsCostNum
     
 
-#strat3Theo()
-
-adjustments(1)
-print(adj)
+strat3Theo()
 
 def strat1Exp():
     print("")
