@@ -118,9 +118,11 @@ def partsAndSampleCost(mechanic):
     partsCost = 0
     for i in range(0,N):
         if adj == 0:
-            
+            if probability(W/100) == 0:
+                partsCost+=D
         elif adj == 1:
-            
+            if probability(K/100) == 0:
+                partsCost+=D
         elif adj == 2:
             if probability(G/100) == 0:
                 partsCost+=D
