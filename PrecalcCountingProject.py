@@ -4,6 +4,8 @@
 
 from random import *
 
+#declaring variables:
+
 N = 634     #number of parts
 D = 7       #
 G = 98      #% of good parts w/ both adjusments correct
@@ -12,7 +14,10 @@ W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per test part?
 
+global adj = 0
+
 adjustProb = randint(1,100)
+
 
 def probability(chance):
     num = randint(1,100)
@@ -28,21 +33,21 @@ def noDefective(chance,parts):
             numDefectice+=1
 
 def newRunTheoretical():
-    adjustments(0)
+    adj = adjustments(0)
 
 def newRunExperimental():
-    adjustments(0)
+    adj = adjustments(0)
 
 def adjustments(mechanic):
     if mechanic == 0:
         if adjustProb <= 80: #number of correct adjustments
-            adj = 2
+            return 2
         elif adjustProb <= 95:
-            adj = 1
+            return 1
         else:
-            adj = 0
+            return 0
     else:
-        adj = 2
+        return 2
 
 
 #each different production strategy
@@ -75,7 +80,7 @@ def strat3Theo():
                 sampleCost.append(S*item+M)
     
 
-#strat3Theo()
+strat3Theo()
 
 def strat1Exp():
     adjustments(1)
