@@ -17,12 +17,13 @@ S = 2       #cost per test part?
 
 adjustProb = randint(1,100)
 
-
 def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
+        #event happened
         return 1
     else: 
+        #event didn't happen
         return 0
 
 def noDefective(chance,parts):
@@ -99,6 +100,7 @@ def strat3Theo():
     if mechanic == 1:
         adjustments(mechanic)
     
+    #costs from defective parts
     partsCost = 0
     for i in range(0,N):
         
