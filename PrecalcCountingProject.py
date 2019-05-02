@@ -115,7 +115,6 @@ def strat3Theo():
                 totalCost.append(sampleCost[i]+partsCost(1))
     
     #debugging purposes only:
-    print("(Strat 3): Sample amount: ", sampleAmount)
     print("(Strat 3): Total cost: ", totalCost)
 
 #gives us the cost of parts 
@@ -136,7 +135,6 @@ def partsCost(mechanic):
         elif adj == 2:
             if probability(G/100) == 0:
                 partsCostNum+=D
-    print(partsCostNum)
     return partsCostNum
 
 #each different experimental production strategy
