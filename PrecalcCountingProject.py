@@ -150,11 +150,11 @@ def partsCostTheo(mechanic, noParts):
 
 #each different theroetical production strategy
 def strat1Theo():
-    cost1Theo = partsCostTheo(1) + M
+    cost1Theo = partsCostTheo(1,N) + M
     print("Cost (strat 1): ",cost1Theo)
     
 def strat2Theo():
-    cost2Theo = partsCostTheo(0)
+    cost2Theo = partsCostTheo(0,N)
     print("Cost (strat 2): ",cost2Theo)
     
 def strat3Theo():
@@ -170,7 +170,7 @@ def strat3Theo():
     print(samplePercentDefective)
     #finding the total cost
     for i in range(0,len(sampleAmount)):
-        samplePercentDefective[i]*M + partsCostTheo(1, (N*samplePercentDefective))
+        (samplePercentDefective[i]*M + partsCostTheo(1, (N*samplePercentDefective[i]/100)) + partsCostTheo(0, (N*(1-samplePercentDefective[i]/100))) )
 
 #a new experimental production run
 def newRunExperimental():
