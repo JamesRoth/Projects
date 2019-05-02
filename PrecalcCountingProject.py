@@ -14,7 +14,7 @@ W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per test part?
 
-global adj = 0
+ adj = 0
 
 adjustProb = randint(1,100)
 
@@ -46,7 +46,7 @@ def adjustments(mechanic):
             return 1
         else:
             return 0
-    else:
+    else: #if mechanic is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
         return 2
 
 
@@ -63,7 +63,7 @@ def strat2Theo():
     
 def strat3Theo():
     cost3Theo = 0
-    adjustments(0)
+    adj = adjustments(0)
     
     #running the sample batch
     sampleAmount = []
