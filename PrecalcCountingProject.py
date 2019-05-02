@@ -148,11 +148,11 @@ partsCostTheo(mechanic):
 #each different theroetical production strategy
 def strat1Theo():
     cost1Theo = partsCostTheo(1) + M
-    print(cost1Theo)
+    print("Cost (strat 1): ",cost1Theo)
     
 def strat2Theo():
     cost2Theo = partsCostTheo(0)
-    print(cost2Theo)
+    print("Cost (strat 2): ",cost2Theo)
     
 def strat3Theo():
     sampleAmount = []
