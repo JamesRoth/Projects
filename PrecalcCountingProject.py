@@ -103,6 +103,12 @@ def strat3Theo():
     #costs from defective parts
     partsCost = 0
     for i in range(0,N):
+        if adj == 0:
+            
+        elif adj == 1:
+            
+        elif adj == 2:
+            
         
     
     #adding up total cost:
