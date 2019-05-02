@@ -146,6 +146,7 @@ def partsCostTheo(mechanic):
         partsCostNum+=floor(N*(G-100)/100)*D
     else:
         partsCostNum+=floor(N*.8*(G-100)/100)*D+floor(N*.15*(K-100)/100)*D+floor(N*.05*(W-100)/100)*D
+    return partsCostNum
 
 #each different theroetical production strategy
 def strat1Theo():
