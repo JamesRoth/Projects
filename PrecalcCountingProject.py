@@ -46,19 +46,19 @@ def adjustments(mechanic):
             return 1
         else:
             return 0
-    else: #if mechanic is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
+    else: #if the mechanic argument is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
         return 2
 
 
 #each different production strategy
 def strat1Theo():
     cost1Theo = M
-    adjustments(1)
+    adj = adjustments(1)
     
     
 def strat2Theo():
     cost2Theo = 0
-    adjustments(0)
+    adj = adjustments(0)
     
     
 def strat3Theo():
