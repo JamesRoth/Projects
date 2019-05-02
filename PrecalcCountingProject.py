@@ -90,9 +90,12 @@ def strat3Theo():
                 sampleCost.append(S*item+M)
     print(sampleAmount)
     print(sampleCost)
+    
+    
     #adding up total cost:
+    finalCost = []
     for item in sampleCost:
-        
+        finalCost.append
     
 
 strat3Theo()
