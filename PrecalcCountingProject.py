@@ -159,8 +159,11 @@ def strat2Theo():
     
 def strat3Theo():
     sampleAmount = []
-    for i in range(1, N+1):
+    sampleCost = []
+    for i in range(1, 11):
         sampleAmount.append(i)
+    
+    
 
 #a new experimental production run
 def newRunExperimental():
