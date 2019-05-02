@@ -30,6 +30,7 @@ def noDefective(chance,parts):
     for i in range(1,parts+1):
         if probability(chance) == 0:
             numDefective+=1
+    return numDefective
 
 def newRunTheoretical():
     global adj
