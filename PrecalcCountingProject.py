@@ -15,6 +15,14 @@ W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per sample part
 
+N = 444
+D = 4
+G = 98
+K = 89
+W = 80
+M = 64
+S = 6
+
 adj = 0
 
 adjustProb = randint(1,100)
@@ -76,7 +84,7 @@ def strat3Exp():
     
     #running the sample batch
     sampleAmount = []
-    for i in range(1, N+1):
+    for i in range(1, 6):
         sampleAmount.append(i)
     
     sampleCost = []
