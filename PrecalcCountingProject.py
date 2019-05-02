@@ -120,15 +120,12 @@ def partsCost(mechanic):
         if adj == 0:
             if probability(W/100) == 0:
                 partsCostNum+=D
-                print("defective")
         elif adj == 1:
             if probability(K/100) == 0:
                 partsCostNum+=D
-                print("defective")
         elif adj == 2:
             if probability(G/100) == 0:
                 partsCostNum+=D
-                print("defective")
     return partsCostNum
 
 def strat1Exp():
