@@ -7,21 +7,13 @@ from random import *
 #declaring variables:
 
 N = 634     #number of parts
-N = 200    #this N for testing purposes only
+N = 200     #this N for testing purposes only
 D = 7       #cost per defective part
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
 W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per sample part
-
-N = 444
-D = 4
-G = 98
-K = 89
-W = 80
-M = 64
-S = 6
 
 adj = 0
 
@@ -84,7 +76,7 @@ def strat3Exp():
     
     #running the sample batch
     sampleAmount = []
-    for i in range(1, 6):
+    for i in range(1, 11):
         sampleAmount.append(i)
     
     sampleCost = []
