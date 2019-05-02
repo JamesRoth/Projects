@@ -137,7 +137,8 @@ def partsCost(mechanic):
                 partsCostNum+=D
     return partsCostNum
 
-partsCostTheo(mechanic):
+#the theoretical cost of parts
+def partsCostTheo(mechanic):
      partsCostNum = 0
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
