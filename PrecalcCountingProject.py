@@ -64,11 +64,11 @@ def adjustments(mechanic):
 #each different production strategy
 def strat1Theo():
     cost1Theo = M
-    
+    partsCost(1)
     
 def strat2Theo():
     cost2Theo = 0
-    
+    partsCost(0)
     
 def strat3Theo():
     cost3Theo = 0
