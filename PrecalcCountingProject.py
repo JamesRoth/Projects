@@ -169,6 +169,7 @@ def newRunExperimental():
 
 #a new theoretical production run
 def newRunTheoretical():
+    print("Theoretical")
     strat1Theo()
     strat2Theo()
     #strat3Theo()
