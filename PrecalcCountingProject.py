@@ -139,7 +139,7 @@ def partsCost(mechanic):
 
 #the theoretical cost of parts
 def partsCostTheo(mechanic):
-     partsCostNum = 0
+    partsCostNum = 0
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
         partsCostNum+=floor(N*(G-100)/100)*D
