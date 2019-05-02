@@ -29,7 +29,7 @@ def noDefective(chance,parts):
     numDefective = 0
     for i in range(1,parts+1):
         if probability(chance) == 0:
-            numDefectice+=1
+            numDefective+=1
 
 def newRunTheoretical():
     global adj
