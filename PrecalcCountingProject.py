@@ -157,7 +157,7 @@ def strat2Theo():
     cost2Theo = partsCostTheo(0,N)
     print("Cost (strat 2): ",cost2Theo)
     
-def strat3Theo():
+def strat3Theo(): #REMEMBER COST OF DEFECTIVE PARTS AND COST OF SAMPLES
     sampleAmount = []
     samplePercentDefective = []
     totalCost = []
@@ -166,7 +166,7 @@ def strat3Theo():
         sampleAmount.append(i)
     #% of the time the master mechanic will be called for each amount of sample parts
     for i in range(0,len(sampleAmount)):
-        samplePercentDefective.append(round(sampleAmount[i]*.8*(100-G) + sampleAmount[i]*.15*(100-K) + sampleAmount[i]*.05*(100-W),4))
+        samplePercentDefective.append(round(sampleAmount[i]*.8*(100-G) + sampleAmount[i]*.15*(100-K) + sampleAmount[i]*.05*(100-W)))
     print(samplePercentDefective)
     #finding the total cost
     for i in range(0,len(sampleAmount)):
