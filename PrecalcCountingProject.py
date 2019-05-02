@@ -7,13 +7,13 @@ from random import *
 #declaring variables:
 
 N = 634     #number of parts
-N = 634     #this N for testing purposes only
+N = 20    #this N for testing purposes only
 D = 7       #cost per defective part
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
 W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
-S = 2       #cost per test part?
+S = 2       #cost per sample part
 
 adj = 0
 
@@ -115,6 +115,7 @@ def strat3Theo():
                 totalCost.append(sampleCost[i]+partsCost(1))
     
     #debugging purposes only:
+    print("(Strat 3): Sample amount: ", sampleAmount
     print("(Strat 3): Total cost: ", totalCost)
 
 #gives us the cost of parts 
@@ -135,6 +136,7 @@ def partsCost(mechanic):
         elif adj == 2:
             if probability(G/100) == 0:
                 partsCostNum+=D
+    print(partsCostNum)
     return partsCostNum
 
 #each different experimental production strategy
