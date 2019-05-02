@@ -78,21 +78,21 @@ def strat3Theo():
                 sampleCost.append(S*item)
             else:
                 sampleCost.append(S*item+M)
-                print("Mechanic")
         elif adj == 1:
             if noDefective(K/100, item) == 0:
                 sampleCost.append(S*item)
             else:
                 sampleCost.append(S*item+M)
-                print("Mechanic")
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 sampleCost.append(S*item)
             else:
                 sampleCost.append(S*item+M)
-                print("Mechanic")
     print(sampleAmount)
     print(sampleCost)
+    #adding up total cost:
+    for item in sampleCost:
+        
     
 
 strat3Theo()
