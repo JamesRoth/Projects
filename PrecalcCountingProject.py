@@ -143,7 +143,7 @@ def partsCostTheo(mechanic):
     partsCostNum = 0
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        partsCostNum+=floor(N*(G-100)/100)*D
+        partsCostNum+=floor(N*(100-G)/100)*D
     else:
         partsCostNum+=floor(N*.8*(100-G)/100)*D+floor(N*.15*(100-K)/100)*D+floor(N*.05*(100-W)/100)*D
     print(partsCostNum)
