@@ -83,10 +83,10 @@ strat3Theo()
 print(sampleCost)
 
 def strat1Exp():
-    
+    print("")
     
 def strat2Exp():
-    
+    print("")
     
 def strat3Exp():
     sampleAmount = []
