@@ -73,6 +73,7 @@ def strat3Theo():
         sampleAmount.append(i)
     
     sampleCost = []
+    totalCost = []
    
     #listing the cost of running all amounts of sample parts
     mechanic = 0
