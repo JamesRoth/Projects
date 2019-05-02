@@ -145,7 +145,7 @@ def partsCostTheo(mechanic):
     if mechanic == 1:
         partsCostNum+=floor(N*(G-100)/100)*D
     else:
-        partsCostNum+=floor(N*.8*(G-100)/100)*D+floor(N*.15*(K-100)/100)*D+floor(N*.05*(W-100)/100)*D
+        partsCostNum+=floor(N*.8*(100-G)/100)*D+floor(N*.15*(100-K)/100)*D+floor(N*.05*(100-W)/100)*D
     return partsCostNum
 
 #each different theroetical production strategy
