@@ -162,8 +162,8 @@ def strat3Theo():
     sampleCost = []
     for i in range(1, 11):
         sampleAmount.append(i)
-    for i in range(1,(len(sampleAmount)+1):
-        
+    for i in range(0,(len(sampleAmount)):
+        sampleAmount[0]*.8*(100-G) + 2*sampleAmount[0] +  
     
 
 #a new experimental production run
