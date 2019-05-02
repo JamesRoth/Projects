@@ -99,6 +99,9 @@ def strat3Theo():
     if mechanic == 1:
         adjustments(mechanic)
     
+    partsCost = 0
+    for i in range(0,N):
+        
     
     #adding up total cost:
     finalCost = []
