@@ -149,7 +149,7 @@ def strat3Exp():
     for i in range(1, N+1):
         sampleAmount.append(i)
 
-#a new theoretical production run
+#a new theoretical production run - although I don't get the distinction between theoretical and experimental
 def newRunTheoretical():
     adjustments(0)
     strat1Theo()
