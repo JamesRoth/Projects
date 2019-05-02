@@ -35,22 +35,23 @@ def noDefective(chance,parts):
     return numDefective
 
 def newRunTheoretical():
-    global adj
-    adj = adjustments(0)
+    adjustments(0)
 
 def newRunExperimental():
-    global adj
-    adj = adjustments(0)
+    adjustments(0)
 
 #calculates the number of correct adjustments
 def adjustments(mechanic):
     if mechanic == 0:
         if adjustProb <= 80: #number of correct adjustments
-            return 2
+            global adj
+            adj = 2
         elif adjustProb <= 95:
-            return 1
+            global adj
+            adj = 1
         else:
-            return 0
+            global adj
+            adj = 0
     else: #if the mechanic argument is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
         return 2
 
@@ -132,7 +133,10 @@ def partsCost(mechanic):
     return partsCostNum
     
 
-strat3Theo()
+#strat3Theo()
+
+adjustments(1)
+print(adj)
 
 def strat1Exp():
     print("")
