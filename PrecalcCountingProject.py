@@ -165,14 +165,14 @@ def strat3Theo():
 #a new experimental production run
 def newRunExperimental():
     adjustments(0)
-    print("Experimental")
+    print("Experimental:")
     strat1Exp()
     strat2Exp()
     strat3Exp()
 
 #a new theoretical production run
 def newRunTheoretical():
-    print("Theoretical")
+    print("Theoretical:")
     strat1Theo()
     strat2Theo()
     #strat3Theo()
