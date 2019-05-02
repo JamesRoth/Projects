@@ -80,35 +80,35 @@ def strat3Theo():
         if adj == 0:
             if noDefective(W/100, item) == 0:
                 sampleCost.append(S*item)
+                #finding the cost of the parts when none are defective
                 partsCost(0)
             else:
                 sampleCost.append(S*item+M)
+                #finding the cost of the parts when some are defective
                 partsCost(1)
         elif adj == 1:
             if noDefective(K/100, item) == 0:
                 sampleCost.append(S*item)
+                #finding the cost of the parts when none are defective
                 partsCost(0)
             else:
                 sampleCost.append(S*item+M)
-                mechanic = 1
+                #finding the cost of the parts when some are defective
                 partsCost(1)
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 sampleCost.append(S*item)
+                #finding the cost of the parts when none are defective
                 partsCost(0)
             else:
                 sampleCost.append(S*item+M)
+                #finding the cost of the parts when some are defective
                 partsCost(1)
     
     print(sampleAmount)
     print(sampleCost)
-    
-    #adding up total cost:
-    finalCost = []
-    for item in sampleCost:
-        finalCost.append
 
-#gives us the cost of parts and their accompanying sample
+#gives us the cost of parts 
 def partsCost(mechanic):
     #if any sample parts are defective, we hire the mechanic
     if mechanic == 1:
