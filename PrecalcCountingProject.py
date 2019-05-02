@@ -8,7 +8,6 @@ from math import floor
 #declaring variables:
 
 N = 634     #number of parts
-N = 634     #this N for testing purposes only
 D = 7       #cost per defective part
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
@@ -39,7 +38,7 @@ def probability(chance):
         #event didn't happen
         return 0
 
-#tells us if any parts are defective so we know to call the mechanic
+#returns the number of defective parts for a select number and chance
 def noDefective(chance,parts):
     numDefective = 0
     for i in range(1,parts+1):
@@ -141,6 +140,7 @@ def partsCost(mechanic):
 #the theoretical cost of parts
 def partsCostTheo(mechanic, noParts):
     partsCostNum = 0
+    
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
         partsCostNum+=(noParts*(100-G)/100)*D
@@ -157,17 +157,20 @@ def strat2Theo():
     cost2Theo = partsCostTheo(0,N)
     print("Cost (strat 2): ",cost2Theo)
     
-def strat3Theo(): #- NEED TO CHECK WITH DONNELLY - THINK MY CALCULATIONS FOR LINE 173 (TOTALCOST) ARE WRONG
+def strat3Theo(): #- NEED TO CHECK WITH DONNELLY - THINK MY CALCULATIONS FOR totalCost ARE WRONG
     sampleAmount = []
     samplePercentDefective = []
     totalCost = []
+    
     #different numbers of sample parts
     for i in range(1, 11):
         sampleAmount.append(i)
+        
     #% of the time the master mechanic will be called for each amount of sample parts
     for i in range(0,len(sampleAmount)):
         samplePercentDefective.append(round(sampleAmount[i]*.8*(100-G) + sampleAmount[i]*.15*(100-K) + sampleAmount[i]*.05*(100-W)))
     print(samplePercentDefective)
+   
     #finding the total cost - NEEDS FIXING AS OF 5/2/19
     for i in range(0,len(sampleAmount)):
         totalCost.append(round(samplePercentDefective[i]/100*M + partsCostTheo(1, (N*samplePercentDefective[i]/100)) + partsCostTheo(0, (N*(1-samplePercentDefective[i]/100))),3) + (i+1)*S )
