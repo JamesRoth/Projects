@@ -52,7 +52,7 @@ def adjustments(mechanic):
         global adj 
         adj = 2
 
-#each different production strategy
+#each different theoretical production strategy
 def strat1Theo():
     cost1Theo = M + partsCost(1)
     print("Cost (strat 1): ", cost1Theo)
@@ -114,7 +114,7 @@ def partsCost(mechanic):
     if mechanic == 1:
         adjustments(mechanic)
     
-    #costs from defective parts
+    #costs from defective parts - "creates" all the parts and accounts for costs for each defective one
     partsCostNum = 0
     for i in range(0,N):
         if adj == 0:
@@ -128,6 +128,7 @@ def partsCost(mechanic):
                 partsCostNum+=D
     return partsCostNum
 
+#each different experimental production strategy
 def strat1Exp():
     print("")
     
