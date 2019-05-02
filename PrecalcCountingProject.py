@@ -138,9 +138,9 @@ def partsCost(mechanic):
     return partsCostNum
 
 partsCostTheo(mechanic):
-     #if any sample parts are defective, we hire the mechanic (for strategy 3 this cost, however, is accounted for in the sampleCost list, so we don't need to add it
+     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        adjustments(mechanic)
+        partsCostNum+=floor(N*(G-100)/100)
     partsCostNum = 0
     partsCostNum+=floor(N*.8*(G-100)/100)
 
