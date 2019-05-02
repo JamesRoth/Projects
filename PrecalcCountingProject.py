@@ -26,6 +26,7 @@ def probability(chance):
         #event didn't happen
         return 0
 
+#tells us if any parts are defective so we know to call the mechanic
 def noDefective(chance,parts):
     numDefective = 0
     for i in range(1,parts+1):
@@ -41,6 +42,7 @@ def newRunExperimental():
     global adj
     adj = adjustments(0)
 
+#calculates the number of correct adjustments
 def adjustments(mechanic):
     if mechanic == 0:
         if adjustProb <= 80: #number of correct adjustments
@@ -51,7 +53,6 @@ def adjustments(mechanic):
             return 0
     else: #if the mechanic argument is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
         return 2
-
 
 #each different production strategy
 def strat1Theo():
@@ -70,6 +71,7 @@ def strat3Theo():
     sampleAmount = []
     for i in range(1, N+1):
         sampleAmount.append(i)
+    
     sampleCost = []
    
     #listing the cost of running all amounts of sample parts
@@ -78,25 +80,25 @@ def strat3Theo():
         if adj == 0:
             if noDefective(W/100, item) == 0:
                 sampleCost.append(S*item)
-                partsCost(0)
+                partsAndSampleCost(0)
             else:
                 sampleCost.append(S*item+M)
-                partsCost(1)
+                partsAndSampleCost(1)
         elif adj == 1:
             if noDefective(K/100, item) == 0:
                 sampleCost.append(S*item)
-                partsCost(0)
+                partsAndSampleCost(0)
             else:
                 sampleCost.append(S*item+M)
                 mechanic = 1
-                partsCost(1)
+                partsAndSampleCost(1)
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 sampleCost.append(S*item)
-                partsCost(0)
+                partsAndSampleCost(0)
             else:
                 sampleCost.append(S*item+M)
-                partsCost(1)
+                partsAndSampleCost(1)
     
     print(sampleAmount)
     print(sampleCost)
@@ -106,7 +108,8 @@ def strat3Theo():
     for item in sampleCost:
         finalCost.append
 
-def partsCost(mechanic):
+#gives us the cost of parts and their accompanying sample
+def partsAndSampleCost(mechanic):
     #if any sample parts are defective, we hire the mechanic
     if mechanic == 1:
         adjustments(mechanic)
