@@ -55,7 +55,8 @@ def adjustments(mechanic):
             global adj 
             adj = 0
     else: #if the mechanic argument is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
-        return 2
+        global adj 
+        adj = 2
 
 #each different production strategy
 def strat1Theo():
