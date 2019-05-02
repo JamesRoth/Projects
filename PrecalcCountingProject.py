@@ -14,8 +14,6 @@ W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per test part?
 
- adj = 0
-
 adjustProb = randint(1,100)
 
 
@@ -33,9 +31,11 @@ def noDefective(chance,parts):
             numDefectice+=1
 
 def newRunTheoretical():
+    global adj
     adj = adjustments(0)
 
 def newRunExperimental():
+    global adj
     adj = adjustments(0)
 
 def adjustments(mechanic):
