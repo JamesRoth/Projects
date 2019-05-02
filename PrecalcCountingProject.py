@@ -139,13 +139,13 @@ def partsCost(mechanic):
     return partsCostNum
 
 #the theoretical cost of parts
-def partsCostTheo(mechanic):
+def partsCostTheo(mechanic, noParts):
     partsCostNum = 0
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        partsCostNum+=(N*(100-G)/100)*D
+        partsCostNum+=(noParts*(100-G)/100)*D
     else:
-        partsCostNum+=(N*.8*(100-G)/100)*D+(N*.15*(100-K)/100)*D+(N*.05*(100-W)/100)*D
+        partsCostNum+=(noParts*.8*(100-G)/100)*D+(noParts*.15*(100-K)/100)*D+(noParts*.05*(100-W)/100)*D
     return partsCostNum
 
 #each different theroetical production strategy
@@ -170,7 +170,7 @@ def strat3Theo():
     print(samplePercentDefective)
     #finding the total cost
     for i in range(0,len(sampleAmount)):
-        samplePercentDefective[i]*M + partsCostTheo(1)
+        samplePercentDefective[i]*M + partsCostTheo(1, (N*samplePercentDefective))
 
 #a new experimental production run
 def newRunExperimental():
