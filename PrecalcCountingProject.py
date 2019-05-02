@@ -76,7 +76,8 @@ def strat3Theo():
    
     #listing the cost of running all amounts of sample parts
     mechanic = 0
-    for item in sampleAmount:
+    for i in range(0,len(sampleAmount):
+        item = sampleAmount[i]
         if adj == 0:
             if noDefective(W/100, item) == 0:
                 sampleCost.append(S*item)
