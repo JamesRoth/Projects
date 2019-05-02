@@ -160,8 +160,10 @@ def strat2Theo():
 def strat3Theo():
     sampleAmount = []
     samplePercentDefective = []
+    #different numbers of sample parts
     for i in range(1, 11):
         sampleAmount.append(i)
+    #% of the time the master mechanic will be called for each amount of sample parts
     for i in range(0,len(sampleAmount)):
         samplePercentDefective.append(sampleAmount[0]*.8*(100-G) + sampleAmount[0]*.15*(100-K) + sampleAmount[0]*.05*(100-W))
     print(samplePercentDefective)
