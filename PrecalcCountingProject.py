@@ -95,6 +95,10 @@ def strat3Theo():
     print(sampleAmount)
     print(sampleCost)
     
+    #if sample parts are defective, we hire the mechanic
+    if mechanic == 1:
+        adjustments(mechanic)
+    
     
     #adding up total cost:
     finalCost = []
