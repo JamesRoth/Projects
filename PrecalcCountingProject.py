@@ -97,6 +97,7 @@ def strat3Theo():
             else:
                 sampleCost.append(S*item+M)
                 partsCost(1)
+    
     print(sampleAmount)
     print(sampleCost)
     
