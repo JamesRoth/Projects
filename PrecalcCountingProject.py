@@ -77,10 +77,10 @@ def strat3Theo():
                 sampleCost.append(S*item)
             else:
                 sampleCost.append(S*item+M)
+    print(sampleCost)
     
 
 strat3Theo()
-print(sampleCost)
 
 def strat1Exp():
     print("")
