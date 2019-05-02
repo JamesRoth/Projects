@@ -151,7 +151,8 @@ def strat1Theo():
     print(cost1Theo)
     
 def strat2Theo():
-    print("")
+    cost2Theo = partsCostTheo(0)
+    print(cost2Theo)
     
 def strat3Theo():
     sampleAmount = []
