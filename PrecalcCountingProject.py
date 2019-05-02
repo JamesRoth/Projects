@@ -139,13 +139,14 @@ def strat3Exp():
     for i in range(1, N+1):
         sampleAmount.append(i)
 
-
+#a new theoretical production run
 def newRunTheoretical():
     adjustments(0)
     strat1Theo()
     strat2Theo()
     strat3Theo()
 
+#a new experimental production run
 def newRunExperimental():
     adjustments(0)
 
