@@ -64,15 +64,16 @@ def adjustments(mechanic):
 
 #each different theoretical production strategy
 def strat1Exp():
-    cost1Theo = M + partsCost(1)
-    #print("Cost (strat 1): ", cost1Theo)
+    cost1Exp = M + partsCost(1)
+    #print("Cost (strat 1): ", cost1Exp)
+    return cost1Exp
     
 def strat2Exp():
-    cost2Theo = partsCost(0)
-    #print("Cost (strat 2): ", cost2Theo)
+    cost2Exp = partsCost(0)
+    #print("Cost (strat 2): ", cost2Exp)
+    return cost2Exp
     
 def strat3Exp():
-    cost3Theo = 0
     
     #running the sample batch
     sampleAmount = []
@@ -115,7 +116,8 @@ def strat3Exp():
                 totalCost.append(sampleCost[i]+partsCost(1))
     
     #debugging purposes only:
-    print("(Strat 3): Total cost: ", totalCost)
+    #print("(Strat 3): Total cost: ", totalCost)
+    return totalCost
 
 #gives us the cost of parts - for experimental
 def partsCost(mechanic):
@@ -218,6 +220,6 @@ def averageList(list):
 
 #newRunExperimental()
 #newRunTheoretical()
-#manyRuns(100)
+#manyRuns(10)
 print(sum([1,2,3,4,5]))
 
