@@ -220,6 +220,5 @@ def averageList(list):
 
 #newRunExperimental()
 #newRunTheoretical()
-#manyRuns(10)
-print(sum([1,2,3,4,5]))
+manyRuns(10)
 
