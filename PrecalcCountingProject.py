@@ -204,7 +204,8 @@ def manyRuns(runs):
         costStrat3.append(strat3Exp())
     print("Avg. cost strat 1: ", averageList(costStrat1))
     print("Avg. cost strat 2: ", averageList(costStrat2))
-    print("Avg. cost strat 3: ", avgStrat3(costStrat3))
+    #print("Avg. cost strat 3: ", avgStrat3(costStrat3))
+    print(costStrat3)
 
 def avgStrat3(list):
     sum = 0
