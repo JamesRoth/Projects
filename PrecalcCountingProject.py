@@ -214,7 +214,7 @@ def avgStrat3(list):
             sum+=item[i]
             print("For ", i+1, " sample part(s), the average cost is: ", sum/len(list))
             avgCostStrat3.append(sum/len(list))
-    return avgCostSrat3
+    return avgCostStrat3
     
 #average value in a list
 def averageList(list):
