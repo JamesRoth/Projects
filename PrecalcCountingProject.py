@@ -121,7 +121,6 @@ def partsCost(mechanic, adj):
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
         adj = 2
-    print(adj)
     #costs from defective parts - "creates" all the parts and accounts for costs for each defective one
     partsCostNum = 0
     for i in range(0,N):
@@ -134,6 +133,7 @@ def partsCost(mechanic, adj):
         elif adj == 0:
             if probability(G/100) == 0:
                 partsCostNum+=D
+    print(partsCostNum)
     return partsCostNum
 
 #the theoretical cost of parts
