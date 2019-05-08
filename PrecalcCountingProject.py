@@ -225,11 +225,5 @@ def averageList(list):
 
 #newRunExperimental()
 #newRunTheoretical()
-#manyRuns(10)
-
-for i in range(0,100):
-    if probability(.9) == 1:
-        print("Yes")
-    else:
-        print("No")
+manyRuns(10)
 
