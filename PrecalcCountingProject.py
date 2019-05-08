@@ -66,7 +66,7 @@ def adjustments(mechanic):
 #each different theoretical production strategy
 def strat1Exp():
     cost1Exp = M + partsCost(1)
-    print("Cost (strat 1): ", cost1Exp)
+    #print("Cost (strat 1): ", cost1Exp)
     return cost1Exp
     
 def strat2Exp():
@@ -122,20 +122,22 @@ def strat3Exp():
 
 #gives us the cost of parts - for experimental
 def partsCost(mechanic):
-    #if any sample parts are defective, we hire the mechanic (for strategy 3 this cost, however, is accounted for in the sampleCost list, so we don't need to add it
+    #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        adjustments(mechanic)
+        adjust = 1
+    else:
+        adjust = adj
     
     #costs from defective parts - "creates" all the parts and accounts for costs for each defective one
     partsCostNum = 0
     for i in range(0,N):
-        if adj == 0:
+        if adjust == 0:
             if probability(W/100) == 0:
                 partsCostNum+=D
-        elif adj == 1:
+        elif adjtus == 1:
             if probability(K/100) == 0:
                 partsCostNum+=D
-        elif adj == 2:
+        elif adjust == 2:
             if probability(G/100) == 0:
                 partsCostNum+=D
     return partsCostNum
