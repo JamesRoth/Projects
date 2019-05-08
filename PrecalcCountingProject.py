@@ -210,7 +210,7 @@ def avgStrat3(list):
     sum = 0
     avgCostStrat3 = []
     for i in range(0, len(list[0])):
-        avgCostStrat3.append(('New set', i+1))
+        avgCostStrat3.append(('Samples', i+1))
         for i2 in range(0,len(list[i])):
             sum+=list[i2][i]
             print("For ", i+1, " sample part(s), the average cost is: ", sum/len(list))
