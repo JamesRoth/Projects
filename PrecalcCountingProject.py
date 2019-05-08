@@ -204,17 +204,15 @@ def manyRuns(runs):
         costStrat3.append(strat3Exp())
     print("Avg. cost strat 1: ", averageList(costStrat1))
     print("Avg. cost strat 2: ", averageList(costStrat2))
-    #print("Avg. cost strat 3: ", avgStrat3(costStrat3))
-    print(costStrat3)
+    print("Avg. cost strat 3: ", avgStrat3(costStrat3))
 
 def avgStrat3(list):
     sum = 0
     avgCostStrat3 = []
     for i in range(0, len(list[0])):
         avgCostStrat3.append(('New set', i+1))
-        for item in (list[i]):
-            print(item[i],"test")
-            sum+=item[i]
+        for i2 in range(0,len(list[i])):
+            sum+=list[i][i2]
             print("For ", i+1, " sample part(s), the average cost is: ", sum/len(list))
             avgCostStrat3.append(round(sum/len(list)))
     return avgCostStrat3
