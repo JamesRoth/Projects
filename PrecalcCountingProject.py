@@ -65,11 +65,11 @@ def adjustments(mechanic):
 #each different theoretical production strategy
 def strat1Exp():
     cost1Theo = M + partsCost(1)
-    print("Cost (strat 1): ", cost1Theo)
+    #print("Cost (strat 1): ", cost1Theo)
     
 def strat2Exp():
     cost2Theo = partsCost(0)
-    print("Cost (strat 2): ", cost2Theo)
+    #print("Cost (strat 2): ", cost2Theo)
     
 def strat3Exp():
     cost3Theo = 0
@@ -169,12 +169,12 @@ def strat3Theo():
     #% of the time the master mechanic will be called for each amount of sample parts
     for i in range(0,len(sampleAmount)):
         samplePercentDefective.append(round(sampleAmount[i]*.8*(100-G) + sampleAmount[i]*.15*(100-K) + sampleAmount[i]*.05*(100-W)))
-    print("Percent defective: ", samplePercentDefective)
+    #print("Percent defective: ", samplePercentDefective)
    
     #finding the total cost - 
     for i in range(0,len(sampleAmount)):
         totalCost.append(round(samplePercentDefective[i]/100*M + partsCostTheo(1, (N*samplePercentDefective[i]/100)) + partsCostTheo(0, (N*(1-(samplePercentDefective[i]/100)))),3) + (i+1)*S )
-    print("Total cost (strat 3) ", totalCost)
+    #print("Total cost (strat 3) ", totalCost)
 
 #a new experimental production run
 def newRunExperimental():
