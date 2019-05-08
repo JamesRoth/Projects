@@ -200,6 +200,7 @@ def manyRuns(runs):
     costStrat2 = []
     costStrat3 = []
     for i in range(0, runs):
+        adjustments(0)
         costStrat1.append(strat1Exp())
         costStrat2.append(strat2Exp())
         costStrat3.append(strat3Exp())
