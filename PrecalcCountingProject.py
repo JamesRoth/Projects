@@ -157,7 +157,7 @@ def strat2Theo():
     cost2Theo = partsCostTheo(0,N)
     print("Cost (strat 2): ",cost2Theo)
     
-def strat3Theo(): #- NEED TO CHECK WITH DONNELLY - THINK MY CALCULATIONS FOR totalCost ARE WRONG
+def strat3Theo(): 
     sampleAmount = []
     samplePercentDefective = []
     totalCost = []
@@ -171,7 +171,7 @@ def strat3Theo(): #- NEED TO CHECK WITH DONNELLY - THINK MY CALCULATIONS FOR tot
         samplePercentDefective.append(round(sampleAmount[i]*.8*(100-G) + sampleAmount[i]*.15*(100-K) + sampleAmount[i]*.05*(100-W)))
     print("Percent defective: ", samplePercentDefective)
    
-    #finding the total cost - NEEDS FIXING AS OF 5/2/19
+    #finding the total cost - 
     for i in range(0,len(sampleAmount)):
         totalCost.append(round(samplePercentDefective[i]/100*M + partsCostTheo(1, (N*samplePercentDefective[i]/100)) + partsCostTheo(0, (N*(1-(samplePercentDefective[i]/100)))),3) + (i+1)*S )
     print("Total cost (strat 3) ", totalCost)
@@ -190,6 +190,17 @@ def newRunTheoretical():
     strat1Theo()
     strat2Theo()
     strat3Theo()
+
+#a function that runs a lot of production runs and finds the average cost of each strat
+def manyRuns(runs):
+    costStrat1 = []
+    costStrat2 = []
+    costStrat3 = []
+    for i in range(0, runs):
+        costStrat1.append(strat1Exp())
+        costStrat2.append(strat2Exp())
+        costStrat3.append(strat3Exp())
+    
 
 newRunExperimental()
 newRunTheoretical()
