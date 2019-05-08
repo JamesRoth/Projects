@@ -134,7 +134,7 @@ def partsCost(mechanic):
         if adjust == 0:
             if probability(W/100) == 0:
                 partsCostNum+=D
-        elif adjtus == 1:
+        elif adjust == 1:
             if probability(K/100) == 0:
                 partsCostNum+=D
         elif adjust == 2:
