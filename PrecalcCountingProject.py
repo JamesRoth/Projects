@@ -176,12 +176,12 @@ def strat3Theo():
     #print("Total cost (strat 3) ", totalCost)
 
 #a new experimental production run
-def newRunExperimental():
+def newRunExperimental(adj):
     adj = adjustments(0)
     print("Experimental:")
-    strat1Exp()
-    strat2Exp()
-    strat3Exp()
+    strat1Exp(adj)
+    strat2Exp(adj)
+    strat3Exp(adj)
 
 #a new theoretical production run
 def newRunTheoretical():
@@ -191,15 +191,15 @@ def newRunTheoretical():
     strat3Theo()
 
 #a function that runs a lot of production runs and finds the average cost of each strat
-def manyRuns(runs):
+def manyRuns(runs,adj):
     costStrat1 = []
     costStrat2 = []
     costStrat3 = []
     for i in range(0, runs):
         adj = adjustments(0)
-        costStrat1.append(strat1Exp())
-        costStrat2.append(strat2Exp())
-        costStrat3.append(strat3Exp())
+        costStrat1.append(strat1Exp(adj))
+        costStrat2.append(strat2Exp(adj))
+        costStrat3.append(strat3Exp(adj))
     print("Avg. cost strat 1: ", averageList(costStrat1))
     print("Avg. cost strat 2: ", averageList(costStrat2))
     print("Avg. cost strat 3: ", avgStrat3(costStrat3))
@@ -219,7 +219,7 @@ def avgStrat3(list):
 def averageList(list):
     return (sum(list)/len(list))
 
-#newRunExperimental()
+#newRunExperimental(adj)
 #newRunTheoretical()
 manyRuns(10)
 
