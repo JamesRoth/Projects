@@ -76,7 +76,7 @@ def strat3Exp():
     
     #running the sample batch
     sampleAmount = []
-    for i in range(1, 11):
+    for i in range(1, 6):
         sampleAmount.append(i)
     
     sampleCost = []
@@ -163,7 +163,7 @@ def strat3Theo():
     totalCost = []
     
     #different numbers of sample parts
-    for i in range(1, 11):
+    for i in range(1, 6):
         sampleAmount.append(i)
         
     #% of the time the master mechanic will be called for each amount of sample parts
@@ -202,6 +202,8 @@ def manyRuns(runs):
         costStrat3.append(strat3Exp())
     print("Avg. cost strat 1: ", average(costStrat1))
 
-newRunExperimental()
-newRunTheoretical()
+#newRunExperimental()
+#newRunTheoretical()
+manyRuns(
+
 
