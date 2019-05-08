@@ -120,7 +120,7 @@ def strat3Exp(adj):
 def partsCost(mechanic, adj):
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        adj = 1
+        adj = 2
     print(adj)
     #costs from defective parts - "creates" all the parts and accounts for costs for each defective one
     partsCostNum = 0
