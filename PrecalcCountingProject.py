@@ -65,7 +65,7 @@ def adjustments(mechanic):
 #each different theoretical production strategy
 def strat1Exp():
     cost1Exp = M + partsCost(1)
-    #print("Cost (strat 1): ", cost1Exp)
+    print("Cost (strat 1): ", cost1Exp)
     return cost1Exp
     
 def strat2Exp():
@@ -223,5 +223,5 @@ def averageList(list):
 
 #newRunExperimental()
 #newRunTheoretical()
-manyRuns(100)
+manyRuns(10)
 
