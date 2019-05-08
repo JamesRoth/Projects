@@ -140,6 +140,7 @@ def partsCost(mechanic):
         elif adjust == 2:
             if probability(G/100) == 0:
                 partsCostNum+=D
+    print(partsCostNum)
     return partsCostNum
 
 #the theoretical cost of parts
