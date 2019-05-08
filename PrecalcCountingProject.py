@@ -221,5 +221,5 @@ def averageList(list):
 
 #newRunExperimental(adj)
 #newRunTheoretical()
-manyRuns(10)
+manyRuns(10, adj)
 
