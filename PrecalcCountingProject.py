@@ -62,12 +62,12 @@ def adjustments(mechanic):
 #each different theoretical production strategy
 def strat1Exp(adj):
     cost1Exp = M + partsCost(1, adj)
-    #print("Cost (strat 1): ", cost1Exp)
+    print("Cost (strat 1): ", cost1Exp)
     return cost1Exp
     
 def strat2Exp(adj):
     cost2Exp = partsCost(0, adj)
-    #print("Cost (strat 2): ", cost2Exp)
+    print("Cost (strat 2): ", cost2Exp)
     return cost2Exp
     
 def strat3Exp(adj):
@@ -113,7 +113,7 @@ def strat3Exp(adj):
                 totalCost.append(sampleCost[i]+partsCost(1, adj))
     
     #debugging purposes only:
-    #print("(Strat 3): Total cost: ", totalCost)
+    print("(Strat 3): Total cost: ", totalCost)
     return totalCost
 
 #gives us the cost of parts - for experimental
@@ -169,7 +169,7 @@ def strat3Theo():
         samplePercentDefective.append(round(sampleAmount[i]*.8*(100-G) + sampleAmount[i]*.15*(100-K) + sampleAmount[i]*.05*(100-W)))
     #print("Percent defective: ", samplePercentDefective)
    
-    #finding the total cost - 
+    #finding the total cost 
     for i in range(0,len(sampleAmount)):
         totalCost.append(round(samplePercentDefective[i]/100*M + partsCostTheo(1, (N*samplePercentDefective[i]/100)) + partsCostTheo(0, (N*(1-(samplePercentDefective[i]/100)))),3) + (i+1)*S )
     print("Total cost (strat 3) ", totalCost)
@@ -218,7 +218,7 @@ def avgStrat3(list):
 def averageList(list):
     return (sum(list)/len(list))
 
-#newRunExperimental(adj)
+newRunExperimental(adj)
 #newRunTheoretical()
-manyRuns(100)
+#manyRuns(100)
 
