@@ -218,7 +218,7 @@ def avgStrat3(list):
 def averageList(list):
     return (sum(list)/len(list))
 
-#newRunExperimental(adj)
+newRunExperimental(adj)
 #newRunTheoretical()
-manyRuns(10)
+#manyRuns(10)
 
