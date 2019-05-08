@@ -113,7 +113,7 @@ def strat3Exp(adj):
                 totalCost.append(sampleCost[i]+partsCost(1, adj))
     
     #debugging purposes only:
-    print("(Strat 3): Total cost: ", totalCost)
+    print("Cost (strat 3): ", totalCost)
     return totalCost
 
 #gives us the cost of parts - for experimental
