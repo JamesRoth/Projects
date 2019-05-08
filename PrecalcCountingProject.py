@@ -213,7 +213,7 @@ def avgStrat3(list):
         avgCostStrat3.append(('Samples', i+1))
         for i2 in range(0,len(list[i])):
             sum+=list[i2][i]
-        avgCostStrat3.append(round(sum/len(list)))
+        avgCostStrat3.append(round(sum/len(list[0])))
     return avgCostStrat3
     
     
