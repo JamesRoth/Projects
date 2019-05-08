@@ -62,7 +62,7 @@ def adjustments(mechanic):
 #each different theoretical production strategy
 def strat1Exp(adj):
     cost1Exp = M + partsCost(1, adj)
-    #print("Cost (strat 1): ", cost1Exp)
+    print("Cost (strat 1): ", cost1Exp)
     return cost1Exp
     
 def strat2Exp(adj):
@@ -133,7 +133,6 @@ def partsCost(mechanic, adj):
         elif adj == 0:
             if probability(G/100) == 0:
                 partsCostNum+=D
-    print(partsCostNum)
     return partsCostNum
 
 #the theoretical cost of parts
@@ -191,7 +190,7 @@ def newRunTheoretical():
     strat3Theo()
 
 #a function that runs a lot of production runs and finds the average cost of each strat
-def manyRuns(runs,adj):
+def manyRuns(runs):
     costStrat1 = []
     costStrat2 = []
     costStrat3 = []
@@ -221,5 +220,5 @@ def averageList(list):
 
 #newRunExperimental(adj)
 #newRunTheoretical()
-manyRuns(10, adj)
+manyRuns(10)
 
