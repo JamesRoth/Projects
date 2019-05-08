@@ -60,17 +60,17 @@ def adjustments(mechanic):
         return 2
 
 #each different theoretical production strategy
-def strat1Exp():
-    cost1Exp = M + partsCost(1)
+def strat1Exp(adj):
+    cost1Exp = M + partsCost(1, adj)
     #print("Cost (strat 1): ", cost1Exp)
     return cost1Exp
     
-def strat2Exp():
-    cost2Exp = partsCost(0)
+def strat2Exp(adj):
+    cost2Exp = partsCost(0, adj)
     #print("Cost (strat 2): ", cost2Exp)
     return cost2Exp
     
-def strat3Exp():
+def strat3Exp(adj):
     
     #running the sample batch
     sampleAmount = []
@@ -88,52 +88,50 @@ def strat3Exp():
             if noDefective(W/100, item) == 0:
                 sampleCost.append(S*item)
                 #finding the cost of the parts when none are defective
-                totalCost.append(sampleCost[i]+partsCost(0))
+                totalCost.append(sampleCost[i]+partsCost(0, adj))
             else:
                 sampleCost.append(S*item+M)
                 #finding the cost of the parts when some are defective
-                totalCost.append(sampleCost[i]+partsCost(1))
+                totalCost.append(sampleCost[i]+partsCost(1, adj))
         elif adj == 1:
             if noDefective(K/100, item) == 0:
                 sampleCost.append(S*item)
                 #finding the cost of the parts when none are defective
-                totalCost.append(sampleCost[i]+partsCost(0))
+                totalCost.append(sampleCost[i]+partsCost(0, adj))
             else:
                 sampleCost.append(S*item+M)
                 #finding the cost of the parts when some are defective
-                totalCost.append(sampleCost[i]+partsCost(1))
+                totalCost.append(sampleCost[i]+partsCost(1, adj))
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 sampleCost.append(S*item)
                 #finding the cost of the parts when none are defective
-                totalCost.append(sampleCost[i]+partsCost(0))
+                totalCost.append(sampleCost[i]+partsCost(0, adj))
             else:
                 sampleCost.append(S*item+M)
                 #finding the cost of the parts when some are defective
-                totalCost.append(sampleCost[i]+partsCost(1))
+                totalCost.append(sampleCost[i]+partsCost(1, adj))
     
     #debugging purposes only:
     #print("(Strat 3): Total cost: ", totalCost)
     return totalCost
 
 #gives us the cost of parts - for experimental
-def partsCost(mechanic):
+def partsCost(mechanic, adj):
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
-        adjust = 1
-    else:
-        adjust = adj
-    print(adjust)
+        adj = 1
+    print(adj)
     #costs from defective parts - "creates" all the parts and accounts for costs for each defective one
     partsCostNum = 0
     for i in range(0,N):
-        if adjust == 2:
+        if adj == 2:
             if probability(W/100) == 0:
                 partsCostNum+=D
-        elif adjust == 1:
+        elif adj == 1:
             if probability(K/100) == 0:
                 partsCostNum+=D
-        elif adjust == 0:
+        elif adj == 0:
             if probability(G/100) == 0:
                 partsCostNum+=D
     return partsCostNum
@@ -179,7 +177,7 @@ def strat3Theo():
 
 #a new experimental production run
 def newRunExperimental():
-    adjustments(0)
+    adj = adjustments(0)
     print("Experimental:")
     strat1Exp()
     strat2Exp()
@@ -198,7 +196,7 @@ def manyRuns(runs):
     costStrat2 = []
     costStrat3 = []
     for i in range(0, runs):
-        adjustments(0)
+        adj = adjustments(0)
         costStrat1.append(strat1Exp())
         costStrat2.append(strat2Exp())
         costStrat3.append(strat3Exp())
