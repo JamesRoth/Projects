@@ -200,7 +200,7 @@ def manyRuns(runs):
         costStrat1.append(strat1Exp())
         costStrat2.append(strat2Exp())
         costStrat3.append(strat3Exp())
-    
+    print("Avg. cost strat 1: ", average(costStrat1))
 
 newRunExperimental()
 newRunTheoretical()
