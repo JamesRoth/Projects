@@ -51,17 +51,13 @@ def noDefective(chance,parts):
 def adjustments(mechanic):
     if mechanic == 0:
         if adjustProb <= 80: #number of correct adjustments
-            global adj
-            adj = 2
+            return 2
         elif adjustProb <= 95:
-            global adj 
-            adj = 1
+            return 1
         else:
-            global adj 
-            adj = 0
+            return 0
     else: #if the mechanic argument is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
-        global adj 
-        adj = 2
+        return 2
 
 #each different theoretical production strategy
 def strat1Exp():
@@ -127,20 +123,19 @@ def partsCost(mechanic):
         adjust = 1
     else:
         adjust = adj
-    
+    print(adjust)
     #costs from defective parts - "creates" all the parts and accounts for costs for each defective one
     partsCostNum = 0
     for i in range(0,N):
-        if adjust == 0:
+        if adjust == 2:
             if probability(W/100) == 0:
                 partsCostNum+=D
         elif adjust == 1:
             if probability(K/100) == 0:
                 partsCostNum+=D
-        elif adjust == 2:
+        elif adjust == 0:
             if probability(G/100) == 0:
                 partsCostNum+=D
-    print(partsCostNum)
     return partsCostNum
 
 #the theoretical cost of parts
