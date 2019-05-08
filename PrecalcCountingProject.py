@@ -29,6 +29,7 @@ def generateNewNums():
     M = randint(50,100)
     S = randint(2,6)
 
+#figures out if an event happened with a certain probability
 def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
