@@ -77,7 +77,7 @@ def strat3Exp():
     
     #running the sample batch
     sampleAmount = []
-    for i in range(1, 6):
+    for i in range(1,6):
         sampleAmount.append(i)
     
     sampleCost = []
@@ -165,7 +165,7 @@ def strat3Theo():
     totalCost = []
     
     #different numbers of sample parts
-    for i in range(1, 6):
+    for i in range(1,6):
         sampleAmount.append(i)
         
     #% of the time the master mechanic will be called for each amount of sample parts
