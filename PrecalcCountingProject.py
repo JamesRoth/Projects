@@ -205,9 +205,10 @@ def manyRuns(runs):
     print("Avg. cost strat 3: ", )
 
 def avgStrat3(list):
+    sum = 0
     for i in range(0, len(list[0])):
-        for i2 in range(0, len(list)):
-            
+        for item in list:
+            sum+=item[i]
 
 #average value in a list
 def averageList(list):
