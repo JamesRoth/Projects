@@ -181,7 +181,7 @@ def newRunTheoretical():
 def manyRuns(runs):
     newRunTheoretical()
     print("")
-    print("Experimental:",runs,"runs: ")
+    print("Experimental - ",runs,"runs: ")
     costStrat1 = []
     costStrat2 = []
     costStrat3 = []
@@ -211,6 +211,6 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-manyRuns(500)
+manyRuns(100)
 
 
