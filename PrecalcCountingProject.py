@@ -128,13 +128,13 @@ def partsCost(mechanic, adj):
     partsCostNum = 0
     for i in range(0,N):
         if adj == 2:
-            if probability(W/100) == 0:
+            if probability(G/100) == 0:
                 partsCostNum+=D
         elif adj == 1:
             if probability(K/100) == 0:
                 partsCostNum+=D
         elif adj == 0:
-            if probability(G/100) == 0:
+            if probability(W/100) == 0:
                 partsCostNum+=D
     return partsCostNum
 
@@ -223,14 +223,5 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-#newRunTheoretical()
-#manyRuns(100)
-
-num3 = 0
-for i in range(0,N):
-    print(probability(W/100))
-    if probability(W/100) == 0:
-        num3 = num3 + 1
-print(num3)
-print(W/100)
-
+newRunTheoretical()
+manyRuns(100)
