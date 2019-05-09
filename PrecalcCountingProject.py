@@ -7,7 +7,7 @@ from math import floor
 
 #declaring variables:
 
-N = 634    #number of parts
+N = 634     #number of parts
 D = 7       #cost per defective part
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
@@ -136,7 +136,6 @@ def partsCost(mechanic, adj):
         elif adj == 0:
             if probability(G/100) == 0:
                 partsCostNum+=D
-    print(partsCostNum)
     return partsCostNum
 
 #the theoretical cost of parts
@@ -224,6 +223,9 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-newRunTheoretical()
-manyRuns(100)
+#newRunTheoretical()
+#manyRuns(100)
+
+for i in range(0,N):
+    print(probability(W/100))
 
