@@ -77,7 +77,7 @@ def strat3Exp(adj,printer):
     #listing the cost of running all amounts of sample parts
     for i in range(0,(len(sampleAmount))):
         item = sampleAmount[i]
-        print(item)
+        print("item",item)
         if adj == 0:
             if noDefective(W/100, item) == 0:
                 #finding the cost of the parts when none are defective
