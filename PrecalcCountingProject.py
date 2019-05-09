@@ -188,6 +188,7 @@ def manyRuns(runs):
     costStrat3 = []
     for i in range(0, runs):
         adj = adjustments(0)
+        print(adj)
         costStrat1.append(strat1Exp(adj,0))
         costStrat2.append(strat2Exp(adj,0))
         costStrat3.append(strat3Exp(adj,0))
