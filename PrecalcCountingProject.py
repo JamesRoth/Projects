@@ -226,6 +226,9 @@ def averageList(list):
 #newRunTheoretical()
 #manyRuns(100)
 
+num3 = 0
 for i in range(0,N):
     print(probability(W/100))
+    num3 = num3 + 1
+print(num3)
 
