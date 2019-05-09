@@ -62,7 +62,6 @@ def strat2Exp(adj,printer):
     return cost2Exp
     
 def strat3Exp(adj,printer):
-    print(adj)
     #running the sample batch
     sampleAmount = []
     for i in range(1,5):
