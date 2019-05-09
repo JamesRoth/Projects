@@ -14,7 +14,7 @@ K = 89      #% of good parts w/ one adjusments correct
 W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per sample part
-
+"""
 N = 500
 D = 5
 G = 98
@@ -22,7 +22,7 @@ K = 90
 W = 80
 M = 50
 S = 5
-
+"""
 adj = 0
 
 adjustProb = randint(1,100)
