@@ -191,7 +191,7 @@ def newRunExperimental(adj, printer):
     print("Experimental:")
     strat1Exp(adj, printer)
     strat2Exp(adj, printer)
-    strat3Exp(adj, print)
+    strat3Exp(adj, printer)
 
 #a new theoretical production run
 def newRunTheoretical():
