@@ -211,7 +211,6 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-generateNewNums()
 manyRuns(25)
 
 
