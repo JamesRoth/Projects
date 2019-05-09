@@ -82,6 +82,9 @@ def strat3Exp(adj,printer):
     sampleCost = []
     totalCost = []
    
+    for item in sampleAmount:
+        sampleCost.append(S*)
+   
     #listing the cost of running all amounts of sample parts
     mechanic = 0
     for i in range(0,(len(sampleAmount))):
@@ -92,7 +95,7 @@ def strat3Exp(adj,printer):
                 #finding the cost of the parts when none are defective
                 totalCost.append(sampleCost[i]+partsCost(0, adj))
             else:
-                sampleCost.append((S*item)+M)
+                sampleCost.append(S*item)
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i]+partsCost(1, adj))
         elif adj == 1:
@@ -101,16 +104,15 @@ def strat3Exp(adj,printer):
                 #finding the cost of the parts when none are defective
                 totalCost.append(sampleCost[i]+partsCost(0, adj))
             else:
-                sampleCost.append((S*item)+M)
+                sampleCost.append(S*item)
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i]+partsCost(1, adj))
         elif adj == 2:
             if noDefective(G/100, item) == 0:
-                sampleCost.append(S*item)
                 #finding the cost of the parts when none are defective
                 totalCost.append(sampleCost[i]+partsCost(0, adj))
             else:
-                sampleCost.append((S*item)+M)
+                sampleCost.append(S*item)
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i]+partsCost(1, adj))
     
