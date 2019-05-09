@@ -51,7 +51,7 @@ def adjustments(mechanic):
 
 #each different theoretical production strategy
 def strat1Exp(adj, printer):
-    cost1Exp = M + partsCost(1, adj)
+    cost1Exp = partsCost(1, adj) + M
     if printer == 1:
         print("Cost (strat 1): ", cost1Exp)
     return cost1Exp
