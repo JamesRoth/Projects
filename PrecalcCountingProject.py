@@ -229,6 +229,7 @@ def averageList(list):
 num3 = 0
 for i in range(0,N):
     print(probability(W/100))
-    num3 = num3 + 1
+    if probability(W/100) == 0:
+        num3 = num3 + 1
 print(num3)
 
