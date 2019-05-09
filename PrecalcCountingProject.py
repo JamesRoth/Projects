@@ -14,9 +14,6 @@ W = 81      #% of good parts w/ no adjustment correct
 M = 72      #cost of mechanic
 S = 2       #cost per sample part
 
-adj = 0
-adj = adjustments(0)
-
 #figures out if a binary event happened with a certain probability
 def probability(chance):
     num = randint(1,100)
@@ -47,6 +44,10 @@ def adjustments(mechanic):
             return 0
     else: #if the mechanic argument is anything but zero that means the mechanic is being called, so we return a value saying that both machines are correct
         return 2
+
+#initializing the adjustments value, needs to happen after the adjustment function is defined
+adj = 0
+adj = adjustments(0)
 
 #each different theoretical production strategy
 def strat1Exp(adj, printer):
@@ -209,7 +210,7 @@ def avgStrat3(list):
 def averageList(list):
     return (sum(list)/len(list))
 
-#newRunExperimental(adj,1)
-manyRuns(500)
+newRunExperimental(adj,1)
+#manyRuns(500)
 
 
