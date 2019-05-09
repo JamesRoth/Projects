@@ -42,9 +42,11 @@ def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
         #event happened
+        print(1)
         return 1
     else: 
         #event didn't happen
+        print(0)
         return 0
 
 #returns the number of defective parts for a select number and chance
@@ -207,9 +209,9 @@ def manyRuns(runs):
     costStrat3 = []
     for i in range(0, runs):
         adj = adjustments(0)
-        costStrat1.append(strat1Exp(adj))
-        costStrat2.append(strat2Exp(adj))
-        costStrat3.append(strat3Exp(adj))
+        costStrat1.append(strat1Exp(adj,0))
+        costStrat2.append(strat2Exp(adj,0))
+        costStrat3.append(strat3Exp(adj,0))
     print("Avg. cost strat 1: ", averageList(costStrat1))
     print("Avg. cost strat 2: ", averageList(costStrat2))
     print("Avg. cost strat 3: ", avgStrat3(costStrat3))
@@ -229,7 +231,10 @@ def avgStrat3(list):
 def averageList(list):
     return (sum(list)/len(list))
 
-newRunExperimental(adj,1)
-newRunTheoretical()
-#manyRuns(100)
+#newRunExperimental(adj,1)
+#newRunTheoretical()
+manyRuns(100)
+
+
+#probabili
 
