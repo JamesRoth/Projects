@@ -14,15 +14,7 @@ K = 89      #% of good parts w/ one adjusments correct
 W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per sample part
-"""
-N = 500
-D = 5
-G = 98
-K = 90
-W = 80
-M = 50
-S = 5
-"""
+
 adj = 0
 
 adjustProb = randint(1,100)
@@ -42,11 +34,11 @@ def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
         #event happened
-        print(1)
+        #print(1)
         return 1
     else: 
         #event didn't happen
-        print(0)
+       # print(0)
         return 0
 
 #returns the number of defective parts for a select number and chance
@@ -204,6 +196,7 @@ def newRunTheoretical():
 
 #a function that runs a lot of production runs and finds the average cost of each strat
 def manyRuns(runs):
+    print("Experimental: ",runs," runs: ")
     costStrat1 = []
     costStrat2 = []
     costStrat3 = []
@@ -232,7 +225,7 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-#newRunTheoretical()
+newRunTheoretical()
 manyRuns(100)
 
 
