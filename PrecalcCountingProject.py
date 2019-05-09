@@ -194,6 +194,7 @@ def manyRuns(runs):
     print("Avg. cost strat 2: ", averageList(costStrat2))
     print("Avg. cost strat 3: ", avgStrat3(costStrat3))
 
+#gives the average cost for each amount of sample parts
 def avgStrat3(list):
     avgCostStrat3 = []
     for i in range(0, len(list[0])):
