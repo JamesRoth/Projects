@@ -19,16 +19,6 @@ adj = 0
 
 adjustProb = randint(1,100)
 
-#generates new numbers for the inital values for the project
-def generateNewNums():
-    N = randint(300,1000)
-    D = randint(3,9)
-    G = randint(96,99)
-    K = randint(88,92)
-    W = randint(78,84)
-    M = randint(50,100)
-    S = randint(2,6)
-
 #figures out if an event happened with a certain probability
 def probability(chance):
     num = randint(1,100)
@@ -138,12 +128,11 @@ def partsCost(mechanic, adj):
 #the theoretical cost of parts
 def partsCostTheo(mechanic, noParts):
     partsCostNum = 0
-    
     #if any sample parts are defective, we hire the mechanic 
     if mechanic == 1:
         partsCostNum+=(noParts*(100-G)/100)*D
     else:
-        partsCostNum+= (noParts*.8*(100-G)/100)*D + (noParts*.15*(100-K)/100)*D + (noParts*.05*(100-W)/100)*D
+        partsCostNum+= ((noParts*.8*(100-G)/100) + (noParts*.15*(100-K)/100) + (noParts*.05*(100-W)/100))*D
     return partsCostNum
 
 #each different theroetical production strategy
@@ -222,4 +211,7 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
+generateNewNums()
 manyRuns(25)
+
+
