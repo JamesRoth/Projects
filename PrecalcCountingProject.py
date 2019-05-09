@@ -165,7 +165,8 @@ def strat3Theo():
 #a new experimental production run
 def newRunExperimental(adj, printer):
     adj = adjustments(0)
-    print("Experimental:")
+    if printer == 1:
+        print("Experimental:")
     strat1Exp(adj, printer)
     strat2Exp(adj, printer)
     strat3Exp(adj, printer)
@@ -210,7 +211,7 @@ def avgStrat3(list):
 def averageList(list):
     return (sum(list)/len(list))
 
-newRunExperimental(adj,1)
+newRunExperimental(adj,0)
 #manyRuns(500)
 
 
