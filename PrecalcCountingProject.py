@@ -7,7 +7,7 @@ from math import floor
 
 #declaring variables:
 
-N = 634     #number of parts
+N = 634    #number of parts
 D = 7       #cost per defective part
 G = 98      #% of good parts w/ both adjusments correct
 K = 89      #% of good parts w/ one adjusments correct
