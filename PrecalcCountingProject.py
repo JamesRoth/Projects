@@ -17,8 +17,6 @@ S = 2       #cost per sample part
 
 adj = 0
 
-adjustProb = randint(1,100)
-
 #figures out if an event happened with a certain probability
 def probability(chance):
     num = randint(1,100)
@@ -39,6 +37,7 @@ def noDefective(chance,parts):
 
 #calculates the number of correct adjustments
 def adjustments(mechanic):
+    adjustProb = randint(1,100)
     if mechanic == 0:
         if adjustProb <= 80: #number of correct adjustments
             return 2
