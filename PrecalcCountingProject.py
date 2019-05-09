@@ -62,7 +62,7 @@ def strat2Exp(adj,printer):
     return cost2Exp
     
 def strat3Exp(adj,printer):
-    
+    print(adj)
     #running the sample batch
     sampleAmount = []
     for i in range(1,5):
@@ -75,7 +75,6 @@ def strat3Exp(adj,printer):
         sampleCost.append(S*item)
    
     #listing the cost of running all amounts of sample parts
-    mechanic = 0
     for i in range(0,(len(sampleAmount))):
         item = sampleAmount[i]
         if adj == 0:
@@ -85,7 +84,7 @@ def strat3Exp(adj,printer):
             else:
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i] + partsCost(1, adj) + M)
-                print("M",totalCost[len(totalCost)-1])
+                #print("M",totalCost[len(totalCost)-1])
         elif adj == 1:
             if noDefective(K/100, item) == 0:
                 #finding the cost of the parts when none are defective
@@ -93,7 +92,7 @@ def strat3Exp(adj,printer):
             else:
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i] + partsCost(1, adj) + M)
-                print("M",totalCost[len(totalCost)-1])
+                #print("M",totalCost[len(totalCost)-1])
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 #finding the cost of the parts when none are defective
@@ -101,7 +100,7 @@ def strat3Exp(adj,printer):
             else:
                 #finding the cost of the parts when some are defective
                 totalCost.append(sampleCost[i] + partsCost(1, adj) + M)
-                print("M",totalCost[len(totalCost)-1])
+                #print("M",totalCost[len(totalCost)-1])
     
     if printer == 1:
         print("Cost (strat 3): ", totalCost)
