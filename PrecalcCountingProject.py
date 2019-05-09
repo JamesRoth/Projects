@@ -14,6 +14,9 @@ W = 81      #% of good parts w/ no adjustment correct
 M = 72      #cost of mechanic
 S = 2       #cost per sample part
 
+adj = 0
+adj = adjustments(0)
+
 #figures out if a binary event happened with a certain probability
 def probability(chance):
     num = randint(1,100)
