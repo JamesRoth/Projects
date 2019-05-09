@@ -83,7 +83,7 @@ def strat3Exp(adj,printer):
     totalCost = []
    
     for item in sampleAmount:
-        sampleCost.append(S*)
+        sampleCost.append(S*item)
    
     #listing the cost of running all amounts of sample parts
     mechanic = 0
@@ -91,30 +91,25 @@ def strat3Exp(adj,printer):
         item = sampleAmount[i]
         if adj == 0:
             if noDefective(W/100, item) == 0:
-                sampleCost.append(S*item)
                 #finding the cost of the parts when none are defective
                 totalCost.append(sampleCost[i]+partsCost(0, adj))
             else:
-                sampleCost.append(S*item)
                 #finding the cost of the parts when some are defective
-                totalCost.append(sampleCost[i]+partsCost(1, adj))
+                totalCost.append(sampleCost[i] + partsCost(1, adj) + M)
         elif adj == 1:
             if noDefective(K/100, item) == 0:
-                sampleCost.append(S*item)
                 #finding the cost of the parts when none are defective
-                totalCost.append(sampleCost[i]+partsCost(0, adj))
+                totalCost.append(sampleCost[i] + partsCost(0, adj))
             else:
-                sampleCost.append(S*item)
                 #finding the cost of the parts when some are defective
-                totalCost.append(sampleCost[i]+partsCost(1, adj))
+                totalCost.append(sampleCost[i] + partsCost(1, adj) + M)
         elif adj == 2:
             if noDefective(G/100, item) == 0:
                 #finding the cost of the parts when none are defective
-                totalCost.append(sampleCost[i]+partsCost(0, adj))
+                totalCost.append(sampleCost[i] + partsCost(0, adj))
             else:
-                sampleCost.append(S*item)
                 #finding the cost of the parts when some are defective
-                totalCost.append(sampleCost[i]+partsCost(1, adj))
+                totalCost.append(sampleCost[i] + partsCost(1, adj) + M)
     
     if printer == 1:
         print("Cost (strat 3): ", totalCost)
