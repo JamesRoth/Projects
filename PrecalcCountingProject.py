@@ -17,7 +17,7 @@ S = 2       #cost per sample part
 
 adj = 0
 
-#figures out if an event happened with a certain probability
+#figures out if a binary event happened with a certain probability
 def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
@@ -187,7 +187,6 @@ def manyRuns(runs):
     costStrat3 = []
     for i in range(0, runs):
         adj = adjustments(0)
-        print(adj)
         costStrat1.append(strat1Exp(adj,0))
         costStrat2.append(strat2Exp(adj,0))
         costStrat3.append(strat3Exp(adj,0))
@@ -211,6 +210,6 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-manyRuns(25)
+manyRuns(100)
 
 
