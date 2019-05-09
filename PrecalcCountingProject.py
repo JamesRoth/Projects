@@ -232,4 +232,5 @@ for i in range(0,N):
     if probability(W/100) == 0:
         num3 = num3 + 1
 print(num3)
+print(W/100)
 
