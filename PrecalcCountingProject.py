@@ -15,6 +15,14 @@ W = 81      #% of good parts w/ no adjusment correct
 M = 72      #cost of mechanic
 S = 2       #cost per sample part
 
+N = 500
+D = 5
+G = 98
+K = 90
+W = 80
+M = 50
+S = 5
+
 adj = 0
 
 adjustProb = randint(1,100)
@@ -173,7 +181,7 @@ def strat3Theo():
     #finding the total cost 
     for i in range(0,len(sampleAmount)):
         totalCost.append(round(samplePercentDefective[i]/100*M + partsCostTheo(1, (N*samplePercentDefective[i]/100)) + partsCostTheo(0, (N*(1-(samplePercentDefective[i]/100)))),3) + (i+1)*S )
-    #print("Total cost (strat 3) ", totalCost)
+    print("Cost (strat 3) ", totalCost)
 
 #a new experimental production run
 def newRunExperimental(adj):
@@ -220,6 +228,6 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj)
-#newRunTheoretical()
-manyRuns(100)
+newRunTheoretical()
+#manyRuns(100)
 
