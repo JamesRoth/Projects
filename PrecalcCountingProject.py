@@ -34,11 +34,9 @@ def probability(chance):
     num = randint(1,100)
     if num <= (chance*100):
         #event happened
-        print(1)
         return 1
     else: 
         #event didn't happen
-        print(0)
         return 0
 
 #returns the number of defective parts for a select number and chance
