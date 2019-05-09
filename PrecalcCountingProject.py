@@ -157,6 +157,7 @@ def strat3Theo():
    
     #finding the total cost 
     for i in range(0,len(sampleAmount)):
+        totalCost.append(("Samples",i+1))
         totalCost.append(round(samplePercentDefective[i]/100*M + partsCostTheo(1, (N*(samplePercentDefective[i]/100))) + partsCostTheo(0, (N*(1-(samplePercentDefective[i]/100)))),3) + (i+1)*S )
     print("Cost (strat 3) ", totalCost)
 
