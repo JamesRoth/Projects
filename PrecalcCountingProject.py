@@ -3,7 +3,6 @@
 #5/1/19
 
 from random import *
-from math import floor
 
 #declaring variables:
 
