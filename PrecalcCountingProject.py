@@ -194,6 +194,9 @@ def newRunTheoretical():
 
 #a function that runs a lot of production runs and finds the average cost of each strat
 def manyRuns(runs):
+    print("Theoretical: ")
+    newRunTheoretical()
+    print("")
     print("Experimental:",runs,"runs: ")
     costStrat1 = []
     costStrat2 = []
@@ -223,5 +226,4 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-newRunTheoretical()
 manyRuns(100)
