@@ -42,7 +42,7 @@ def probability(chance):
 #returns the number of defective parts for a select number and chance
 def noDefective(chance,parts):
     numDefective = 0
-    for i in range(1,parts+1):
+    for i in range(0,parts):
         if probability(chance) == 0:
             numDefective+=1
     return numDefective
