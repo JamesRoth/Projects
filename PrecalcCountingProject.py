@@ -210,6 +210,6 @@ def averageList(list):
     return (sum(list)/len(list))
 
 #newRunExperimental(adj,1)
-manyRuns(100)
+manyRuns(500)
 
 
