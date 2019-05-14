@@ -9,3 +9,4 @@ def sumList(A):
         return A[0] + sumList(A[1:])
 
 print(sumList([1,2,3,4,5,6,7,8]))
+
