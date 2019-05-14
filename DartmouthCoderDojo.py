@@ -11,8 +11,7 @@ def sumList(A):
 print(sumList([1,2,3,4,5,6,7,8]))
 
 def fibonacci(n):
-    n=n+1
-    if n == 1 or n== 0:
+    if n == 1 or n == 2:
         return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
