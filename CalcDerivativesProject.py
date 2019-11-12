@@ -10,4 +10,4 @@ f(1.2)
 """
 
 #delcaring varialbes
-tolerance = 
+tolerance = 0.1
