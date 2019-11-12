@@ -10,4 +10,7 @@ f(1.2)
 """
 
 #delcaring varialbes
-tolerance = 0.1
+tolerance = 0.001
+def NumDeriv(x,h):
+    ((x+h)**2 - (x-h)**2)/(2*h)
+    print(((x+h)**2 - (x-h)**2)/(2*h))
