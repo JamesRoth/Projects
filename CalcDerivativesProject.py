@@ -11,6 +11,10 @@ f(1.2)
 
 #delcaring varialbes
 tolerance = 0.001
+
+
+
+#functions
 def numDeriv(x,h):
     ((x+h)**2 - (x-h)**2)/(2*h)
     return(round( (((x+h)**2 - (x-h)**2)/(2*h)) ))
