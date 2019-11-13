@@ -27,6 +27,7 @@ def listDeriv(stepDeriv,domainLow,domainHigh):
     listDerivs = []
     for i in range (0, stepDeriv*abs(domainLow-domainHigh)):
         listXVals.append(round(domainLow+i/stepDeriv,4))
+        listDerivs.append(numDeriv(listXVals[i],tolerance))
     print(listXVals)
 
 listDeriv(1000,-10,10)
