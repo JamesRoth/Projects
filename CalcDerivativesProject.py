@@ -25,7 +25,8 @@ print(numDeriv(0,tolerance))
 def listDeriv(amountDeriv,domainLow,domainHigh):
     listXVals = []
     listDerivs = []
-    for i in range (0, amountDeriv):
+    for i in range (0, amountDeriv*abs(domainLow-domainHigh)):
         listXVals.append(domainLow+i/amountDeriv)
     print(listXVals)
 
+listDeriv(1000,-10,10)
