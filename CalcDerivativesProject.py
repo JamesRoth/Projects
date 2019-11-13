@@ -18,7 +18,7 @@ listDerivs = []
 #functions
 def numDeriv(x,h):
     ((x+h)**2 - (x-h)**2)/(2*h)
-    return(round( (((x+h)**2 - (x-h)**2)/(2*h)) ))
+    return(round( (((x+h)**2 - (x-h)**2)/(2*h)),3 ))
 
 print(numDeriv(0,tolerance))
 
