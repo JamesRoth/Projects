@@ -16,13 +16,16 @@ listDerivs = []
 listMax = []
 listMin = []
 
-
 #functions
 def numDeriv(x,h):
     ((x+h)**2 - (x-h)**2)/(2*h)
-    return(round( (((x+h)**2 - (x-h)**2)/(2*h)),3 ))
+    return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
 
-print(numDeriv(0,tolerance))
+def critFinder():
+    for i in range (0,len(listDerivs)):
+        if listDerivs[i] == 0.0:
+            print('Critical Point at',listXVals[i])
+    print("Done")
 
 def listDeriv(stepDeriv,domainLow,domainHigh):
     listXVals = []
@@ -32,13 +35,6 @@ def listDeriv(stepDeriv,domainLow,domainHigh):
         listDerivs.append(numDeriv(listXVals[i],tolerance))
     print(listXVals)
     print(listDerivs)
-
-listDeriv(1000,-10,10)
-
-def critFinder():
-    for i in range (0,length(listDerivs))
-        if listDerivs = 0:
-            print('Critical Point at',)
             
 def maxFinder():
     listMax = []
@@ -47,3 +43,7 @@ def maxFinder():
 def minFinder():
     listMin = []
     print('Abs Min at x=',min(listMin))
+    
+listDeriv(100,-10,10)
+print(numDeriv(0,tolerance))
+critFinder() 
