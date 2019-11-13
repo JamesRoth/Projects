@@ -11,7 +11,8 @@ f(1.2)
 
 #delcaring varialbes
 tolerance = 0.001
-
+listXVals = []
+listDerivs = []
 
 
 #functions
@@ -20,3 +21,6 @@ def numDeriv(x,h):
     return(round( (((x+h)**2 - (x-h)**2)/(2*h)) ))
 
 print(numDeriv(0,tolerance))
+
+def listDeriv(amountDeriv,)
+
