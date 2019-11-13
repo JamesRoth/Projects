@@ -13,6 +13,8 @@ f(1.2)
 tolerance = 0.001
 listXVals = []
 listDerivs = []
+listMax = []
+listMin = []
 
 
 #functions
@@ -37,3 +39,11 @@ def critFinder():
     for i in range (0,length(listDerivs))
         if listDerivs = 0:
             print('Critical Point at',)
+            
+def maxFinder():
+    listMax = []
+    print('Abs Max at x=',max(listMax))
+    
+def minFinder():
+    listMin = []
+    print('Abs Min at x=',min(listMin))
