@@ -32,3 +32,8 @@ def listDeriv(stepDeriv,domainLow,domainHigh):
     print(listDerivs)
 
 listDeriv(1000,-10,10)
+
+def critFinder():
+    for i in range (0,length(listDerivs))
+        if listDerivs = 0:
+            print('Critical Point at',)
