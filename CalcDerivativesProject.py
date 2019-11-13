@@ -22,11 +22,11 @@ def numDeriv(x,h):
 
 print(numDeriv(0,tolerance))
 
-def listDeriv(amountDeriv,domainLow,domainHigh):
+def listDeriv(stepDeriv,domainLow,domainHigh):
     listXVals = []
     listDerivs = []
-    for i in range (0, amountDeriv*abs(domainLow-domainHigh)):
-        listXVals.append(round(domainLow+i/amountDeriv),4)
+    for i in range (0, stepDeriv*abs(domainLow-domainHigh)):
+        listXVals.append(round(domainLow+i/stepDeriv,4))
     print(listXVals)
 
 listDeriv(1000,-10,10)
