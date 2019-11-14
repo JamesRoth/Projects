@@ -15,7 +15,7 @@ listMax = []
 listMin = []
 
 #functions
-def numDeriv(x,h):
+def numDeriv(x,h): #currently running with 2x, the derivative of the function x^2
     ((x+h)**2 - (x-h)**2)/(2*h)
     return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
 
@@ -26,19 +26,29 @@ def finder(stepDeriv,domainLow,domainHigh): #STILL NEED ENPOINT CASE
         x = round(domainLow+i/stepDeriv,4)
         leftDeriv = numDeriv(x-tolerance, tolerance)
         rightDeriv = numDeriv(x+tolerance,tolerance)
+        #first derivative stuff
         if numDeriv(x-tolerance, tolerance)*numDeriv(x+tolerance,tolerance) < 0:
             print("Sign change", x)
             if leftDeriv > 0:
                 listMax.append(x)
             elif leftDeriv < 0:
                 listMin.append(x)
-
+        #second derivative stuff
+        secondDeriv = round((leftDeriv - rightDeriv)/((x+tolerance)-(x-tolerance)),3) #finding the second derivative at x
+        
 def maxFinder():
-    print(list)
-    print('Abs Max at x=',max(listMax))
+    largestX = listMax[0]
+    for i in range(0,len(listMax)):
+        if listMax[i]**2 > largestX**2:
+            largestX = listMax[i]
+    print('Abs max at x=', largestX)
     
 def minFinder():
-    print('Abs Min at x=',min(listMin))
+    smallestX = listMin[0]
+    for i in range(0,len(listMin)):
+        if listMin[i]**2 > smallestX**2:
+            smallestX = listMin[i]
+    print('Abs min at x=', smallestX)
     
 print(numDeriv(0,tolerance))
 finder(100,-10,10)
