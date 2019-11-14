@@ -11,8 +11,6 @@ f(1.2)
 
 #delcaring varialbes
 tolerance = 0.001
-listXVals = []
-listDerivs = []
 listMax = []
 listMin = []
 
@@ -21,21 +19,14 @@ def numDeriv(x,h):
     ((x+h)**2 - (x-h)**2)/(2*h)
     return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
 
-def critFinder():
-    for i in range (0,len(listDerivs)):
-        if listDerivs[i] == 0.0:
-            print('Critical Point at',listXVals[i])
-    print("Done")
-
-def listDeriv(stepDeriv,domainLow,domainHigh):
-    listXVals = []
-    listDerivs = []
+def extremeFinder(stepDeriv,domainLow,domainHigh):
     for i in range (0, stepDeriv*abs(domainLow-domainHigh)):
-        listXVals.append(round(domainLow+i/stepDeriv,4))
-        listDerivs.append(numDeriv(listXVals[i],tolerance))
-    print(listXVals)
-    print(listDerivs)
-            
+        x = round(domainLow+i/stepDeriv,4)
+        if numDeriv(x-tolerance, tolerance)*numDeriv(x+tolerance,tolerance) < 0:
+            print("Sign change", x)
+
+
+
 def maxFinder():
     listMax = []
     print('Abs Max at x=',max(listMax))
@@ -44,6 +35,5 @@ def minFinder():
     listMin = []
     print('Abs Min at x=',min(listMin))
     
-listDeriv(100,-10,10)
 print(numDeriv(0,tolerance))
-critFinder() 
+extremeFinder(100,-10,10)
