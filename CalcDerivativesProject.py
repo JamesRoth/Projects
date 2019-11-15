@@ -13,6 +13,7 @@ f(1.2)
 tolerance = 0.001
 listMax = []
 listMin = []
+listExtreme = []
 
 #functions
 def numDeriv(x,h):
@@ -29,6 +30,15 @@ def numDerivRight(x,h):
     
 def f(x):
     return x**2
+
+def checkIncDec():
+    listExtreme = [listMax]:[listMin]
+    for i in range (0, len(listExtreme)):
+            if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) < 0:
+                print("Decreasing from ",listExtreme[i],"to ",listExtreme[i + 1])
+            if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
+                print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
+
 
 def finder(stepDeriv,domainLow,domainHigh): 
     listMin = []
