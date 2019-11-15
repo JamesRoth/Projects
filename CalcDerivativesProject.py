@@ -30,7 +30,12 @@ def numDerivLeft(x,h):
 def numDerivRight(x,h):
     ans = (f(x-h) - f(x))/(h)
     return round(ans,3) 
-    
+
+def numSecDeriv(x,h): #finds the second derivative at x
+    leftDeriv = numDeriv(x-h, h)
+    rightDeriv = numDeriv(x+h,h)
+    return round((leftDeriv - rightDeriv)/((2*h)),3) 
+
 def f(x):
     return x**2
 
