@@ -14,6 +14,9 @@ tolerance = 0.001
 listMax = []
 listMin = []
 listExtreme = []
+listMax2 = [] 
+listMin2 = []
+listExtreme2 = []  #for critical pts of the second derivative
 
 #functions
 def numDeriv(x,h):
@@ -39,6 +42,13 @@ def checkIncDec():
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
                 print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
 
+def checkIncDec2():
+    listExtreme2 = listMax2 + listMin2
+    for i in range (0, len(listExtreme)):
+            if numSecDeriv((listExtreme2[i] + listExtreme2[i + 1])/2, tolerance) < 0:
+                print("Concave down from ",listExtreme2[i],"to ",listExtreme2[i + 1])
+            if numSecDeriv((listExtreme[i] + listExtreme2[i + 1])/2, tolerance) > 0:
+                print("Concave up from ",listExtreme2[i],"to ",listExtreme2[i + 1])
 
 def finder(stepDeriv,domainLow,domainHigh): 
     listMin = []
