@@ -26,7 +26,7 @@ def numDerivLeft(x,h): #does derivative at the left endpoint
     return round(ans,3) 
 
 def numDerivRight(x,h): #does derivative at the right endpoint
-    ans = (f(x-h) - f(x))/(h)
+    ans = (f(x-h) - f(x))/(-h) # I added the - to the h and hopefully it'll fix the problem, but we need to find WHY it fixes the problem
     return round(ans,3) 
 
 def numSecDeriv(x,h): #finds the second derivative at x
@@ -44,14 +44,6 @@ def checkIncDec(listMax,listMin):
                 print("Decreasing from ",listExtreme[i],"to ",listExtreme[i + 1])
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
                 print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
-                
-def checkIncDec2():
-    listExtreme2 = listMax2 + listMin2
-    for i in range (0, len(listPOI)):
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) < 0:
-                print("Concave down from ",listPOI[i],"to ",listPOI[i + 1])
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) > 0:
-                print("Concave up from ",listPOI[i],"to ",listPOI[i + 1])
 
 def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we want to know, the "master function"
     listMin = []
@@ -61,10 +53,8 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
     val = numDerivLeft(x,tolerance)
     if val > 0:
         listMin.append(domainLow)
-        print("happened")
     elif val < 0:
         listMax.append(domainLow)
-        print("happened")
     for i in range (1, stepDeriv*abs(domainLow-domainHigh)-1):
         x = round(domainLow+i/stepDeriv,4)
         leftDeriv = numDeriv(x-tolerance, tolerance)
@@ -77,6 +67,7 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
             elif leftDeriv < 0:
                 listMin.append(x)
         #second derivative stuff
+        print (numSecDeriv(x,tolerance))
         if numSecDeriv(x-tolerance, tolerance)*numSecDeriv(x+tolerance,tolerance) < 0:
             print("POI", x)
             listPOI.append(x)
@@ -84,26 +75,35 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
     val = numDerivRight(x,tolerance)
     if val > 0:
         listMax.append(domainHigh)
-        print("happened")
     elif val < 0:
         listMin.append(domainHigh)
-        print("happened")
     checkIncDec(listMax,listMin)
+    print("Maxes:",listMax)
+    print("Mins:",listMin)
+    absMaxFinder(listMax)
+    absMinFinder(listMin)
 
-def maxFinder():
-    largestX = listMax[0]
-    for i in range(0,len(listMax)):
-        if f(listMax[i]) > f(largestX):
-            largestX = listMax[i]
-    print('Abs max at x=', largestX)
+def absMaxFinder(listMax):
+    if len(listMax) > 0:
+        if len(listMax) == 1:
+            print('Abs max at x =', listMax[0])
+        else:
+            largestX = listMax[0]
+            for i in range(0,len(listMax)):
+                if f(listMax[i]) > f(largestX):
+                    largestX = listMax[i]
+            print('Abs max at x =', largestX)
     
-def minFinder():
-    smallestX = listMin[0]
-    for i in range(0,len(listMin)):
-        if f(listMin[i]) > f(smallestX):
-            smallestX = listMin[i]
-    print('Abs min at x=', smallestX)
+def absMinFinder(listMin):
+    if len(listMin) > 0:
+        if len(listMin) == 1:
+            print('Abs min at x =', listMin[0])
+        else:
+            smallestX = listMin[0]
+            for i in range(0,len(listMin)):
+                if f(listMin[i]) < f(smallestX):
+                    smallestX = listMin[i]
+            print('Abs min at x =', smallestX)
     
-#print(numDeriv(0,tolerance))
-finder(100,-10,10)
-print(listMin,listMax)
+finder(100,-5,5)
+#print(numDerivRight(10,tolerance))
