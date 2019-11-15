@@ -44,6 +44,13 @@ def checkIncDec(listMax,listMin):
                 print("Decreasing from ",listExtreme[i],"to ",listExtreme[i + 1])
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
                 print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
+def checkConcav():
+    listExtreme2 = listMax2 + listMin2
+    for i in range (0, len(listPOI)):
+            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) < 0:
+                print("Concave down from ",listPOI[i],"to ",listPOI[i + 1])
+            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) > 0:
+                print("Concave up from ",listPOI[i],"to ",listPOI[i + 1])
 
 def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we want to know, the "master function"
     listMin = []
