@@ -16,18 +16,20 @@ listMin = []
 
 #functions (numDeriv still only running for x^2)
 def numDeriv(x,h):
-    ans = ((x+h)**2 - (x-h)**2)/(2*h)
+    ans = (f(x+h) - f(x-h))/(2*h)
     return(round(ans,3))
     
 def numDerivLeft(x,h):
-    ans = ((x+h)**2 - (x)**2)/(h)
+    ans = (f(x+h) - f(x))/(h)
     return(round(ans,3))
 
 def numDerivRight(x,h):
-    ans = ((x-h)**2 - (x)**2)/(h)
+    ans = (f(x-h) - f(x))/(h)
     return(round(ans),3))
     
-
+def f(x):
+    return x**2
+    
 def finder(stepDeriv,domainLow,domainHigh): #STILL NEED ENPOINT CASE
     listMin = []
     listMax = []
