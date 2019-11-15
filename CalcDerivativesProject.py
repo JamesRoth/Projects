@@ -19,6 +19,14 @@ def numDeriv(x,h): #currently running with 2x, the derivative of the function x^
     ((x+h)**2 - (x-h)**2)/(2*h)
     return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
 
+def numDerivLeft(x,h):
+    ((x+h)**2 - (x)**2)/(h)
+    return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
+
+def numDerivRight(x,h):
+    ((x-h)**2 - (x)**2)/(h)
+    return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
+
 def finder(stepDeriv,domainLow,domainHigh): #STILL NEED ENPOINT CASE
     listMin = []
     listMax = []
@@ -52,4 +60,13 @@ def minFinder():
     
 print(numDeriv(0,tolerance))
 finder(100,-10,10)
+
+if numDerivLeft > 0:
+    listMin.append(domainLow)
+if numDerivLeft < 0:
+    listMax.append(domainLow)
+if numDerivRight > 0:
+    listMin.append(domainHigh)
+if numDerivRight < 0:
+    listMax.append(domainHigh)
 
