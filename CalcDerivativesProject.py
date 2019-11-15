@@ -14,26 +14,31 @@ tolerance = 0.001
 listMax = []
 listMin = []
 
-#functions (numDeriv still only running for x^2)
+#functions
 def numDeriv(x,h):
     ans = (f(x+h) - f(x-h))/(2*h)
-    return(round(ans,3))
+    return round(ans,3) 
     
 def numDerivLeft(x,h):
     ans = (f(x+h) - f(x))/(h)
-    return(round(ans,3))
+    return round(ans,3) 
 
 def numDerivRight(x,h):
     ans = (f(x-h) - f(x))/(h)
-    return(round(ans),3))
+    return round(ans,3) 
     
 def f(x):
     return x**2
-    
-def finder(stepDeriv,domainLow,domainHigh): #STILL NEED ENPOINT CASE
+
+def finder(stepDeriv,domainLow,domainHigh): 
     listMin = []
     listMax = []
-    for i in range (0, stepDeriv*abs(domainLow-domainHigh)):
+    x = round(domainLow) #left endpoint case
+    if numDerivLeft > 0:
+        listMin.append(domainLow)
+    if numDerivLeft < 0:
+        listMax.append(domainLow)
+    for i in range (1, stepDeriv*abs(domainLow-domainHigh)-1):
         x = round(domainLow+i/stepDeriv,4)
         leftDeriv = numDeriv(x-tolerance, tolerance)
         rightDeriv = numDeriv(x+tolerance,tolerance)
@@ -46,7 +51,12 @@ def finder(stepDeriv,domainLow,domainHigh): #STILL NEED ENPOINT CASE
                 listMin.append(x)
         #second derivative stuff
         secondDeriv = round((leftDeriv - rightDeriv)/((x+tolerance)-(x-tolerance)),3) #finding the second derivative at x
-        
+    x = round(domainHigh) #right endpoint case
+    if numDerivRight > 0:
+        listMin.append(domainHigh)
+    if numDerivRight < 0:
+        listMax.append(domainHigh)
+
 def maxFinder():
     largestX = listMax[0]
     for i in range(0,len(listMax)):
@@ -61,16 +71,5 @@ def minFinder():
             smallestX = listMin[i]
     print('Abs min at x=', smallestX)
     
-print(numDeriv(0,tolerance))
-finder(100,-10,10)
-
-if numDerivLeft > 0 and x == domainLow:
-    listMin.append(domainLow)
-if numDerivLeft < 0 and x == domainLow:
-    listMax.append(domainLow)
-if numDerivRight > 0 and x == domainHigh:
-    listMin.append(domainHigh)
-if numDerivRight < 0 and x == domainHigh:
-    listMax.append(domainHigh)
-
-
+#print(numDeriv(0,tolerance))
+#finder(100,-10,10)
