@@ -14,18 +14,19 @@ tolerance = 0.001
 listMax = []
 listMin = []
 
-#functions
-def numDeriv(x,h): #currently running with 2x, the derivative of the function x^2
-    ((x+h)**2 - (x-h)**2)/(2*h)
-    return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
-
+#functions (numDeriv still only running for x^2)
+def numDeriv(x,h):
+    ans = ((x+h)**2 - (x-h)**2)/(2*h)
+    return(round(ans,3))
+    
 def numDerivLeft(x,h):
-    ((x+h)**2 - (x)**2)/(h)
-    return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
+    ans = ((x+h)**2 - (x)**2)/(h)
+    return(round(ans,3))
 
 def numDerivRight(x,h):
-    ((x-h)**2 - (x)**2)/(h)
-    return(round((((x+h)**2 - (x-h)**2)/(2*h)),3))
+    ans = ((x-h)**2 - (x)**2)/(h)
+    return(round(ans),3))
+    
 
 def finder(stepDeriv,domainLow,domainHigh): #STILL NEED ENPOINT CASE
     listMin = []
@@ -61,12 +62,13 @@ def minFinder():
 print(numDeriv(0,tolerance))
 finder(100,-10,10)
 
-if numDerivLeft > 0:
+if numDerivLeft > 0 and x == domainLow:
     listMin.append(domainLow)
-if numDerivLeft < 0:
+if numDerivLeft < 0 and x == domainLow:
     listMax.append(domainLow)
-if numDerivRight > 0:
+if numDerivRight > 0 and x == domainHigh:
     listMin.append(domainHigh)
-if numDerivRight < 0:
+if numDerivRight < 0 and x == domainHigh:
     listMax.append(domainHigh)
+
 
