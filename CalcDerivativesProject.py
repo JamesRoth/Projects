@@ -50,14 +50,14 @@ def finder(stepDeriv,domainLow,domainHigh): #STILL NEED ENPOINT CASE
 def maxFinder():
     largestX = listMax[0]
     for i in range(0,len(listMax)):
-        if listMax[i]**2 > largestX**2:
+        if f(listMax[i]) > f(largestX):
             largestX = listMax[i]
     print('Abs max at x=', largestX)
     
 def minFinder():
     smallestX = listMin[0]
     for i in range(0,len(listMin)):
-        if listMin[i]**2 > smallestX**2:
+        if f(listMin[i]) > f(smallestX):
             smallestX = listMin[i]
     print('Abs min at x=', smallestX)
     
