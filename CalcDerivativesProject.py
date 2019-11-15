@@ -35,7 +35,7 @@ def numSecDeriv(x,h): #finds the second derivative at x
     return round((leftDeriv - rightDeriv)/((2*h)),3) 
 
 def f(x): #the function we are currently finding all the info for
-    return x**2
+    return x**3
 
 def checkIncDec(listMax,listMin):
     listExtreme = listMax + listMin
@@ -44,25 +44,19 @@ def checkIncDec(listMax,listMin):
                 print("Decreasing from ",listExtreme[i],"to ",listExtreme[i + 1])
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
                 print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
-def checkIncDec2():
-    listExtreme2 = listMax2 + listMin2
-    for i in range (0, len(listPOI)):
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) < 0:
-                print("Concave down from ",listPOI[i],"to ",listPOI[i + 1])
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) > 0:
-                print("Concave up from ",listPOI[i],"to ",listPOI[i + 1])
 
-def finder(stepDeriv,domainLow,domainHigh): 
+def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we want to know, the "master function"
     listMin = []
     listMax = []
     listPOI = []
     x = round(domainLow) #left endpoint case
     val = numDerivLeft(x,tolerance)
-    print(val)
     if val > 0:
         listMin.append(domainLow)
+        print("happened")
     elif val < 0:
         listMax.append(domainLow)
+        print("happened")
     for i in range (1, stepDeriv*abs(domainLow-domainHigh)-1):
         x = round(domainLow+i/stepDeriv,4)
         leftDeriv = numDeriv(x-tolerance, tolerance)
@@ -82,8 +76,10 @@ def finder(stepDeriv,domainLow,domainHigh):
     val = numDerivRight(x,tolerance)
     if val > 0:
         listMax.append(domainHigh)
+        print("happened")
     elif val < 0:
         listMin.append(domainHigh)
+        print("happened")
     checkIncDec(listMax,listMin)
 
 def maxFinder():
@@ -102,3 +98,4 @@ def minFinder():
     
 #print(numDeriv(0,tolerance))
 finder(100,-10,10)
+print(listMin,listMax)
