@@ -14,20 +14,18 @@ tolerance = 0.001
 listMax = []
 listMin = []
 listExtreme = []
-listMax2 = [] 
-listMin2 = []
-listExtreme2 = []  #for critical pts of the second derivative
+listPOI = []
 
 #functions
 def numDeriv(x,h):
     ans = (f(x+h) - f(x-h))/(2*h)
     return round(ans,3) 
     
-def numDerivLeft(x,h):
+def numDerivLeft(x,h): #does derivative at the left endpoint
     ans = (f(x+h) - f(x))/(h)
     return round(ans,3) 
 
-def numDerivRight(x,h):
+def numDerivRight(x,h): #does derivative at the right endpoint
     ans = (f(x-h) - f(x))/(h)
     return round(ans,3) 
 
@@ -36,28 +34,21 @@ def numSecDeriv(x,h): #finds the second derivative at x
     rightDeriv = numDeriv(x+h,h)
     return round((leftDeriv - rightDeriv)/((2*h)),3) 
 
-def f(x):
+def f(x): #the function we are currently finding all the info for
     return x**2
 
-def checkIncDec():
-    listExtreme = [listMax]:[listMin]
-    for i in range (0, len(listExtreme)):
+def checkIncDec(listMax,listMin):
+    listExtreme = listMax + listMin
+    for i in range (0, len(listExtreme)-1):
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) < 0:
                 print("Decreasing from ",listExtreme[i],"to ",listExtreme[i + 1])
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
                 print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
 
-def checkIncDec2():
-    listExtreme2 = listMax2 + listMin2
-    for i in range (0, len(listExtreme)):
-            if numSecDeriv((listExtreme2[i] + listExtreme2[i + 1])/2, tolerance) < 0:
-                print("Concave down from ",listExtreme2[i],"to ",listExtreme2[i + 1])
-            if numSecDeriv((listExtreme2[i] + listExtreme2[i + 1])/2, tolerance) > 0:
-                print("Concave up from ",listExtreme2[i],"to ",listExtreme2[i + 1])
-
 def finder(stepDeriv,domainLow,domainHigh): 
     listMin = []
     listMax = []
+    listPOI = []
     x = round(domainLow) #left endpoint case
     val = numDerivLeft(x,tolerance)
     print(val)
@@ -77,8 +68,9 @@ def finder(stepDeriv,domainLow,domainHigh):
             elif leftDeriv < 0:
                 listMin.append(x)
         #second derivative stuff
-        
-        
+        if numSecDeriv(x-tolerance, tolerance)*numSecDeriv(x+tolerance,tolerance) < 0:
+            print("POI", x)
+            listPOI.append(x)
     x = round(domainHigh) #right endpoint case
     val = numDerivRight(x,tolerance)
     if val > 0:
@@ -102,4 +94,4 @@ def minFinder():
     print('Abs min at x=', smallestX)
     
 #print(numDeriv(0,tolerance))
-#finder(100,-10,10)
+finder(100,-10,10)
