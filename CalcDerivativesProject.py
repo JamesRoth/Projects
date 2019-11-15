@@ -47,7 +47,7 @@ def checkIncDec2():
     for i in range (0, len(listExtreme)):
             if numSecDeriv((listExtreme2[i] + listExtreme2[i + 1])/2, tolerance) < 0:
                 print("Concave down from ",listExtreme2[i],"to ",listExtreme2[i + 1])
-            if numSecDeriv((listExtreme[i] + listExtreme2[i + 1])/2, tolerance) > 0:
+            if numSecDeriv((listExtreme2[i] + listExtreme2[i + 1])/2, tolerance) > 0:
                 print("Concave up from ",listExtreme2[i],"to ",listExtreme2[i + 1])
 
 def finder(stepDeriv,domainLow,domainHigh): 
