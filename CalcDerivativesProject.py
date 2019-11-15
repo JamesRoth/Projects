@@ -54,9 +54,11 @@ def finder(stepDeriv,domainLow,domainHigh):
     listMin = []
     listMax = []
     x = round(domainLow) #left endpoint case
-    if numDerivLeft > 0:
+    val = numDerivLeft(x,tolerance)
+    print(val)
+    if val > 0:
         listMin.append(domainLow)
-    if numDerivLeft < 0:
+    elif val < 0:
         listMax.append(domainLow)
     for i in range (1, stepDeriv*abs(domainLow-domainHigh)-1):
         x = round(domainLow+i/stepDeriv,4)
@@ -70,12 +72,15 @@ def finder(stepDeriv,domainLow,domainHigh):
             elif leftDeriv < 0:
                 listMin.append(x)
         #second derivative stuff
-        secondDeriv = round((leftDeriv - rightDeriv)/((x+tolerance)-(x-tolerance)),3) #finding the second derivative at x
+        
+        
     x = round(domainHigh) #right endpoint case
-    if numDerivRight > 0:
-        listMin.append(domainHigh)
-    if numDerivRight < 0:
+    val = numDerivRight(x,tolerance)
+    if val > 0:
         listMax.append(domainHigh)
+    elif val < 0:
+        listMin.append(domainHigh)
+    checkIncDec(listMax,listMin)
 
 def maxFinder():
     largestX = listMax[0]
