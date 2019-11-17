@@ -17,7 +17,7 @@ listExtreme = []
 listPOI = []
 
 #functions
-def numDeriv(x,h):
+def numDeriv(x,h): #finds the numerical derivative at a point
     ans = (f(x+h) - f(x-h))/(2*h)
     #return round(ans,3) 
     return ans
@@ -41,28 +41,30 @@ def numSecDeriv(x,h): #finds the second derivative at x
 def f(x): #the function we are currently finding all the info for
     return x**3
 
-def checkIncDec(listMax,listMin):
+def checkIncDec(listMax,listMin): #finds where the function is increasing and decreasing
     listExtreme = listMax + listMin
     for i in range (0, len(listExtreme)-1):
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) < 0:
-                print("Decreasing from ",listExtreme[i],"to ",listExtreme[i + 1])
+                print("Decreasing from ",listExtreme[i + 1],"to ",listExtreme[i])
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
-                print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
-                
-def checkConcav():
-    listExtreme2 = listMax2 + listMin2
-    for i in range (0, len(listPOI)):
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) < 0:
-                print("Concave down from ",listPOI[i],"to ",listPOI[i + 1])
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) > 0:
-                print("Concave up from ",listPOI[i],"to ",listPOI[i + 1])
-                
+                print("Increasing from ",listExtreme[i + 1],"to ",listExtreme[i])
+
+def checkConcav(listPOI): #finds where the function is concave up/concave down
+    for i in range (0, len(listPOI)-1):
+        if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) > 0:
+            print("Concave down from ",listPOI[i],"to ",listPOI[i + 1])
+        if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) < 0:
+            print("Concave up from ",listPOI[i],"to ",listPOI[i + 1])
+
 def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we want to know, the "master function"
     listMin = []
     listMax = []
-    listPOI = []
+    listMin2 = []
+    listMax2 = []
+    listPOI = [] #has endpoints as well as POIs
+    listPOI.append(domainLow)
     x = round(domainLow) #left endpoint case
-    val = numDerivLeft(x,tolerance)
+    val = numDerivLeft(x,tolerance) #just using this variable so I only calculate this number once
     if val > 0:
         listMin.append(domainLow)
     elif val < 0:
@@ -83,18 +85,20 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
             listPOI.append(x)
             print("POI at ",x)
     x = round(domainHigh) #right endpoint case
-    val = numDerivRight(x,tolerance)
+    val = numDerivRight(x,tolerance) #just using this variable so I only calculate this number once
     if val > 0:
         listMax.append(domainHigh)
     elif val < 0:
         listMin.append(domainHigh)
+    listPOI.append(domainHigh)
     checkIncDec(listMax,listMin)
     print("Maxes:",listMax)
     print("Mins:",listMin)
     absMaxFinder(listMax)
     absMinFinder(listMin)
+    checkConcav(listPOI)
 
-def absMaxFinder(listMax):
+def absMaxFinder(listMax): #finds the absolute minimum in a list of all minimums
     if len(listMax) > 0:
         if len(listMax) == 1:
             print('Abs max at x =', listMax[0])
@@ -105,7 +109,7 @@ def absMaxFinder(listMax):
                     largestX = listMax[i]
             print('Abs max at x =', largestX)
     
-def absMinFinder(listMin):
+def absMinFinder(listMin): #finds the absolute minimum in a list of all minimums
     if len(listMin) > 0:
         if len(listMin) == 1:
             print('Abs min at x =', listMin[0])
