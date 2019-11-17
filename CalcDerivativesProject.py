@@ -19,20 +19,24 @@ listPOI = []
 #functions
 def numDeriv(x,h):
     ans = (f(x+h) - f(x-h))/(2*h)
-    return round(ans,3) 
+    #return round(ans,3) 
+    return ans
     
 def numDerivLeft(x,h): #does derivative at the left endpoint
     ans = (f(x+h) - f(x))/(h)
-    return round(ans,3) 
+    #return round(ans,3) 
+    return ans
 
 def numDerivRight(x,h): #does derivative at the right endpoint
     ans = (f(x-h) - f(x))/(-h) # I added the - to the h and hopefully it'll fix the problem, but we need to find WHY it fixes the problem
-    return round(ans,3) 
+    #return round(ans,3) 
+    return ans
 
 def numSecDeriv(x,h): #finds the second derivative at x
     leftDeriv = numDeriv(x-h, h)
     rightDeriv = numDeriv(x+h,h)
-    return round((leftDeriv - rightDeriv)/((2*h)),3) 
+    #return round((leftDeriv - rightDeriv)/(2*h),3) 
+    return (leftDeriv - rightDeriv)/(2*h)
 
 def f(x): #the function we are currently finding all the info for
     return x**3
@@ -44,13 +48,6 @@ def checkIncDec(listMax,listMin):
                 print("Decreasing from ",listExtreme[i],"to ",listExtreme[i + 1])
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
                 print("Increasing from ",listExtreme[i],"to ",listExtreme[i + 1])
-def checkConcav():
-    listExtreme2 = listMax2 + listMin2
-    for i in range (0, len(listPOI)):
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) < 0:
-                print("Concave down from ",listPOI[i],"to ",listPOI[i + 1])
-            if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) > 0:
-                print("Concave up from ",listPOI[i],"to ",listPOI[i + 1])
 
 def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we want to know, the "master function"
     listMin = []
@@ -74,10 +71,9 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
             elif leftDeriv < 0:
                 listMin.append(x)
         #second derivative stuff
-        print (numSecDeriv(x,tolerance))
         if numSecDeriv(x-tolerance, tolerance)*numSecDeriv(x+tolerance,tolerance) < 0:
-            print("POI", x)
             listPOI.append(x)
+            print("POI at ",x)
     x = round(domainHigh) #right endpoint case
     val = numDerivRight(x,tolerance)
     if val > 0:
