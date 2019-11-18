@@ -39,7 +39,8 @@ def numSecDeriv(x,h): #finds the second derivative at x
     return (leftDeriv - rightDeriv)/(2*h)
 
 def f(x): #the function we are currently finding all the info for
-    return x**3
+    return x**3 - (2*x)
+    print("Func = " + str(x**3 - (2*x)))
 
 def checkIncDec(listMax,listMin): #finds where the function is increasing and decreasing
     listExtreme = listMax + listMin
@@ -119,6 +120,7 @@ def absMinFinder(listMin): #finds the absolute minimum in a list of all minimums
                 if f(listMin[i]) < f(smallestX):
                     smallestX = listMin[i]
             print('Abs min at x =', smallestX)
-    
+
+print("Func = " + str(x**3 - (2*x)))    
 finder(100,-5,5)
 #print(numDerivRight(10,tolerance))
