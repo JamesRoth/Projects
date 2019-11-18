@@ -13,7 +13,7 @@ f(1.2)
 tolerance = 0.001
 listMax = []
 listMin = []
-listExtreme = []
+listDeriv = []
 listPOI = []
 
 #functions
@@ -71,18 +71,20 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
     elif val < 0:
         listMax.append(domainLow)
     for i in range (1, stepDeriv*abs(domainLow-domainHigh)-1):
-        x = round(domainLow+i/stepDeriv,4)
+        x = (domainLow+i/stepDeriv)
         leftDeriv = numDeriv(x-tolerance, tolerance)
         rightDeriv = numDeriv(x+tolerance,tolerance)
+        #print(numDeriv(x,tolerance))
+        listDeriv.append(numDeriv(x,tolerance))
         #first derivative stuff
-        if numDeriv(x-tolerance, tolerance)*numDeriv(x+tolerance,tolerance) < 0:
+        if numDeriv(x, tolerance)*numDeriv(x+(1/stepDeriv),tolerance) < 0:
             print("Sign change", x)
             if leftDeriv > 0:
                 listMax.append(x)
             elif leftDeriv < 0:
                 listMin.append(x)
         #second derivative stuff
-        if numSecDeriv(x-tolerance, tolerance)*numSecDeriv(x+tolerance,tolerance) < 0:
+        if numSecDeriv(x, tolerance)*numSecDeriv(x+(1/stepDeriv),tolerance) < 0:
             listPOI.append(x)
             print("POI at ",x)
     x = round(domainHigh) #right endpoint case
@@ -98,6 +100,7 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
     absMaxFinder(listMax)
     absMinFinder(listMin)
     checkConcav(listPOI)
+    print(listDeriv)
 
 def absMaxFinder(listMax): #finds the absolute minimum in a list of all minimums
     if len(listMax) > 0:
@@ -121,6 +124,6 @@ def absMinFinder(listMin): #finds the absolute minimum in a list of all minimums
                     smallestX = listMin[i]
             print('Abs min at x =', smallestX)
 
-print("Func = " + str(x**3 - (2*x)))    
-finder(100,-5,5)
+
+finder(100,-2,2)
 #print(numDerivRight(10,tolerance))
