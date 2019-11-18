@@ -168,13 +168,15 @@ def numSecDeriv(x,h): #finds the second derivative at x
 
 def checkIncDec(listMax,listMin): #finds where the function is increasing and decreasing
     listExtreme = listMax + listMin
+    listExtreme.sort()
     for i in range (0, len(listExtreme)-1):
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) < 0:
-                print("Decreasing from",listExtreme[i + 1],"to ",listExtreme[i])
+                print("Decreasing from",listExtreme[i],"to ",listExtreme[i + 1])
             if numDeriv((listExtreme[i] + listExtreme[i + 1])/2, tolerance) > 0:
-                print("Increasing from",listExtreme[i + 1],"to ",listExtreme[i])
+                print("Increasing from",listExtreme[i],"to ",listExtreme[i + 1])
 
 def checkConcav(listPOI): #finds where the function is concave up/concave down
+    listPOI.sort()
     for i in range (0, len(listPOI)-1):
         if numSecDeriv((listPOI[i] + listPOI[i + 1])/2, tolerance) > 0:
             print("Concave down from",listPOI[i],"to ",listPOI[i + 1])
