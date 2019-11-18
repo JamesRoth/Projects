@@ -126,10 +126,8 @@ def individual_perform(equ):
         def ans(x):
             return x
     return ans
-
-
-function_1=individual_perform(func_1)
-print()
+    
+#function_1=individual_perform(func_1)
 
 #delcaring varialbes
 tolerance = 0.001
@@ -141,9 +139,8 @@ listPOI = []
 #functions
 def f(x): #the function we are currently finding all the info for
     #func_1='cos(x*pi)+x^3'
-    func_1 = input("Enter your function, but please remember proper syntax: ")
-    function_1=individual_perform(func_1)
-    return(function_1(x))
+    #return(function_1(x))
+    return x**2
 
 def numDeriv(x,h): #finds the numerical derivative at a point
     ans = (f(x+h) - f(x-h))/(2*h)
@@ -186,8 +183,6 @@ def checkConcav(listPOI): #finds where the function is concave up/concave down
 def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we want to know, the "master function"
     listMin = []
     listMax = []
-    listMin2 = []
-    listMax2 = []
     listPOI = [] #has endpoints as well as POIs
     listPOI.append(domainLow)
     x = round(domainLow) #left endpoint case
@@ -198,16 +193,24 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
         listMax.append(domainLow)
     for i in range (1, stepDeriv*abs(domainLow-domainHigh)-1):
         x = (domainLow+i/stepDeriv)
-        leftDeriv = numDeriv(x-tolerance, tolerance)
-        rightDeriv = numDeriv(x+tolerance,tolerance)
-        #listDeriv.append(numDeriv(x,tolerance))
+        leftDeriv = numDeriv(x-(1/stepDeriv), tolerance)
+        rightDeriv = numDeriv(x+(1/stepDeriv),tolerance)
+        deriv = numDeriv(x,tolerance)
+        listDeriv.append(numDeriv(x,tolerance))
         #first derivative stuff
-        if numDeriv(x, tolerance)*numDeriv(x+(1/stepDeriv),tolerance) < 0:
-            #print("Sign change", x)
+        if deriv*numDeriv(x+(1/stepDeriv),tolerance) < 0 and deriv != 0: #not recognizing both sides of the zero
+            print("sign change", x)
             if leftDeriv > 0:
-                listMax.append(round(x,5))
+                listMax.append(x)
             elif leftDeriv < 0:
-                listMin.append(round(x,5))
+                listMin.append(x)
+        elif deriv == 0:
+            if leftDeriv*rightDeriv < 0:
+                print("sign change", x)
+            if leftDeriv > 0:
+                listMax.append(x)
+            elif leftDeriv < 0:
+                listMin.append(x)
         #second derivative stuff
         if numSecDeriv(x, tolerance)*numSecDeriv(x+(1/stepDeriv),tolerance) < 0:
             listPOI.append(x)
@@ -220,8 +223,14 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
         listMin.append(domainHigh)
     listPOI.append(domainHigh)
     checkIncDec(listMax,listMin)
-    print("Maxes at x =",listMax)
-    print("Mins at x =",listMin)
+    if len(listMax) > 0:
+        print("Maxes at x =",listMax)
+    else:
+        print("No maximums")
+    if len(listMin) > 0:
+        print("Mins at x =",listMin)
+    else:
+        print("No minimums")
     absMaxFinder(listMax)
     absMinFinder(listMin)
     checkConcav(listPOI)
@@ -230,25 +239,29 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
 def absMaxFinder(listMax): #finds the absolute minimum in a list of all minimums
     if len(listMax) > 0:
         if len(listMax) == 1:
-            print('Abs max at x =', listMax[0])
+            print('Absolute max at x =', listMax[0])
         else:
             largestX = listMax[0]
             for i in range(0,len(listMax)):
                 if f(listMax[i]) > f(largestX):
                     largestX = listMax[i]
-            print('Abs max at x =', largestX)
+            print('Absolute max at x =', largestX)
     
 def absMinFinder(listMin): #finds the absolute minimum in a list of all minimums
     if len(listMin) > 0:
         if len(listMin) == 1:
-            print('Abs min at x =', listMin[0])
+            print('Absolute min at x =', listMin[0])
         else:
             smallestX = listMin[0]
             for i in range(0,len(listMin)):
                 if f(listMin[i]) < f(smallestX):
                     smallestX = listMin[i]
-            print('Abs min at x =', smallestX)
+            print('Absolute min at x =', smallestX)
+
+#intperets the function you enter
+func_1 = input("Enter your function, but please remember proper syntax: When typing the function, don’t include spaces. You also have to stick to certain syntax. ^ is used to bring a number to a power, while * is for multiplication exclusively. I can’t promise it will work if you input commas. Division is done by /, and it includes all trig functions and their inverses (with the inverse notation being asin instead of sin, acsc instead of csc, etc.) When inputting a logarithm, you first type log, then the base, then _, then the number whose log you want to find. Ln isn’t a working command, but the program can recognize both e and pi (typed as seen here).It follows general order of operations (although it recognizes only parentheses, not brackets) but also prioritizes the positive direction of the negative (addition before subtraction, multiplication before division). ")
+function_1=individual_perform(func_1)
+
+finder(100,-2,2)
 
 
-#finder(1000,-2,2)
-#print(numDerivRight(10,tolerance))
