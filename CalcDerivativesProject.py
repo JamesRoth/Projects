@@ -74,15 +74,14 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
         x = (domainLow+i/stepDeriv)
         leftDeriv = numDeriv(x-tolerance, tolerance)
         rightDeriv = numDeriv(x+tolerance,tolerance)
-        #print(numDeriv(x,tolerance))
-        listDeriv.append(numDeriv(x,tolerance))
+        #listDeriv.append(numDeriv(x,tolerance))
         #first derivative stuff
         if numDeriv(x, tolerance)*numDeriv(x+(1/stepDeriv),tolerance) < 0:
-            print("Sign change", x)
+            #print("Sign change", x)
             if leftDeriv > 0:
-                listMax.append(x)
+                listMax.append(round(x,5))
             elif leftDeriv < 0:
-                listMin.append(x)
+                listMin.append(round(x,5))
         #second derivative stuff
         if numSecDeriv(x, tolerance)*numSecDeriv(x+(1/stepDeriv),tolerance) < 0:
             listPOI.append(x)
@@ -100,7 +99,7 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
     absMaxFinder(listMax)
     absMinFinder(listMin)
     checkConcav(listPOI)
-    print(listDeriv)
+    #print(listDeriv)
 
 def absMaxFinder(listMax): #finds the absolute minimum in a list of all minimums
     if len(listMax) > 0:
