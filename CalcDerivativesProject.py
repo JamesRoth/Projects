@@ -199,14 +199,12 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
         listDeriv.append(numDeriv(x,tolerance))
         #first derivative stuff
         if deriv*numDeriv(x+(1/stepDeriv),tolerance) < 0 and deriv != 0: #not recognizing both sides of the zero
-            print("sign change", x)
             if leftDeriv > 0:
                 listMax.append(x)
             elif leftDeriv < 0:
                 listMin.append(x)
         elif deriv == 0:
             if leftDeriv*rightDeriv < 0:
-                print("sign change", x)
             if leftDeriv > 0:
                 listMax.append(x)
             elif leftDeriv < 0:
