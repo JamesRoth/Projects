@@ -86,7 +86,6 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
                 listMin.append(x)
         elif deriv == 0:
             if leftDeriv*rightDeriv < 0:
-                print("sign change:", x)
                 if leftDeriv > 0:
                     listMax.append(x)
                 elif leftDeriv < 0:
