@@ -2,7 +2,6 @@
 #11/12/19
 #Calc derivative project
 
-#all of this is the function interperter, our code starts at line 132
 #imports
 import math
 from math import sin,cos, tan, acos, asin, atan
