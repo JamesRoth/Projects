@@ -80,10 +80,6 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
         listDeriv.append(numDeriv(x,tolerance))
         #first derivative stuff
         if deriv*rightDeriv < 0 and deriv != 0:
-            #debugging stuff (the print statements)
-            #print(deriv,rightDeriv)
-            #print("Deriv*",deriv*rightDeriv)
-            #print("sign change:", x, deriv)
             if leftDeriv > 0:
                 listMax.append(x)
             elif leftDeriv < 0:
@@ -107,6 +103,14 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
         listMin.append(domainHigh)
     listPOI.append(domainHigh)
     checkIncDec(listMax,listMin)
+    checkConcav(listPOI)
+    #prints maxes and mins, checks to make sure infinity and negative infinty aren't included
+    for i in range(0, len(listMax)):
+        if math.isinf(f(listMax[i])) == True:
+            listMax.remove(listMax[i])
+    for i in range(0, len(listMin)):
+        if math.isinf(f(listMin[i])) == True:
+            listMin.remove(listMin[i])
     if len(listMax) > 0:
         print("Maxes at x =",listMax)
     else:
@@ -117,8 +121,6 @@ def finder(stepDeriv,domainLow,domainHigh): #finds all of the information we wan
         print("No minimums")
     absMaxFinder(listMax)
     absMinFinder(listMin)
-    checkConcav(listPOI)
-    #print(listDeriv)
 
 def absMaxFinder(listMax): #finds the absolute minimum in a list of all minimums
     if len(listMax) > 0:
@@ -148,5 +150,7 @@ domainH = int(input("Enter the right bound of your domain: "))
 func = input("Input a function: ")
 
 finder(100,domainL,domainH)
+
+
 
 
