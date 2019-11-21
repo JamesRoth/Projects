@@ -32,8 +32,8 @@ for i in range(0,interval):
     #MRAM
     mRam = mRam + f((base/2+intervalLow+i/(interval/(intervalHigh-intervalLow))))*base
     
-print("RRAM: ", rRam)
 print("LRAM: ", lRam)
+print("RRAM: ", rRam)
 print("MRAM: ", mRam)
     
     
