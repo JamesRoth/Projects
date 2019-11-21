@@ -22,17 +22,16 @@ base = (intervalHigh-intervalLow)/interval
 print(base)
 for i in range(0,interval):
     #LRAM
-    lRam = lRam + f(i/interval)*base
-    print(i)
+    lRam = lRam + f(intervalLow+i/(interval/(intervalHigh-intervalLow)))*base
     
 for i in range(1,interval+1):
     #RRAM
-    rRam = rRam + f(i/interval)*base
+    rRam = rRam + f(intervalLow+i/(interval/(intervalHigh-intervalLow)))*base
 
 for i in range(0,interval):
     #MRAM
-    mRam = mRam + f((i+base/2)/interval)*base
-
+    mRam = mRam + f((base/2+intervalLow+i/(interval/(intervalHigh-intervalLow)))*base
+    
 print("RRAM: ", rRam)
 print("LRAM: ", lRam)
 print("MRAM: ", mRam)
