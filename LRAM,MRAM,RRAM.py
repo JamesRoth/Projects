@@ -10,7 +10,7 @@ def f(xVal):
     x=xVal
     return(eval(func))
 
-func = input("Input a function: ”)
+func = input("Input a function: ")
 intervalLow = int(input("Enter the lower bound of your interval: "))
 intervalHigh = int(input("Enter the higher bound of your interval: "))
 interval = int(input("Enter the interval value: "))
