@@ -25,12 +25,15 @@ for i in range(0,interval):
     
 for i in range(1,interval+1):
     #RRAM
-    lRam += f(i/interval)*base
+    rRam += f(i/interval)*base
 
 for i in range(0,interval):
     #MRAM
-    lRam += f((i+base/2)/interval)*base
-    
+    mRam += f((i+base/2)/interval)*base
+
+print("RRAM: ", rRam)
+print("LRAM: ", lRam)
+print("MRAM: ", mRam)
     
     
 
