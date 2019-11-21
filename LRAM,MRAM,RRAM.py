@@ -23,4 +23,14 @@ for i in range(0,interval):
     #LRAM
     lRam += f(i/interval)*base
     
+for i in range(,interval+base):
+    #RRAM
+    lRam += f(i/interval)*base
+
+for i in range(0,interval):
+    #LRAM
+    lRam += f(i/interval)*base
+    
+    
+    
 
