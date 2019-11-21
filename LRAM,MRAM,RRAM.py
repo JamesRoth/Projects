@@ -6,7 +6,11 @@ from math import sin, cos, tan, acos, asin, atan
 from math import exp, e, pi
 from math import log, log10, sqrt, log2
 
-def f(x):
-    
+def f(xVal):
+    x=xVal
+    return(eval(func))
+
 func = input("Input a function: ”)
-eval(func)
+intervalLow = int(input("Enter the lower bound of your interval: "))
+intervalHigh = int(input("Enter the higher bound of your interval: "))
+
