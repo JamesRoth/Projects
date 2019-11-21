@@ -19,17 +19,19 @@ rRam = 0
 mRam = 0
 
 base = (intervalHigh-intervalLow)/interval
+print(base)
 for i in range(0,interval):
     #LRAM
-    lRam += f(i/interval)*base
+    lRam = lRam + f(i/interval)*base
+    print(i)
     
 for i in range(1,interval+1):
     #RRAM
-    rRam += f(i/interval)*base
+    rRam = rRam + f(i/interval)*base
 
 for i in range(0,interval):
     #MRAM
-    mRam += f((i+base/2)/interval)*base
+    mRam = mRam + f((i+base/2)/interval)*base
 
 print("RRAM: ", rRam)
 print("LRAM: ", lRam)
