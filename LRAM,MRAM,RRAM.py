@@ -33,8 +33,9 @@ for i in range(0,interval):
     mRam = mRam + f((base/2+intervalLow+i/(interval/(intervalHigh-intervalLow))))*base
     
 print("LRAM: ", lRam)
-print("RRAM: ", rRam)
 print("MRAM: ", mRam)
+print("RRAM: ", rRam)
+
     
     
 
