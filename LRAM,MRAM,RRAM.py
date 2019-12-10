@@ -35,6 +35,7 @@ for i in range(0,interval):
 print("LRAM: ", lRam)
 print("MRAM: ", mRam)
 print("RRAM: ", rRam)
+print("TRAP: ", (lRam+rRam)/2)
 
     
     
