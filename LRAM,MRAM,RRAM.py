@@ -32,10 +32,12 @@ for i in range(0,interval):
     #MRAM
     mRam = mRam + f((base/2+intervalLow+i/(interval/(intervalHigh-intervalLow))))*base
     
+trap = (lRam+rRam)/2
 print("LRAM: ", lRam)
 print("MRAM: ", mRam)
 print("RRAM: ", rRam)
-print("TRAP: ", (lRam+rRam)/2)
+print("TRAP: ", trap)
+print("Simpson's: ", (mRam*2+trap)/3)
 
     
     
