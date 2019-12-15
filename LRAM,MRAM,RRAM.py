@@ -19,7 +19,7 @@ rRam = 0
 mRam = 0
 
 base = (intervalHigh-intervalLow)/interval
-print(base)
+
 for i in range(0,interval):
     #LRAM
     lRam = lRam + f(intervalLow+i/(interval/(intervalHigh-intervalLow)))*base
