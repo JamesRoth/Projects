@@ -6,7 +6,7 @@ from math import sin, cos, tan, acos, asin, atan
 from math import exp, e, pi
 from math import log, log10, sqrt, log2
 
-#evaluates functions
+#evaluates functions - for this code, first derivatives (f(x,y))
 def f(xVal,yVal):
     x=xVal
     y=yVal
