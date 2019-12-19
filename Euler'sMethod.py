@@ -21,6 +21,12 @@ n = int(input("Enter the n-value you want: "))
 
 #variables:
 deltaX = (endX - startX)/n
+currentX = startX
+currentY = startY
+
+#main loop:
+for i in range(0,n):
+    f(currentX,currentY)
 
 
 
