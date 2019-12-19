@@ -11,6 +11,10 @@ def f(xVal,yVal):
     y=yVal
     return(eval(func))
 
-func = input("Enter a function: ")
+func = input("Enter a function (g(x), or dy/dx: ")
+startX = int(input("Enter the starting x-value: "))
+startY = int(input("Enter the starting y-value: "))
+n = int(input("Enter the n-value you want: "))
 
-print(f(1,2))
+
+
