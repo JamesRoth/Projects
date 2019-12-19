@@ -23,10 +23,13 @@ n = int(input("Enter the n-value you want: "))
 deltaX = (endX - startX)/n
 currentX = startX
 currentY = startY
+slope = 0
 
 #main loop:
 for i in range(0,n):
-    f(currentX,currentY)
+    slope = f(currentX,currentY)
+    currentX+=deltaX
+    currentY+=(slope*deltaX)
 
 
 
