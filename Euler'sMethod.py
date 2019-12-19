@@ -31,6 +31,8 @@ for i in range(0,n):
     currentX+=deltaX
     currentY+=(slope*deltaX)
 
+print(currentX, currentY)
+
 
 
 
