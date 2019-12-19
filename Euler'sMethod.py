@@ -31,5 +31,5 @@ for i in range(0,n):
     currentX+=deltaX
     currentY+=(slope*deltaX)
 
-print("(X:",round(currentX,8),"Y:",round(currentY,8)+")")
+print("(X:",round(currentX,8),"Y:",str(round(currentY,8))+")")
 
