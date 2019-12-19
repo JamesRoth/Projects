@@ -20,7 +20,8 @@ endX = float(input("Enter the ending x-value: "))
 n = int(input("Enter the n-value you want: "))
 
 #variables:
-deltaX = (endX - startX)/n
+deltaX = round(endX - startX,4)/n
+print(round(endX-startX,4),deltaX)
 currentX = startX
 currentY = startY
 slope = 0
