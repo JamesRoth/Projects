@@ -1,6 +1,6 @@
 #James Roth
 #12/19/19
-#Euler'sMethod.py - a program to solve euler's method
+#Euler'sMethod.py - a program to do euler's method
 
 from math import sin, cos, tan, acos, asin, atan
 from math import exp, e, pi
@@ -30,4 +30,3 @@ for i in range(0,n):
     currentY+=(slope*deltaX)
 
 print("Approximate values: (X:",round(currentX,8),"Y:",str(round(currentY,8))+")")
-
