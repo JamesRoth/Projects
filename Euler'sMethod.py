@@ -14,15 +14,13 @@ def f(xVal,yVal):
 
 #standard run of input statements
 func = input("Enter a function (g(x), or dy/dx): ")
-startX = float(input("Enter the starting x-value: "))
-startY = float(input("Enter the starting y-value: "))
+currentX = float(input("Enter the starting x-value: "))
+currentY = float(input("Enter the starting y-value: "))
 endX = float(input("Enter the ending x-value: "))
 n = int(input("Enter the n-value you want: "))
 
 #variables:
 deltaX = (endX - startX)/n
-currentX = startX
-currentY = startY
 slope = 0
 
 #main loop:
